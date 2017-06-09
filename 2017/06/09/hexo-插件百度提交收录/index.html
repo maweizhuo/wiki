@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://imaye.oschina.io">
-  <title>maweizhuo blog</title>
+  <title>hexo 插件实现链接被百度提交收录 | maweizhuo blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的第一个博客网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="maweizhuo blog">
-<meta property="og:url" content="http://imaye.oschina.io/index.html">
+  <meta name="description" content="1.注册账号注册百度站长平台账号： 百度站长  2. 安装插件1234$ 安装插件针对谷歌和百度npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save$ hexo g 会生成 sitemap.xml 以及baidusitemap.xml 表面成功安装 3. 使用目的 希望自己">
+<meta name="keywords" content="百度收录,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo 插件实现链接被百度提交收录">
+<meta property="og:url" content="http://imaye.oschina.io/2017/06/09/hexo-插件百度提交收录/index.html">
 <meta property="og:site_name" content="maweizhuo blog">
-<meta property="og:description" content="我的第一个博客网站">
+<meta property="og:description" content="1.注册账号注册百度站长平台账号： 百度站长  2. 安装插件1234$ 安装插件针对谷歌和百度npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save$ hexo g 会生成 sitemap.xml 以及baidusitemap.xml 表面成功安装 3. 使用目的 希望自己">
+<meta property="og:updated_time" content="2017-06-09T09:12:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="maweizhuo blog">
-<meta name="twitter:description" content="我的第一个博客网站">
+<meta name="twitter:title" content="hexo 插件实现链接被百度提交收录">
+<meta name="twitter:description" content="1.注册账号注册百度站长平台账号： 百度站长  2. 安装插件1234$ 安装插件针对谷歌和百度npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save$ hexo g 会生成 sitemap.xml 以及baidusitemap.xml 表面成功安装 3. 使用目的 希望自己">
   
     <link rel="alternative" href="/atom.xml" title="maweizhuo blog" type="application/atom+xml">
   
@@ -154,16 +156,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-hexo-插件百度提交收录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-hexo-插件百度提交收录" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/09/hexo-插件百度提交收录/">hexo 插件实现链接被百度提交收录</a>
+    <h1 class="article-title" itemprop="name">
+      hexo 插件实现链接被百度提交收录
     </h1>
   
 
@@ -179,12 +179,43 @@ var _hmt = _hmt || [];
         <p><strong> 1.注册账号</strong><br>注册百度站长平台账号： <a href="http://zhanzhang.baidu.com" target="_blank" rel="external">百度站长</a></p>
 <p><strong> 2. 安装插件</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ 安装插件针对谷歌和百度</div><div class="line">npm install hexo-generator-sitemap --save</div><div class="line">npm install hexo-generator-baidu-sitemap --save</div><div class="line">$ hexo g 会生成 sitemap.xml 以及baidusitemap.xml 表面成功安装</div></pre></td></tr></table></figure></p>
 <p><strong>3. 使用目的</strong></p>
-<p><code>希望自己的网站内容被第一时间收录</code><br>
-        
-          <a class="article-more-a" href="/2017/06/09/hexo-插件百度提交收录/#more">展开全文 >></a>
-        
+<p><code>希望自己的网站内容被第一时间收录</code><br><a id="more"></a><br><strong>4. 安装插件</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-baidu-url-submit --save</div></pre></td></tr></table></figure></p>
+<p><strong>5. 配置修改</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ 在根目录下的_config.yml 新增如下配置</div><div class="line">$ baidu_url_submit:</div><div class="line"> count: 3 <span class="comment">## 比如3，代表提交最新的三个链接</span></div><div class="line"> host: http://imaye.oschina.io <span class="comment">## 在百度站长平台中注册的域名</span></div><div class="line"> token: your token secret <span class="comment">## 请注意这是您的秘钥， 请不要发布在公众仓库里!</span></div><div class="line"> path: baidusitemap.xml  <span class="comment">## 文本文档的地址， 新链接会保存在此文本文档里</span></div><div class="line"> $ 在deploy处新增</div><div class="line"> $ -type: baidu_url_submit</div></pre></td></tr></table></figure></p>
+<p><strong>6. 实现原理</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g 生成文件</div><div class="line">$ hexo d 读取上面生成的文件，并提交到百度搜索引擎</div></pre></td></tr></table></figure></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/wx.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -221,90 +252,83 @@ var _hmt = _hmt || [];
       
 
       
-      <div class="clearfix"></div>
-    </div>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
   </div>
-</article>
+</div>
 
-
-
-
-
-  
-    <article id="post-markdown使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/26/markdown使用/">markdown 笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/26/markdown使用/" class="archive-article-date">
-  	<time datetime="2017-05-26T03:40:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>第一次使用Markdown 写文章，记录下笔记，供参考<br>参考文章：<a href="http://www.appinn.com/markdown/" target="_blank" rel="external">markdown 语法</a></p>
-<h2 id="标题格式"><a href="#标题格式" class="headerlink" title="标题格式"></a>标题格式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ <span class="comment">#号分隔的，多个#号可以显示不同的标题大小</span></div><div class="line">$ eg. <span class="comment">## 标题哈 ;  ### 文字</span></div><div class="line">$ 类似于html 的 h1-h6标签</div></pre></td></tr></table></figure>
-<h3 id="代码行显示"><a href="#代码行显示" class="headerlink" title="代码行显示"></a>代码行显示</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ ``` bash</div><div class="line">$ 内容。。。</div><div class="line">$ ``` </div><div class="line">$ 第二种方法更简单 ，只需要缩进四个空格自动成为代码行</div><div class="line">$     这个就显示代码行了</div><div class="line">$ 第三种 `code`</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/05/26/markdown使用/#more">展开全文 >></a>
-        
-      
-
-      
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://imaye.oschina.io/2017/06/09/hexo-插件百度提交收录/" alt="微信分享二维码">
     </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
+</div>
 
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/笔记/" class="article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/26/markdown使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">markdown 笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 
 
 
   
+  
+  
+
+  
+
   
 
 
@@ -327,8 +351,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
