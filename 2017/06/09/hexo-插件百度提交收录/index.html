@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://imaye.oschina.io/2017/06/09/hexo-插件百度提交收录/index.html">
 <meta property="og:site_name" content="maweizhuo blog">
 <meta property="og:description" content="1.注册账号注册百度站长平台账号： 百度站长  2. 安装插件1234$ 安装插件针对谷歌和百度npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save$ hexo g 会生成 sitemap.xml 以及baidusitemap.xml 表面成功安装 3. 使用目的 希望自己">
-<meta property="og:updated_time" content="2017-06-09T09:20:10.000Z">
+<meta property="og:updated_time" content="2017-06-12T07:36:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo 插件实现链接被百度提交收录">
 <meta name="twitter:description" content="1.注册账号注册百度站长平台账号： 百度站长  2. 安装插件1234$ 安装插件针对谷歌和百度npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save$ hexo g 会生成 sitemap.xml 以及baidusitemap.xml 表面成功安装 3. 使用目的 希望自己">
@@ -186,6 +186,9 @@ var _hmt = _hmt || [];
 <p><code>希望自己的网站内容被第一时间收录</code><br><a id="more"></a><br><strong>4. 安装插件</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-baidu-url-submit --save</div></pre></td></tr></table></figure></p>
 <p><strong>5. 配置修改</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ 在根目录下的_config.yml 新增如下配置</div><div class="line">$ baidu_url_submit:</div><div class="line"> count: 3 <span class="comment">## 比如3，代表提交最新的三个链接</span></div><div class="line"> host: http://imaye.oschina.io <span class="comment">## 在百度站长平台中注册的域名</span></div><div class="line"> token: your token secret <span class="comment">## 请注意这是您的秘钥， 请不要发布在公众仓库里!</span></div><div class="line"> path: baidusitemap.xml  <span class="comment">## 文本文档的地址， 新链接会保存在此文本文档里</span></div><div class="line"> $ 在deploy处新增</div><div class="line"> $ -type: baidu_url_submitter</div></pre></td></tr></table></figure></p>
 <p><strong>6. 实现原理</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g 生成文件</div><div class="line">$ hexo d 读取上面生成的文件，并提交到百度搜索引擎</div></pre></td></tr></table></figure></p>
+<h5 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h5><blockquote>
+<p>记录点滴，成为更好的自己。     — weizhuo.ma</p>
+</blockquote>
 
       
 
@@ -315,6 +318,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2017/06/12/python学习-字符串运算/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          python学习 字符串运算
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/05/26/markdown使用/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">markdown 笔记</div>
@@ -366,9 +378,6 @@ var _hmt = _hmt || [];
 		showTags: false
 	}
 </script>
-/*
-百度链接自动提交代码
-*/
 <script>
 (function(){
     var bp = document.createElement('script');
@@ -443,6 +452,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>
