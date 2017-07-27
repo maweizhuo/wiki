@@ -180,25 +180,15 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="kafka-安装配置"><a href="#kafka-安装配置" class="headerlink" title="kafka 安装配置"></a>kafka 安装配置</h3><ol>
-<li><p>安装下载 官网找版本</p>
+        <p>kafka 适用于消息队列。用zookeeper 管理。php 版本支持的是0.9+，<br>php需要开启kafka扩展，和zookeeper.so扩展(新版估计不用zookeeper扩展，未测试)</p>
+<p><strong>1.安装下载 官网找版本</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https://www.apache.org/dyn/closer.cgi?path=/kafka/0.10.1.1/kafka_2.11-0.10.1.1.tgz</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置config/server.properties</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">listeners=PLAINTEXT://10.20.1.47:9092</div><div class="line">log.dirs= </div><div class="line">zookeeper.connect=10.20.1.47:2181</div><div class="line">``` </div><div class="line">3. 配置zookeeper 和 producer，consumer host为ip模式</div><div class="line">4. 遇到的问题</div></pre></td></tr></table></figure>
-<ol>
-<li>during KafkaServerStartable startup. Prepare to shutdown (kafka.server.KafkaServerStartable)<br>…..<br>kafka启动总是起不来，报错，肯定是配置有问题<br>google 后 原来是log.dirs=  配的是当前kafka目录，指定新目录即可</li>
-<li>开始用的版本是0.8.2.1 的，消费时候是–zookeeper参数， 2181端口<br>新版之后都是 –bootstrap-server  9092 端口<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">5. 启动 服务</div></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ol>
-<p>#启动zookeeper</p>
-<p>/usr/local/kafka0.10.1.1/bin/zookeeper-server-start.sh /usr/local/kafka0.10.1.1/config/zookeeper.properties &amp;</p>
-<p>sleep 3 #等3秒后执行</p>
-<p>#启动kafka</p>
-<p>/usr/local/kafka0.10.1.1/bin/kafka-server-start.sh /usr/local/kafka0.10.1.1/config/server.properties &amp;<br>```<br>6.</p>
-
+<p><strong>2.配置config/server.properties</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">listeners=PLAINTEXT://10.20.1.47:9092</div><div class="line">log.dirs= </div><div class="line">zookeeper.connect=10.20.1.47:2181</div></pre></td></tr></table></figure>
+<p><strong>3.配置zookeeper 和 producer，consumer host为ip模式</strong><br>
+        
+          <a class="article-more-a" href="/2017/07/25/kafka安装配置与使用支持php/#more">展开全文 >></a>
+        
       
 
       
@@ -667,15 +657,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">migrate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>

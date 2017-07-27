@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://imaye.oschina.io/2017/07/17/laravel-migrate使用/index.html">
 <meta property="og:site_name" content="maweizhuo blog">
 <meta property="og:description" content="laravel 框架中的 migrate 类似于 git ，数据库的历史版本查看工具, 之前建立表结构都是从数据表中新建，迁移不是太方便，而使用laravel artisan 命令工具 可以很好的解决这个问题。适合于多人协同工作时候，数据库的迁移。  使用两次后，把操作流程记录如下：   1. 生成新表  12php artisan migration create_label_tabel --">
-<meta property="og:updated_time" content="2017-07-17T08:56:42.000Z">
+<meta property="og:updated_time" content="2017-07-25T09:23:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="laravel migrate使用">
 <meta name="twitter:description" content="laravel 框架中的 migrate 类似于 git ，数据库的历史版本查看工具, 之前建立表结构都是从数据表中新建，迁移不是太方便，而使用laravel artisan 命令工具 可以很好的解决这个问题。适合于多人协同工作时候，数据库的迁移。  使用两次后，把操作流程记录如下：   1. 生成新表  12php artisan migration create_label_tabel --">
@@ -188,6 +188,9 @@ var _hmt = _hmt || [];
 <p><strong> 3.  查看帮助 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">php artisan migrate -h</div><div class="line">php artisan make:migration -h</div></pre></td></tr></table></figure></p>
 <p><strong> 4. 生成迁移 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan migrate</div></pre></td></tr></table></figure></p>
 <p><strong> 5. 字段配置 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Schema::create(&apos;label&apos;, function (Blueprint $table) &#123;</div><div class="line">        $table-&gt;increments(&apos;id&apos;);</div><div class="line">        $table-&gt;integer(&apos;label_type_id&apos;)-&gt;comment(&apos;关联id注释&apos;);</div><div class="line">        $table-&gt;string(&apos;name&apos;,100);</div><div class="line">        $table-&gt;timestamps();</div><div class="line">  &#125;</div><div class="line">设置注释 ：comment(&apos;注释&apos;)</div><div class="line">设置默认值：default(&apos;&apos;)</div><div class="line">设置字段位置：在配置的字段名之后 after(&apos;字段名&apos;) </div><div class="line">设置唯一 ：unique()</div><div class="line">设置索引index ：([&apos;field_name&apos;,&apos;field_name&apos;],&apos;index_name&apos;) 第二个参数可不填</div></pre></td></tr></table></figure></p>
+<h5 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h5><blockquote>
+<p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
+</blockquote>
 
       
 
@@ -466,15 +469,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">migrate</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>
