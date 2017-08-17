@@ -6,19 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://imaye.oschina.io">
-  <title>laravel migrate使用 | maweizhuo blog</title>
+  <title>Tag: 算法 | maweizhuo blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="laravel 框架中的 migrate 类似于 git ，数据库的历史版本查看工具, 之前建立表结构都是从数据表中新建，迁移不是太方便，而使用laravel artisan 命令工具 可以很好的解决这个问题。适合于多人协同工作时候，数据库的迁移。  使用两次后，把操作流程记录如下：   1. 生成新表  12php artisan migration create_label_tabel --">
-<meta name="keywords" content="php,laravel,migrate">
-<meta property="og:type" content="article">
-<meta property="og:title" content="laravel migrate使用">
-<meta property="og:url" content="http://imaye.oschina.io/2017/07/17/laravel-migrate使用/index.html">
+  <meta name="description" content="分享个人体会，将工作生活遇到的事情写入到博客上，提醒自己，主要涉猎于网站后台开发，PHP+ Nginx 及个人感悟。与大家共勉 --马伟倬个人博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="maweizhuo blog">
+<meta property="og:url" content="http://imaye.oschina.io/tags/算法/index.html">
 <meta property="og:site_name" content="maweizhuo blog">
-<meta property="og:description" content="laravel 框架中的 migrate 类似于 git ，数据库的历史版本查看工具, 之前建立表结构都是从数据表中新建，迁移不是太方便，而使用laravel artisan 命令工具 可以很好的解决这个问题。适合于多人协同工作时候，数据库的迁移。  使用两次后，把操作流程记录如下：   1. 生成新表  12php artisan migration create_label_tabel --">
-<meta property="og:updated_time" content="2017-07-25T09:23:04.000Z">
+<meta property="og:description" content="分享个人体会，将工作生活遇到的事情写入到博客上，提醒自己，主要涉猎于网站后台开发，PHP+ Nginx 及个人感悟。与大家共勉 --马伟倬个人博客">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="laravel migrate使用">
-<meta name="twitter:description" content="laravel 框架中的 migrate 类似于 git ，数据库的历史版本查看工具, 之前建立表结构都是从数据表中新建，迁移不是太方便，而使用laravel artisan 命令工具 可以很好的解决这个问题。适合于多人协同工作时候，数据库的迁移。  使用两次后，把操作流程记录如下：   1. 生成新表  12php artisan migration create_label_tabel --">
+<meta name="twitter:title" content="maweizhuo blog">
+<meta name="twitter:description" content="分享个人体会，将工作生活遇到的事情写入到博客上，提醒自己，主要涉猎于网站后台开发，PHP+ Nginx 及个人感悟。与大家共勉 --马伟倬个人博客">
   
     <link rel="alternative" href="/atom.xml" title="maweizhuo blog" type="application/atom+xml">
   
@@ -160,76 +158,36 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-laravel-migrate使用" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      laravel migrate使用
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/08/17/php算法小结/" class="archive-article-date">
+  	<time datetime="2017-08-17T06:23:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/08/17/php算法小结/">php算法小结</a>
     </h1>
   
 
-        
-        <a href="/2017/07/17/laravel-migrate使用/" class="archive-article-date">
-  	<time datetime="2017-07-17T08:28:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> laravel 框架中的 migrate 类似于 git ，数据库的历史版本查看工具,<br> 之前建立表结构都是从数据表中新建，迁移不是太方便，而使用laravel artisan 命令工具<br> 可以很好的解决这个问题。适合于多人协同工作时候，数据库的迁移。</p>
-<p> 使用两次后，把操作流程记录如下：</p>
-<p> <strong> 1. 生成新表 </strong><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">php artisan migration create_label_tabel --create=label</div><div class="line">该命令会生成label表 ，并且在database/migrate/ 下生成时间戳_create_label_tabel 的一条文件</div></pre></td></tr></table></figure></p>
-<p> <strong> 2. 新增表字段 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> php artisan migration add_label_field --tabel=label</div><div class="line">该命令会在database/migrate/ 下生成时间戳_add_label_field 的一条文件</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p><strong> 3.  查看帮助 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">php artisan migrate -h</div><div class="line">php artisan make:migration -h</div></pre></td></tr></table></figure></p>
-<p><strong> 4. 生成迁移 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan migrate</div></pre></td></tr></table></figure></p>
-<p><strong> 5. 字段配置 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Schema::create(&apos;label&apos;, function (Blueprint $table) &#123;</div><div class="line">        $table-&gt;increments(&apos;id&apos;);</div><div class="line">        $table-&gt;integer(&apos;label_type_id&apos;)-&gt;comment(&apos;关联id注释&apos;);</div><div class="line">        $table-&gt;string(&apos;name&apos;,100);</div><div class="line">        $table-&gt;timestamps();</div><div class="line">  &#125;</div><div class="line">设置注释 ：comment(&apos;注释&apos;)</div><div class="line">设置默认值：default(&apos;&apos;)</div><div class="line">设置字段位置：在配置的字段名之后 after(&apos;字段名&apos;) </div><div class="line">设置唯一 ：unique()</div><div class="line">设置索引index ：([&apos;field_name&apos;,&apos;field_name&apos;],&apos;index_name&apos;) 第二个参数可不填</div></pre></td></tr></table></figure></p>
-<h5 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h5><blockquote>
-<p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
-</blockquote>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/images/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/images/wx.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -239,17 +197,13 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">laravel</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">migrate</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -262,96 +216,17 @@ var _hmt = _hmt || [];
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://imaye.oschina.io/2017/07/17/laravel-migrate使用/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/07/25/kafka安装配置与使用支持php/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          kafka安装配置与使用支持php
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/06/12/python学习-字符串运算/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python学习 字符串运算</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -374,9 +249,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

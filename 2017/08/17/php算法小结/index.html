@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://imaye.oschina.io">
-  <title>laravel migrate使用 | maweizhuo blog</title>
+  <title>php算法小结 | maweizhuo blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="laravel 框架中的 migrate 类似于 git ，数据库的历史版本查看工具, 之前建立表结构都是从数据表中新建，迁移不是太方便，而使用laravel artisan 命令工具 可以很好的解决这个问题。适合于多人协同工作时候，数据库的迁移。  使用两次后，把操作流程记录如下：   1. 生成新表  12php artisan migration create_label_tabel --">
-<meta name="keywords" content="php,laravel,migrate">
+  <meta name="description" content="PHP面试中基本会问到手写算法，其实主要是一种算法思想，一种思路现总结归纳如下：  冒泡排序 快速排序 二分查找">
+<meta name="keywords" content="php,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="laravel migrate使用">
-<meta property="og:url" content="http://imaye.oschina.io/2017/07/17/laravel-migrate使用/index.html">
+<meta property="og:title" content="php算法小结">
+<meta property="og:url" content="http://imaye.oschina.io/2017/08/17/php算法小结/index.html">
 <meta property="og:site_name" content="maweizhuo blog">
-<meta property="og:description" content="laravel 框架中的 migrate 类似于 git ，数据库的历史版本查看工具, 之前建立表结构都是从数据表中新建，迁移不是太方便，而使用laravel artisan 命令工具 可以很好的解决这个问题。适合于多人协同工作时候，数据库的迁移。  使用两次后，把操作流程记录如下：   1. 生成新表  12php artisan migration create_label_tabel --">
-<meta property="og:updated_time" content="2017-07-25T09:23:04.000Z">
+<meta property="og:description" content="PHP面试中基本会问到手写算法，其实主要是一种算法思想，一种思路现总结归纳如下：  冒泡排序 快速排序 二分查找">
+<meta property="og:updated_time" content="2017-08-17T06:53:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="laravel migrate使用">
-<meta name="twitter:description" content="laravel 框架中的 migrate 类似于 git ，数据库的历史版本查看工具, 之前建立表结构都是从数据表中新建，迁移不是太方便，而使用laravel artisan 命令工具 可以很好的解决这个问题。适合于多人协同工作时候，数据库的迁移。  使用两次后，把操作流程记录如下：   1. 生成新表  12php artisan migration create_label_tabel --">
+<meta name="twitter:title" content="php算法小结">
+<meta name="twitter:description" content="PHP面试中基本会问到手写算法，其实主要是一种算法思想，一种思路现总结归纳如下：  冒泡排序 快速排序 二分查找">
   
     <link rel="alternative" href="/atom.xml" title="maweizhuo blog" type="application/atom+xml">
   
@@ -160,36 +160,39 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-laravel-migrate使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-php算法小结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      laravel migrate使用
+      php算法小结
     </h1>
   
 
         
-        <a href="/2017/07/17/laravel-migrate使用/" class="archive-article-date">
-  	<time datetime="2017-07-17T08:28:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-17</time>
+        <a href="/2017/08/17/php算法小结/" class="archive-article-date">
+  	<time datetime="2017-08-17T06:23:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> laravel 框架中的 migrate 类似于 git ，数据库的历史版本查看工具,<br> 之前建立表结构都是从数据表中新建，迁移不是太方便，而使用laravel artisan 命令工具<br> 可以很好的解决这个问题。适合于多人协同工作时候，数据库的迁移。</p>
-<p> 使用两次后，把操作流程记录如下：</p>
-<p> <strong> 1. 生成新表 </strong><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">php artisan migration create_label_tabel --create=label</div><div class="line">该命令会生成label表 ，并且在database/migrate/ 下生成时间戳_create_label_tabel 的一条文件</div></pre></td></tr></table></figure></p>
-<p> <strong> 2. 新增表字段 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> php artisan migration add_label_field --tabel=label</div><div class="line">该命令会在database/migrate/ 下生成时间戳_add_label_field 的一条文件</div></pre></td></tr></table></figure></p>
+        <p>PHP面试中基本会问到手写算法，其实主要是一种算法思想，一种思路<br>现总结归纳如下：</p>
+<ul>
+<li>冒泡排序</li>
+<li>快速排序</li>
+<li>二分查找</li>
+</ul>
 <a id="more"></a>
-<p><strong> 3.  查看帮助 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">php artisan migrate -h</div><div class="line">php artisan make:migration -h</div></pre></td></tr></table></figure></p>
-<p><strong> 4. 生成迁移 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan migrate</div></pre></td></tr></table></figure></p>
-<p><strong> 5. 字段配置 </strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Schema::create(&apos;label&apos;, function (Blueprint $table) &#123;</div><div class="line">        $table-&gt;increments(&apos;id&apos;);</div><div class="line">        $table-&gt;integer(&apos;label_type_id&apos;)-&gt;comment(&apos;关联id注释&apos;);</div><div class="line">        $table-&gt;string(&apos;name&apos;,100);</div><div class="line">        $table-&gt;timestamps();</div><div class="line">  &#125;</div><div class="line">设置注释 ：comment(&apos;注释&apos;)</div><div class="line">设置默认值：default(&apos;&apos;)</div><div class="line">设置字段位置：在配置的字段名之后 after(&apos;字段名&apos;) </div><div class="line">设置唯一 ：unique()</div><div class="line">设置索引index ：([&apos;field_name&apos;,&apos;field_name&apos;],&apos;index_name&apos;) 第二个参数可不填</div></pre></td></tr></table></figure></p>
+<p><strong> 冒泡排序 </strong><br><b>思路分析:</b>在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即，每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">   *  冒泡排序</div><div class="line">*/</div><div class="line">  <span class="keyword">function</span> bubble_sort(<span class="variable">$array</span>)&#123;</div><div class="line">      <span class="variable">$num</span> = count(<span class="variable">$array</span>);</div><div class="line">    </div><div class="line">      <span class="keyword">if</span>(<span class="variable">$num</span>&lt;=1)&#123;</div><div class="line">          <span class="built_in">return</span> <span class="variable">$array</span>;</div><div class="line">      &#125;</div><div class="line">      // 需要比较多少轮</div><div class="line">      <span class="keyword">for</span>(<span class="variable">$i</span>=1;<span class="variable">$i</span>&lt;<span class="variable">$num</span>;<span class="variable">$i</span>++)&#123;</div><div class="line">          // 每轮冒出需要比较的次数</div><div class="line">          <span class="keyword">for</span>(<span class="variable">$j</span>=0;<span class="variable">$j</span>&lt;<span class="variable">$num</span>-<span class="variable">$i</span>;<span class="variable">$j</span>++)&#123;</div><div class="line">              <span class="keyword">if</span>(<span class="variable">$array</span>[<span class="variable">$j</span>]&gt;<span class="variable">$array</span>[<span class="variable">$j</span>+1])</div><div class="line">              &#123;</div><div class="line">                  <span class="variable">$tmp</span> = <span class="variable">$array</span>[<span class="variable">$j</span>+1];</div><div class="line">                  <span class="variable">$array</span>[<span class="variable">$j</span>+1] = <span class="variable">$array</span>[<span class="variable">$j</span>];</div><div class="line">                  <span class="variable">$array</span>[<span class="variable">$j</span>] = <span class="variable">$tmp</span>;</div><div class="line">              &#125;</div><div class="line">            //<span class="built_in">echo</span> <span class="variable">$j</span>.<span class="string">"\r\n"</span>;</div><div class="line">          &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="built_in">return</span> <span class="variable">$array</span>;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="variable">$arr_test</span> = array(1,21,13,25,36,18,32,16,17,20,19,30,27,40,3);</div><div class="line">  <span class="variable">$res</span> = bubble_sort(<span class="variable">$arr_test</span>);</div><div class="line">  print_r(<span class="variable">$res</span>);</div></pre></td></tr></table></figure></p>
+<p><strong> 快速排序 </strong><br><b>思路分析：</b>选择一个基准元素，通常选择第一个元素或者最后一个元素。通过一趟扫描，将待排序列分成两部分，一部分比基准元素小，一部分大于等于基准元素。此时基准元素在其排好序后的正确位置，然后再用同样的方法递归地排序划分的两部分。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 快速排序 </div><div class="line">*/</div><div class="line"><span class="keyword">function</span> quick_sort(<span class="variable">$arr</span>)&#123;</div><div class="line">    <span class="variable">$len</span> = count(<span class="variable">$arr</span>);</div><div class="line">    <span class="keyword">if</span>(<span class="variable">$len</span> &lt;= 1)&#123;</div><div class="line">        <span class="built_in">return</span> <span class="variable">$arr</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="variable">$left_arr</span> = [];</div><div class="line">    <span class="variable">$right_arr</span> = [];</div><div class="line">    <span class="variable">$base_num</span> = <span class="variable">$arr</span>[0];</div><div class="line">    <span class="keyword">for</span>(<span class="variable">$i</span>=1;<span class="variable">$i</span>&lt;<span class="variable">$len</span>;<span class="variable">$i</span>++)&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="variable">$base_num</span> &gt; <span class="variable">$arr</span>[<span class="variable">$i</span>])&#123;</div><div class="line">            <span class="variable">$left_arr</span>[] = <span class="variable">$arr</span>[<span class="variable">$i</span>]; </div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">           <span class="variable">$right_arr</span>[] = <span class="variable">$arr</span>[<span class="variable">$i</span>]; </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="variable">$left_arr</span> = quick_sort(<span class="variable">$left_arr</span>);</div><div class="line">    <span class="variable">$right_arr</span> = quick_sort(<span class="variable">$right_arr</span>);</div><div class="line">    <span class="variable">$arr</span> = array_merge(<span class="variable">$left_arr</span>,[<span class="variable">$base_num</span>],<span class="variable">$right_arr</span>);</div><div class="line">    <span class="built_in">return</span> <span class="variable">$arr</span>;</div><div class="line">&#125;</div><div class="line"><span class="variable">$arr</span>=array(1,43,54,62,21,66,32,78,36,76,39);  </div><div class="line"><span class="variable">$a</span> = quick_sort(<span class="variable">$arr</span>);</div><div class="line">var_dump(<span class="variable">$a</span>);</div></pre></td></tr></table></figure></p>
+<p><strong> 二分查找 </strong><br><b>思路分析：</b>一个有序数组，根据某个值查找这个元素所在数组的键，思路是折半查找</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 二分查找（折半查找）</div><div class="line"> * 前提数组是规则的递增或递减</div><div class="line"> * @param <span class="variable">$arr</span> 数组</div><div class="line"> * @param <span class="variable">$val</span> 查找的数值</div><div class="line"> * @<span class="built_in">return</span>   数组值的键值or <span class="literal">false</span></div><div class="line"> */</div><div class="line"><span class="keyword">function</span> search(Array <span class="variable">$arr</span>,<span class="variable">$val</span>)&#123;</div><div class="line">    <span class="variable">$low</span> = 0;</div><div class="line">    <span class="variable">$high</span> = count(<span class="variable">$arr</span>)-1;</div><div class="line">    <span class="keyword">while</span>(<span class="variable">$low</span>&lt;=<span class="variable">$high</span>)&#123;</div><div class="line">        // 取中间数组的键值</div><div class="line">        <span class="variable">$mid</span> = floor((<span class="variable">$high</span>+<span class="variable">$low</span>)/2);</div><div class="line">        // 相等返回数据</div><div class="line">        <span class="keyword">if</span>(<span class="variable">$arr</span>[<span class="variable">$mid</span>] == <span class="variable">$val</span>)&#123;</div><div class="line">            <span class="built_in">return</span> <span class="variable">$mid</span>;</div><div class="line">        &#125;</div><div class="line">        // 如果中间数据大于右侧,取左侧最大值</div><div class="line">        <span class="keyword">if</span>(<span class="variable">$arr</span>[<span class="variable">$mid</span>]&gt;<span class="variable">$val</span>)&#123;</div><div class="line">            <span class="variable">$high</span> = <span class="variable">$mid</span>-1;</div><div class="line">        &#125;</div><div class="line">        // 如果中间数小于右侧，取出右侧最小值</div><div class="line">        <span class="keyword">if</span>(<span class="variable">$arr</span>[<span class="variable">$mid</span>]&lt;<span class="variable">$val</span>)&#123;</div><div class="line">            <span class="variable">$low</span> = <span class="variable">$mid</span>+1; </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    // 查找错误</div><div class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="variable">$arr_test</span> = array(1,2,4,7,9,13,16,20,23,25);</div><div class="line"><span class="variable">$a</span> = search(<span class="variable">$arr_test</span>,23);</div><div class="line">var_dump(<span class="variable">$a</span>);</div></pre></td></tr></table></figure>
 <h5 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h5><blockquote>
-<p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
+<p>记录点滴，成为更好的自己。     — weizhuo.ma</p>
 </blockquote>
 
       
@@ -239,11 +242,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">laravel</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">migrate</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -310,7 +309,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://imaye.oschina.io/2017/07/17/laravel-migrate使用/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://imaye.oschina.io/2017/08/17/php算法小结/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -324,18 +323,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/07/25/kafka安装配置与使用支持php/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          kafka安装配置与使用支持php
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/12/python学习-字符串运算/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python学习 字符串运算</div>
+    <a href="/2017/07/25/kafka安装配置与使用支持php/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">kafka安装配置与使用支持php</div>
       <i class="icon-circle-right"></i>
     </a>
   
