@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://imaye.oschina.io">
-  <title>php算法小结 | maweizhuo blog</title>
+  <title>ubuntu环境遇到的问题汇总 | maweizhuo blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PHP面试中基本会问到手写算法，其实主要是一种算法思想，一种思路现总结归纳如下：  冒泡排序 快速排序 二分查找">
-<meta name="keywords" content="php,算法">
+  <meta name="description" content="在阿里云服务器上使用了下ubuntu环境时候，遇到了一些问题，现在整理出来，主要是ubuntu安装php环境和mysql 的问题，及部署laravel 遇到的坑。  1. ubuntu安装/查找软件命令 1234567Linux    环境一键安装一般是用yum -y install  查找软件命令 yum searchubuntu   软件安装 apt-get install   查找软件命令">
+<meta name="keywords" content="php,laravel,ubuntu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="php算法小结">
-<meta property="og:url" content="http://imaye.oschina.io/2017/08/17/php算法小结/index.html">
+<meta property="og:title" content="ubuntu环境遇到的问题汇总">
+<meta property="og:url" content="http://imaye.oschina.io/2017/09/04/ubuntu环境遇到的问题汇总/index.html">
 <meta property="og:site_name" content="maweizhuo blog">
-<meta property="og:description" content="PHP面试中基本会问到手写算法，其实主要是一种算法思想，一种思路现总结归纳如下：  冒泡排序 快速排序 二分查找">
-<meta property="og:updated_time" content="2017-08-17T06:53:02.000Z">
+<meta property="og:description" content="在阿里云服务器上使用了下ubuntu环境时候，遇到了一些问题，现在整理出来，主要是ubuntu安装php环境和mysql 的问题，及部署laravel 遇到的坑。  1. ubuntu安装/查找软件命令 1234567Linux    环境一键安装一般是用yum -y install  查找软件命令 yum searchubuntu   软件安装 apt-get install   查找软件命令">
+<meta property="og:updated_time" content="2017-09-04T03:40:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="php算法小结">
-<meta name="twitter:description" content="PHP面试中基本会问到手写算法，其实主要是一种算法思想，一种思路现总结归纳如下：  冒泡排序 快速排序 二分查找">
+<meta name="twitter:title" content="ubuntu环境遇到的问题汇总">
+<meta name="twitter:description" content="在阿里云服务器上使用了下ubuntu环境时候，遇到了一些问题，现在整理出来，主要是ubuntu安装php环境和mysql 的问题，及部署laravel 遇到的坑。  1. ubuntu安装/查找软件命令 1234567Linux    环境一键安装一般是用yum -y install  查找软件命令 yum searchubuntu   软件安装 apt-get install   查找软件命令">
   
     <link rel="alternative" href="/atom.xml" title="maweizhuo blog" type="application/atom+xml">
   
@@ -160,39 +160,56 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-php算法小结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ubuntu环境遇到的问题汇总" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      php算法小结
+      ubuntu环境遇到的问题汇总
     </h1>
   
 
         
-        <a href="/2017/08/17/php算法小结/" class="archive-article-date">
-  	<time datetime="2017-08-17T06:23:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-17</time>
+        <a href="/2017/09/04/ubuntu环境遇到的问题汇总/" class="archive-article-date">
+  	<time datetime="2017-09-04T02:21:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>PHP面试中基本会问到手写算法，其实主要是一种算法思想，一种思路<br>现总结归纳如下：</p>
-<ul>
-<li>冒泡排序</li>
-<li>快速排序</li>
-<li>二分查找</li>
-</ul>
+        <p>在阿里云服务器上使用了下ubuntu环境时候，遇到了一些问题，现在整理出来，主要是ubuntu安装php环境<br>和mysql 的问题，及部署laravel 遇到的坑。</p>
+<p><strong> 1. ubuntu安装/查找软件命令 </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Linux  </div><div class="line">  环境一键安装一般是用yum -y install</div><div class="line">  查找软件命令 yum search</div><div class="line"></div><div class="line">ubuntu </div><div class="line">  软件安装 apt-get install </div><div class="line">  查找软件命令 apt-cache search</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<p><strong> 冒泡排序 </strong><br><b>思路分析:</b>在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即，每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">   *  冒泡排序</div><div class="line">*/</div><div class="line">  <span class="keyword">function</span> bubble_sort(<span class="variable">$array</span>)&#123;</div><div class="line">      <span class="variable">$num</span> = count(<span class="variable">$array</span>);</div><div class="line">    </div><div class="line">      <span class="keyword">if</span>(<span class="variable">$num</span>&lt;=1)&#123;</div><div class="line">          <span class="built_in">return</span> <span class="variable">$array</span>;</div><div class="line">      &#125;</div><div class="line">      // 需要比较多少轮</div><div class="line">      <span class="keyword">for</span>(<span class="variable">$i</span>=1;<span class="variable">$i</span>&lt;<span class="variable">$num</span>;<span class="variable">$i</span>++)&#123;</div><div class="line">          // 每轮冒出需要比较的次数</div><div class="line">          <span class="keyword">for</span>(<span class="variable">$j</span>=0;<span class="variable">$j</span>&lt;<span class="variable">$num</span>-<span class="variable">$i</span>;<span class="variable">$j</span>++)&#123;</div><div class="line">              <span class="keyword">if</span>(<span class="variable">$array</span>[<span class="variable">$j</span>]&gt;<span class="variable">$array</span>[<span class="variable">$j</span>+1])</div><div class="line">              &#123;</div><div class="line">                  <span class="variable">$tmp</span> = <span class="variable">$array</span>[<span class="variable">$j</span>+1];</div><div class="line">                  <span class="variable">$array</span>[<span class="variable">$j</span>+1] = <span class="variable">$array</span>[<span class="variable">$j</span>];</div><div class="line">                  <span class="variable">$array</span>[<span class="variable">$j</span>] = <span class="variable">$tmp</span>;</div><div class="line">              &#125;</div><div class="line">            //<span class="built_in">echo</span> <span class="variable">$j</span>.<span class="string">"\r\n"</span>;</div><div class="line">          &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="built_in">return</span> <span class="variable">$array</span>;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="variable">$arr_test</span> = array(1,21,13,25,36,18,32,16,17,20,19,30,27,40,3);</div><div class="line">  <span class="variable">$res</span> = bubble_sort(<span class="variable">$arr_test</span>);</div><div class="line">  print_r(<span class="variable">$res</span>);</div></pre></td></tr></table></figure></p>
-<p><strong> 快速排序 </strong><br><b>思路分析：</b>选择一个基准元素，通常选择第一个元素或者最后一个元素。通过一趟扫描，将待排序列分成两部分，一部分比基准元素小，一部分大于等于基准元素。此时基准元素在其排好序后的正确位置，然后再用同样的方法递归地排序划分的两部分。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 快速排序 </div><div class="line">*/</div><div class="line"><span class="keyword">function</span> quick_sort(<span class="variable">$arr</span>)&#123;</div><div class="line">    <span class="variable">$len</span> = count(<span class="variable">$arr</span>);</div><div class="line">    <span class="keyword">if</span>(<span class="variable">$len</span> &lt;= 1)&#123;</div><div class="line">        <span class="built_in">return</span> <span class="variable">$arr</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="variable">$left_arr</span> = [];</div><div class="line">    <span class="variable">$right_arr</span> = [];</div><div class="line">    <span class="variable">$base_num</span> = <span class="variable">$arr</span>[0];</div><div class="line">    <span class="keyword">for</span>(<span class="variable">$i</span>=1;<span class="variable">$i</span>&lt;<span class="variable">$len</span>;<span class="variable">$i</span>++)&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="variable">$base_num</span> &gt; <span class="variable">$arr</span>[<span class="variable">$i</span>])&#123;</div><div class="line">            <span class="variable">$left_arr</span>[] = <span class="variable">$arr</span>[<span class="variable">$i</span>]; </div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">           <span class="variable">$right_arr</span>[] = <span class="variable">$arr</span>[<span class="variable">$i</span>]; </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="variable">$left_arr</span> = quick_sort(<span class="variable">$left_arr</span>);</div><div class="line">    <span class="variable">$right_arr</span> = quick_sort(<span class="variable">$right_arr</span>);</div><div class="line">    <span class="variable">$arr</span> = array_merge(<span class="variable">$left_arr</span>,[<span class="variable">$base_num</span>],<span class="variable">$right_arr</span>);</div><div class="line">    <span class="built_in">return</span> <span class="variable">$arr</span>;</div><div class="line">&#125;</div><div class="line"><span class="variable">$arr</span>=array(1,43,54,62,21,66,32,78,36,76,39);  </div><div class="line"><span class="variable">$a</span> = quick_sort(<span class="variable">$arr</span>);</div><div class="line">var_dump(<span class="variable">$a</span>);</div></pre></td></tr></table></figure></p>
-<p><strong> 二分查找 </strong><br><b>思路分析：</b>一个有序数组，根据某个值查找这个元素所在数组的键，思路是折半查找</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 二分查找（折半查找）</div><div class="line"> * 前提数组是规则的递增或递减</div><div class="line"> * @param <span class="variable">$arr</span> 数组</div><div class="line"> * @param <span class="variable">$val</span> 查找的数值</div><div class="line"> * @<span class="built_in">return</span>   数组值的键值or <span class="literal">false</span></div><div class="line"> */</div><div class="line"><span class="keyword">function</span> search(Array <span class="variable">$arr</span>,<span class="variable">$val</span>)&#123;</div><div class="line">    <span class="variable">$low</span> = 0;</div><div class="line">    <span class="variable">$high</span> = count(<span class="variable">$arr</span>)-1;</div><div class="line">    <span class="keyword">while</span>(<span class="variable">$low</span>&lt;=<span class="variable">$high</span>)&#123;</div><div class="line">        // 取中间数组的键值</div><div class="line">        <span class="variable">$mid</span> = floor((<span class="variable">$high</span>+<span class="variable">$low</span>)/2);</div><div class="line">        // 相等返回数据</div><div class="line">        <span class="keyword">if</span>(<span class="variable">$arr</span>[<span class="variable">$mid</span>] == <span class="variable">$val</span>)&#123;</div><div class="line">            <span class="built_in">return</span> <span class="variable">$mid</span>;</div><div class="line">        &#125;</div><div class="line">        // 如果中间数据大于右侧,取左侧最大值</div><div class="line">        <span class="keyword">if</span>(<span class="variable">$arr</span>[<span class="variable">$mid</span>]&gt;<span class="variable">$val</span>)&#123;</div><div class="line">            <span class="variable">$high</span> = <span class="variable">$mid</span>-1;</div><div class="line">        &#125;</div><div class="line">        // 如果中间数小于右侧，取出右侧最小值</div><div class="line">        <span class="keyword">if</span>(<span class="variable">$arr</span>[<span class="variable">$mid</span>]&lt;<span class="variable">$val</span>)&#123;</div><div class="line">            <span class="variable">$low</span> = <span class="variable">$mid</span>+1; </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    // 查找错误</div><div class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="variable">$arr_test</span> = array(1,2,4,7,9,13,16,20,23,25);</div><div class="line"><span class="variable">$a</span> = search(<span class="variable">$arr_test</span>,23);</div><div class="line">var_dump(<span class="variable">$a</span>);</div></pre></td></tr></table></figure>
+<p><strong> 2. LNMP 环境安装问题汇总 </strong></p>
+<ul>
+<li><p>1.configure: error: Cannot find OpenSSL’s <evp.h><br>解决办法:<br>sudo apt-get install openssl openssl-dev</evp.h></p>
+</li>
+<li><p>2.“freetype-config not found”<br>解决方法:<br>apt-get -y install libfreetype6-dev</p>
+<p>….</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">通用解决方式：编译PHP报错的时候，找到err</div><div class="line">用apt-get 查找报错的内容如libxml ,ext等</div><div class="line">找到该词相近的和有dev的然后安装即可解决。</div></pre></td></tr></table></figure>
+</li>
+<li><p>3.MySQL 安装后开放3306端口支持外网访问<br>解决方法：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.修改user表加入拥有所有权限的用户</div><div class="line">  grant all privileges on *.* to <span class="string">'test'</span>@<span class="string">'%'</span> identified by <span class="string">'123456'</span> with grant option;</div><div class="line">2.flush privillege</div><div class="line">3.vi /etc/mysql/mysql.conf.d/mysqld.cn 注释掉<span class="built_in">bind</span>-address=127.0.0.1</div><div class="line">4.阿里云的开放端口在界面操作 登录到控制台-&gt;更多-&gt;安全组配置-&gt;配置规则—&gt;添加安全组规则</div></pre></td></tr></table></figure>
+<p><strong> 3. laravel 相关问题 </strong></p>
+<ul>
+<li><p>1.composer update 报错 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">composer.json 中镜像改为国内镜像</div><div class="line"><span class="string">"repositories"</span>: &#123;</div><div class="line">       <span class="string">"packagist"</span>: &#123;</div><div class="line">           <span class="string">"type"</span>: <span class="string">"composer"</span>,</div><div class="line">           <span class="string">"url"</span>: <span class="string">"https://packagist.phpcomposer.com"</span></div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"> laravel 5.3 去掉<span class="string">"config"</span>中 <span class="string">"sort-packages"</span>: <span class="literal">true</span> 这项</div></pre></td></tr></table></figure>
+</li>
+<li><p>2.The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php artisan key:generate</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>3.php artisan migrate 报PDOException<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">apt-cache search pdo</div><div class="line">apt-get install php7.0-mysql php7.0-odbc</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <h5 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h5><blockquote>
-<p>记录点滴，成为更好的自己。     — weizhuo.ma</p>
+<p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
 </blockquote>
 
       
@@ -242,7 +259,11 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">laravel</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ubuntu</a>
         		</li>
       		
 		</ul>
@@ -309,7 +330,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://imaye.oschina.io/2017/08/17/php算法小结/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://imaye.oschina.io/2017/09/04/ubuntu环境遇到的问题汇总/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -323,18 +344,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/09/04/ubuntu环境遇到的问题汇总/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ubuntu环境遇到的问题汇总
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/25/kafka安装配置与使用支持php/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">kafka安装配置与使用支持php</div>
+    <a href="/2017/08/17/php算法小结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php算法小结</div>
       <i class="icon-circle-right"></i>
     </a>
   
