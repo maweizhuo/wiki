@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://imaye.oschina.io">
-  <title>hexo 插件实现链接被百度提交收录 | maweizhuo blog</title>
+  <title>linux 初写shell文件 | maweizhuo blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.注册账号注册百度站长平台账号： 百度站长 2. 安装插件1234$ 安装插件针对谷歌和百度npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save$ hexo g 会生成 sitemap.xml 以及baidusitemap.xml 表面成功安装 3. 使用目的希望自己的网站">
-<meta name="keywords" content="百度收录,hexo">
+  <meta name="description" content="前言   最近测试环境supervisor重启需要先查到他的进程id ,kill 掉, 再启动，感觉略low了点   于是乎想到可不可以写成一个命令。自动完成这些操作。   so,查了下相关linux命令,用shell执行即可 系统环境   Linux shell 脚本">
+<meta name="keywords" content="linux,shell,xargs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo 插件实现链接被百度提交收录">
-<meta property="og:url" content="http://imaye.oschina.io/2017/06/09/hexo-插件百度提交收录/index.html">
+<meta property="og:title" content="linux 初写shell文件">
+<meta property="og:url" content="http://imaye.oschina.io/2017/11/20/linux-初写shell文件/index.html">
 <meta property="og:site_name" content="maweizhuo blog">
-<meta property="og:description" content="1.注册账号注册百度站长平台账号： 百度站长 2. 安装插件1234$ 安装插件针对谷歌和百度npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save$ hexo g 会生成 sitemap.xml 以及baidusitemap.xml 表面成功安装 3. 使用目的希望自己的网站">
-<meta property="og:updated_time" content="2017-09-06T09:35:24.000Z">
+<meta property="og:description" content="前言   最近测试环境supervisor重启需要先查到他的进程id ,kill 掉, 再启动，感觉略low了点   于是乎想到可不可以写成一个命令。自动完成这些操作。   so,查了下相关linux命令,用shell执行即可 系统环境   Linux shell 脚本">
+<meta property="og:updated_time" content="2017-11-20T08:26:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo 插件实现链接被百度提交收录">
-<meta name="twitter:description" content="1.注册账号注册百度站长平台账号： 百度站长 2. 安装插件1234$ 安装插件针对谷歌和百度npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save$ hexo g 会生成 sitemap.xml 以及baidusitemap.xml 表面成功安装 3. 使用目的希望自己的网站">
+<meta name="twitter:title" content="linux 初写shell文件">
+<meta name="twitter:description" content="前言   最近测试环境supervisor重启需要先查到他的进程id ,kill 掉, 再启动，感觉略low了点   于是乎想到可不可以写成一个命令。自动完成这些操作。   so,查了下相关linux命令,用shell执行即可 系统环境   Linux shell 脚本">
   
     <link rel="alternative" href="/atom.xml" title="maweizhuo blog" type="application/atom+xml">
   
@@ -160,34 +160,38 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo-插件百度提交收录" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-linux-初写shell文件" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hexo 插件实现链接被百度提交收录
+      linux 初写shell文件
     </h1>
   
 
         
-        <a href="/2017/06/09/hexo-插件百度提交收录/" class="archive-article-date">
-  	<time datetime="2017-06-09T08:06:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-09</time>
+        <a href="/2017/11/20/linux-初写shell文件/" class="archive-article-date">
+  	<time datetime="2017-11-20T07:51:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-注册账号"><a href="#1-注册账号" class="headerlink" title="1.注册账号"></a>1.注册账号</h2><p>注册百度站长平台账号： <a href="http://zhanzhang.baidu.com" target="_blank" rel="external">百度站长</a></p>
-<h2 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2. 安装插件"></a>2. 安装插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ 安装插件针对谷歌和百度</div><div class="line">npm install hexo-generator-sitemap --save</div><div class="line">npm install hexo-generator-baidu-sitemap --save</div><div class="line">$ hexo g 会生成 sitemap.xml 以及baidusitemap.xml 表面成功安装</div></pre></td></tr></table></figure>
-<h2 id="3-使用目的"><a href="#3-使用目的" class="headerlink" title="3. 使用目的"></a>3. 使用目的</h2><p><code>希望自己的网站内容被第一时间收录</code><br><a id="more"></a></p>
-<h2 id="4-安装插件"><a href="#4-安装插件" class="headerlink" title="4. 安装插件"></a>4. 安装插件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-baidu-url-submit --save</div></pre></td></tr></table></figure>
-<h2 id="5-配置修改"><a href="#5-配置修改" class="headerlink" title="5. 配置修改"></a>5. 配置修改</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ 在根目录下的_config.yml 新增如下配置</div><div class="line">$ baidu_url_submit:</div><div class="line"> count: 3 <span class="comment">## 比如3，代表提交最新的三个链接</span></div><div class="line"> host: http://imaye.oschina.io <span class="comment">## 在百度站长平台中注册的域名</span></div><div class="line"> token: your token secret <span class="comment">## 请注意这是您的秘钥， 请不要发布在公众仓库里!</span></div><div class="line"> path: baidusitemap.xml  <span class="comment">## 文本文档的地址， 新链接会保存在此文本文档里</span></div><div class="line"> $ 在deploy处新增</div><div class="line"> $ -type: baidu_url_submitter</div></pre></td></tr></table></figure>
-<h2 id="6-实现原理"><a href="#6-实现原理" class="headerlink" title="6. 实现原理"></a>6. 实现原理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g 生成文件</div><div class="line">$ hexo d 读取上面生成的文件，并提交到百度搜索引擎</div></pre></td></tr></table></figure>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>   最近测试环境supervisor重启需要先查到他的进程id ,kill 掉, 再启动，感觉略low了点<br>   于是乎想到可不可以写成一个命令。自动完成这些操作。<br>   so,查了下相关linux命令,用shell执行即可</p>
+<h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><p>   Linux</p>
+<h1 id="shell-脚本"><a href="#shell-脚本" class="headerlink" title="shell 脚本"></a>shell 脚本</h1><a id="more"></a>
+<h2 id="文件名称"><a href="#文件名称" class="headerlink" title="文件名称"></a>文件名称</h2><p>后缀需要是.sh </p>
+<h2 id="文件首行"><a href="#文件首行" class="headerlink" title="文件首行"></a>文件首行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div></pre></td></tr></table></figure>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1. 定义变量</div><div class="line">your_name=&apos;变量&apos;</div><div class="line">2. 使用变量</div><div class="line">echo &quot;$&#123;your_name&#125;&quot; </div><div class="line">大括号可以不用，但建议保留,</div><div class="line">echo 为输出命令</div><div class="line">3. 删除变量</div><div class="line">unset your_name</div></pre></td></tr></table></figure>
+<h2 id="linux-xargs-命令"><a href="#linux-xargs-命令" class="headerlink" title="linux xargs 命令"></a>linux xargs 命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">xargs 是常用在管道符后面执行</div><div class="line">一般是取得管道符前面的数据取到作为参数进行执行</div><div class="line">eg. ps -A | grep &quot;supervisor&quot; | awk &apos;&#123;print $1&#125;&apos; | xargs kill</div><div class="line">上面语句 查出supervisor 的所有进程</div><div class="line">awk 取出所有的进程id</div><div class="line">xargs 删掉他们</div></pre></td></tr></table></figure>
+<h2 id="命令赋值"><a href="#命令赋值" class="headerlink" title="命令赋值"></a>命令赋值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">赋值用的是``不是单引号&apos;&apos;；</div><div class="line">eg. super_proc=`ps -A |grep &quot;supervisor&quot;| awk &apos;&#123;print $1&#125;&apos;`</div></pre></td></tr></table></figure>
+<h2 id="其他用法"><a href="#其他用法" class="headerlink" title="其他用法"></a>其他用法</h2><p> shell其他用法正在学习中,之后再进行补偿</p>
+<h2 id="shell样例"><a href="#shell样例" class="headerlink" title="shell样例"></a>shell样例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">echo &quot;开始查找supervisor进程&quot;</div><div class="line">super_proc=`ps -A |grep &quot;supervisor&quot;| awk &apos;&#123;print $1&#125;&apos;`</div><div class="line">echo &quot;supoervisor进程是$&#123;super_proc&#125;&quot;</div><div class="line">ps -A |grep &quot;supervisor&quot;| awk &apos;&#123;print $1&#125;&apos; | xargs kill</div><div class="line">echo &quot;$&#123;super_proc&#125;进程已删除&quot;</div><div class="line">/usr/bin/supervisord -c /etc/supervisord.conf</div><div class="line">echo &quot;supervisor 已成功启动&quot;</div></pre></td></tr></table></figure>
 <h5 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h5><blockquote>
-<p>记录点滴，成为更好的自己。     — weizhuo.ma</p>
+<p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
 </blockquote>
 
       
@@ -233,11 +237,15 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">百度收录</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">xargs</a>
         		</li>
       		
 		</ul>
@@ -304,7 +312,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://imaye.oschina.io/2017/06/09/hexo-插件百度提交收录/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://imaye.oschina.io/2017/11/20/linux-初写shell文件/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -318,18 +326,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/06/12/python学习-字符串运算/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          python学习 字符串运算
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/05/26/markdown使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">markdown 笔记</div>
+    <a href="/2017/11/01/php7-性能测试环境搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php7 性能测试环境搭建</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -356,7 +355,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-注册账号"><span class="toc-number">1.</span> <span class="toc-text">1.注册账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-安装插件"><span class="toc-number">2.</span> <span class="toc-text">2. 安装插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-使用目的"><span class="toc-number">3.</span> <span class="toc-text">3. 使用目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-安装插件"><span class="toc-number">4.</span> <span class="toc-text">4. 安装插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-配置修改"><span class="toc-number">5.</span> <span class="toc-text">5. 配置修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-实现原理"><span class="toc-number">6.</span> <span class="toc-text">6. 实现原理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#引用"><span class="toc-number">6.0.0.1.</span> <span class="toc-text">引用</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#系统环境"><span class="toc-number">2.</span> <span class="toc-text">系统环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#shell-脚本"><span class="toc-number">3.</span> <span class="toc-text">shell 脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文件名称"><span class="toc-number">3.1.</span> <span class="toc-text">文件名称</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件首行"><span class="toc-number">3.2.</span> <span class="toc-text">文件首行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">3.3.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linux-xargs-命令"><span class="toc-number">3.4.</span> <span class="toc-text">linux xargs 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令赋值"><span class="toc-number">3.5.</span> <span class="toc-text">命令赋值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他用法"><span class="toc-number">3.6.</span> <span class="toc-text">其他用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shell样例"><span class="toc-number">3.7.</span> <span class="toc-text">shell样例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#引用"><span class="toc-number">3.7.0.0.1.</span> <span class="toc-text">引用</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -372,7 +371,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="hexo-插件百度提交收录" ></div> 
+  <div id="SOHUCS" sid="linux-初写shell文件" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = "cytcxc9Qr"; 
