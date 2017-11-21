@@ -2,9 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://maweizhuo.com/wiki/hello-world/</loc>
+    <loc>http://maweizhuo.com/wiki/CSS%E5%B1%9E%E6%80%A7%E5%A3%B0%E6%98%8E%E9%A1%BA%E5%BA%8F%E8%A7%84%E8%8C%83/</loc>
     
-    <lastmod>2017-11-21T03:26:55.000Z</lastmod>
+    <lastmod>2017-11-21T08:19:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://maweizhuo.com/wiki/maweizhuo%20wiki%20site%20desc/</loc>
+    
+    <lastmod>2017-11-21T08:17:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://maweizhuo.com/wiki/%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
+    
+    <lastmod>2017-11-21T07:41:43.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://maweizhuo.com/wiki/IaaS,%20PaaS,%20SaaS%20%E6%A6%82%E5%BF%B5/</loc>
+    
+    <lastmod>2017-11-21T07:41:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://maweizhuo.com/wiki/Git%20%E6%B8%85%E7%90%86%E5%B7%B2%E8%BF%BD%E8%B8%AA%E6%88%96%E6%9C%AA%E6%B7%BB%E5%8A%A0%E8%BF%BD%E8%B8%AA%E7%9A%84%E6%96%87%E4%BB%B6/</loc>
+    
+    <lastmod>2017-11-21T07:41:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://maweizhuo.com/wiki/DISC-%E8%A1%8C%E4%B8%BA%E9%A3%8E%E6%A0%BC%E7%90%86%E8%AE%BA/</loc>
+    
+    <lastmod>2017-11-21T07:40:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://maweizhuo.com/wiki/awk%20%E7%AE%A1%E9%81%93%E6%93%8D%E4%BD%9C%E5%B0%8F%E7%BB%93/</loc>
+    
+    <lastmod>2017-11-21T07:39:54.000Z</lastmod>
     
   </url>
   
@@ -16,14 +58,14 @@
   </url>
   
   <url>
-    <loc>http://maweizhuo.com/categories/index.html</loc>
+    <loc>http://maweizhuo.com/tags/index.html</loc>
     
     <lastmod>2017-11-20T09:36:00.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://maweizhuo.com/tags/index.html</loc>
+    <loc>http://maweizhuo.com/categories/index.html</loc>
     
     <lastmod>2017-11-20T09:36:00.000Z</lastmod>
     
