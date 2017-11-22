@@ -77,9 +77,9 @@
     <link href="http://maweizhuo.com/wiki/laravel%E7%9B%B8%E5%85%B3/"/>
     <id>http://maweizhuo.com/wiki/laravel相关/</id>
     <published>2017-11-22T06:53:30.000Z</published>
-    <updated>2017-11-22T09:52:38.000Z</updated>
+    <updated>2017-11-22T10:12:06.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><code>laravel</code> 日常使用中遇到的一些问题及总结</p><h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><ol><li><p><code>框架安装完</code>需要做的事情</p><ul><li>.env 文件创建,修改里面的配置</li><li>chmod -R 777 storage/ </li></ul></li><li><p>如何去掉<code>notice错误,undefined index ..</code> 提示<br>当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对<br>php.ini 里的变量进行重写了。 </p><p>修改地址:vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php<br>修改 <code>error_reporting(E_ALL &amp; ~E_NOTICE)</code></p><ol><li><code>session</code>问题</li></ol><ul><li>现象： 登录接口 session::put(‘user_id’,1)<pre><code> 退出接口 session::forget(&apos;user_id&apos;);用户信息 查询 session::get(&apos;user_id&apos;)，还有数据，不正常。</code></pre></li><li>解决办法：<br>在退出接口里session::forget 或put空数据之后<br>再加上一行代码 <code>session::save()</code>即可</li></ul><ol><li>如何<code>添加异常</code>提示<br>位置:代码文件位置在app/Exceptions/Handler.php <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">render</span><span class="params">($request, Exception $exception)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">$this</span>-&gt;isHttpException($exception)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">parent</span>::render($request, $exception);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> response()-&gt;json([</span><br><span class="line">            <span class="string">'code'</span>=&gt;$exception-&gt;getCode(),</span><br><span class="line">            <span class="string">'msg'</span>=&gt;$exception-&gt;getMessage(),</span><br><span class="line">        ] );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol></li></ol><ol><li><code>ubuntu 安装完之后composor</code> 报错</li></ol><ul><li><p>现象: 通过composer安装laravel框架过程中将需要调用<code>ext-dom</code>，若xml扩展未安装，这也会影响我们安装laravel。<br> 以上两个扩展是PHP7版本安装laravel所依赖也是容易被忽略的扩展，<br> 当你安装laravel无法正常生成vendor目录时就需要检查mbstring扩展加载情况了。</p><ul><li><p>解决   安装也是简单的：<br>apt-get install php7.0-mbstring</p><p>若提示：phpunit/phpunit 5.0.x requires ext-dom * -&gt; the requested PHP extension dom is missing from your system.<br>则需要安装xml扩展。<br>apt-get install php7.0-xml</p></li></ul></li></ul><ol><li><code>group by</code> 用法<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReviewMark::whereIn(<span class="string">'package_id'</span>, $review_pid)</span><br><span class="line">    -&gt;where(<span class="string">'is_cancel'</span>, <span class="number">1</span>)</span><br><span class="line">    -&gt;where(<span class="string">"l4_answers"</span>, <span class="string">"!="</span>, <span class="string">''</span>)-&gt;select(\DB::raw(<span class="string">'package_id,count(1) as num'</span>))</span><br><span class="line">    -&gt;groupBy(<span class="string">'package_id'</span>)-&gt;get()-&gt;toArray();</span><br></pre></td></tr></table></figure></li></ol><ol><li><p>laravel <code>定时任务不执行</code>的问题</p><ul><li><p>laravel 定时任务设置不重复执行的话会生成一个加密文件，当完成这个任务时候，会删掉这个文件。<br>如果不删掉的话这个任务会一直不执行。</p></li><li><p>kernel.php 里 command 里面名称的方法命名，如果包含下划线也不执行，如commad(‘m_r_diff:sync’)</p></li></ul><ol><li><code>composer</code> 安装<br>curl -sS <a href="https://getcomposer.org/installer" rel="external nofollow noopener noreferrer" target="_blank">https://getcomposer.org/installer</a> | /data/soft/php-fpm_9000/bin/php<br>sudo mv composer.phar /usr/local/bin/composer</li></ol><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — weizhuo.ma</p></blockquote></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><code>laravel</code> 日常使用中遇到的一些问题及总结</p><h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><ol><li><p><code>框架安装完</code>需要做的事情</p><ul><li>.env 文件创建,修改里面的配置</li><li>chmod -R 777 storage/ </li></ul></li><li><p>如何去掉<code>notice错误,undefined index ..</code> 提示<br>当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对<br>php.ini 里的变量进行重写了。 </p><p>修改地址:vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php<br>修改 <code>error_reporting(E_ALL &amp; ~E_NOTICE)</code></p></li><li><p><code>session</code>问题</p><ul><li>现象： 登录接口 session::put(‘user_id’,1)<pre><code> 退出接口 session::forget(&apos;user_id&apos;);用户信息 查询 session::get(&apos;user_id&apos;)，还有数据，不正常。</code></pre></li><li>解决办法：<br>在退出接口里session::forget 或put空数据之后<br>再加上一行代码 <code>session::save()</code>即可</li></ul></li><li><p>如何<code>添加异常</code>提示<br>位置:代码文件位置在app/Exceptions/Handler.php </p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">render</span><span class="params">($request, Exception $exception)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">$this</span>-&gt;isHttpException($exception)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">parent</span>::render($request, $exception);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> response()-&gt;json([</span><br><span class="line">            <span class="string">'code'</span>=&gt;$exception-&gt;getCode(),</span><br><span class="line">            <span class="string">'msg'</span>=&gt;$exception-&gt;getMessage(),</span><br><span class="line">        ] );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p><code>ubuntu 安装完之后composor</code> 报错</p><ul><li><p>现象: 通过composer安装laravel框架过程中将需要调用<code>ext-dom</code>，若xml扩展未安装，这也会影响我们安装laravel。<br>以上两个扩展是PHP7版本安装laravel所依赖也是容易被忽略的扩展，<br>当你安装laravel无法正常生成vendor目录时就需要检查mbstring扩展加载情况了。</p></li><li><p>解决   安装也是简单的：<br>apt-get install php7.0-mbstring</p><p>若提示：phpunit/phpunit 5.0.x requires ext-dom * -&gt; the requested PHP extension dom is missing from your system.<br>则需要安装xml扩展。<br>apt-get install php7.0-xml</p></li></ul></li><li><p><code>group by</code> 用法</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReviewMark::whereIn(<span class="string">'package_id'</span>, $review_pid)</span><br><span class="line">    -&gt;where(<span class="string">'is_cancel'</span>, <span class="number">1</span>)</span><br><span class="line">    -&gt;where(<span class="string">"l4_answers"</span>, <span class="string">"!="</span>, <span class="string">''</span>)-&gt;select(\DB::raw(<span class="string">'package_id,count(1) as num'</span>))</span><br><span class="line">    -&gt;groupBy(<span class="string">'package_id'</span>)-&gt;get()-&gt;toArray();</span><br></pre></td></tr></table></figure></li><li><p>laravel <code>定时任务不执行</code>的问题</p><ul><li><p>laravel 定时任务设置不重复执行的话会生成一个加密文件，当完成这个任务时候，会删掉这个文件。<br>如果不删掉的话这个任务会一直不执行。</p></li><li><p>kernel.php 里 command 里面名称的方法命名，如果包含下划线也不执行，如commad(‘m_r_diff:sync’)</p></li></ul></li><li><p><code>composer</code> 安装<br> curl -sS <a href="https://getcomposer.org/installer" rel="external nofollow noopener noreferrer" target="_blank">https://getcomposer.org/installer</a> | /data/soft/php-fpm_9000/bin/php<br> sudo mv composer.phar /usr/local/bin/composer</p><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — weizhuo.ma</p></blockquote></li></ol>]]></content>
     
     <summary type="html">
     
@@ -213,34 +213,6 @@
   </entry>
   
   <entry>
-    <title>IaaS, PaaS, SaaS 概念</title>
-    <link href="http://maweizhuo.com/wiki/IaaS,%20PaaS,%20SaaS%20%E6%A6%82%E5%BF%B5/"/>
-    <id>http://maweizhuo.com/wiki/IaaS, PaaS, SaaS 概念/</id>
-    <published>2017-08-25T15:04:48.000Z</published>
-    <updated>2017-11-21T07:41:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>云服务通常将其提供的服务自下而上分成三层：<strong>基础设施(infrastructure)、平台(platform)和软件(software)</strong>。</p><h2 id="IaaS"><a href="#IaaS" class="headerlink" title="IaaS"></a>IaaS</h2><p><strong>Infrastructure-as-a-Service(基础设施即服务)</strong></p><p>第一层叫做 IaaS，有时候也叫做 Hardware-as-a-Service，如果你想在办公室或者公司的网站上运行一些应用（比如自己开发好的 APP 或是网络游戏，你需要去买服务器，成本太高了。</p><p>但是现在有IaaS，你可以将硬件外包给这些专业的公司，这些公司会提供场外服务器，存储和网络硬件，你花钱租用就行。</p><p>这样就节省了维护成本和办公场地，并且你可以在任何时候利用这些硬件来运行其应用。</p><h2 id="PaaS"><a href="#PaaS" class="headerlink" title="PaaS"></a>PaaS</h2><p><strong>Platform-as-a-Service（平台即服务）</strong></p><p>第二层就是 PaaS，某些时候也叫做中间件。PaaS 是面向软件开发者的服务，云计算平台提供硬件，OS， 编程语言，开发库，部署工具， 帮助软件开发者更快的开发软件服务。</p><p>云服务商将软件开发的云端开发平台和软件运营的云端运行环境（包括中间件、数据库、we b服务、消息总线等基础通用服务）作为一种服务，提供给最终用户。</p><p>换句话说，这些 PaaS 服务商提供的都是基础开发服务平台，主要目的就是让你把精力专注在应用层面的开发上面，而不需要浪费在这些基础重复性的事情上，也不用担心开发完成后部署问题。</p><h2 id="SaaS"><a href="#SaaS" class="headerlink" title="SaaS"></a>SaaS</h2><p><strong>Software-as-a-Service（软件即服务）</strong></p><p>简单说就是人家把你想要的功能开发好成应用软件，然后直接卖账号给你用，你也不需要担心服务器、带宽、应用开发等问题，直接交钱使用就行。</p><p>不再面向开发，而是直接面向企业或普通用户，企业改改 logo，直接给用户使用。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href="https://www.aliyun.com/zixun/content/1_5_15871.html" rel="external nofollow noopener noreferrer" target="_blank">IaaS PaaS和SaaS公司的作用 | 盐漂浮草</a></li><li><a href="https://zhihu.com/question/21641778/answer/91301221" rel="external nofollow noopener noreferrer" target="_blank">谁能举个通俗易懂的例子告诉我IAAS，SAAS，PAAS的区别？ | 东坪子的回答</a></li><li><a href="https://zhihu.com/question/21641778/answer/62523535" rel="external nofollow noopener noreferrer" target="_blank">谁能举个通俗易懂的例子告诉我IAAS，SAAS，PAAS的区别？ | 何足道的回答</a></li></ul></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;云服务通常将其提供的服务自下而上分成三层：&lt;strong&gt;基础设施(infrastructure)、平台(platform)和软件(software)&lt;/strong&gt;。&lt;/p&gt;
-&lt;h2 id=&quot;IaaS&quot;&gt;&lt;a href=&quot;#IaaS&quot; class=&quot;headerlink
-      
-    
-    </summary>
-    
-      <category term="编程艺术" scheme="http://maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
-    
-      <category term="架构" scheme="http://maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/%E6%9E%B6%E6%9E%84/"/>
-    
-    
-      <category term="云服务" scheme="http://maweizhuo.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>awk 管道操作小结</title>
     <link href="http://maweizhuo.com/wiki/awk%20%E7%AE%A1%E9%81%93%E6%93%8D%E4%BD%9C%E5%B0%8F%E7%BB%93/"/>
     <id>http://maweizhuo.com/wiki/awk 管道操作小结/</id>
@@ -319,6 +291,34 @@
     
     
       <category term="算法" scheme="http://maweizhuo.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IaaS, PaaS, SaaS 概念</title>
+    <link href="http://maweizhuo.com/wiki/IaaS,%20PaaS,%20SaaS%20%E6%A6%82%E5%BF%B5/"/>
+    <id>http://maweizhuo.com/wiki/IaaS, PaaS, SaaS 概念/</id>
+    <published>2017-08-25T15:04:48.000Z</published>
+    <updated>2017-11-21T07:41:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>云服务通常将其提供的服务自下而上分成三层：<strong>基础设施(infrastructure)、平台(platform)和软件(software)</strong>。</p><h2 id="IaaS"><a href="#IaaS" class="headerlink" title="IaaS"></a>IaaS</h2><p><strong>Infrastructure-as-a-Service(基础设施即服务)</strong></p><p>第一层叫做 IaaS，有时候也叫做 Hardware-as-a-Service，如果你想在办公室或者公司的网站上运行一些应用（比如自己开发好的 APP 或是网络游戏，你需要去买服务器，成本太高了。</p><p>但是现在有IaaS，你可以将硬件外包给这些专业的公司，这些公司会提供场外服务器，存储和网络硬件，你花钱租用就行。</p><p>这样就节省了维护成本和办公场地，并且你可以在任何时候利用这些硬件来运行其应用。</p><h2 id="PaaS"><a href="#PaaS" class="headerlink" title="PaaS"></a>PaaS</h2><p><strong>Platform-as-a-Service（平台即服务）</strong></p><p>第二层就是 PaaS，某些时候也叫做中间件。PaaS 是面向软件开发者的服务，云计算平台提供硬件，OS， 编程语言，开发库，部署工具， 帮助软件开发者更快的开发软件服务。</p><p>云服务商将软件开发的云端开发平台和软件运营的云端运行环境（包括中间件、数据库、we b服务、消息总线等基础通用服务）作为一种服务，提供给最终用户。</p><p>换句话说，这些 PaaS 服务商提供的都是基础开发服务平台，主要目的就是让你把精力专注在应用层面的开发上面，而不需要浪费在这些基础重复性的事情上，也不用担心开发完成后部署问题。</p><h2 id="SaaS"><a href="#SaaS" class="headerlink" title="SaaS"></a>SaaS</h2><p><strong>Software-as-a-Service（软件即服务）</strong></p><p>简单说就是人家把你想要的功能开发好成应用软件，然后直接卖账号给你用，你也不需要担心服务器、带宽、应用开发等问题，直接交钱使用就行。</p><p>不再面向开发，而是直接面向企业或普通用户，企业改改 logo，直接给用户使用。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href="https://www.aliyun.com/zixun/content/1_5_15871.html" rel="external nofollow noopener noreferrer" target="_blank">IaaS PaaS和SaaS公司的作用 | 盐漂浮草</a></li><li><a href="https://zhihu.com/question/21641778/answer/91301221" rel="external nofollow noopener noreferrer" target="_blank">谁能举个通俗易懂的例子告诉我IAAS，SAAS，PAAS的区别？ | 东坪子的回答</a></li><li><a href="https://zhihu.com/question/21641778/answer/62523535" rel="external nofollow noopener noreferrer" target="_blank">谁能举个通俗易懂的例子告诉我IAAS，SAAS，PAAS的区别？ | 何足道的回答</a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;云服务通常将其提供的服务自下而上分成三层：&lt;strong&gt;基础设施(infrastructure)、平台(platform)和软件(software)&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&quot;IaaS&quot;&gt;&lt;a href=&quot;#IaaS&quot; class=&quot;headerlink
+      
+    
+    </summary>
+    
+      <category term="编程艺术" scheme="http://maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+      <category term="架构" scheme="http://maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/%E6%9E%B6%E6%9E%84/"/>
+    
+    
+      <category term="云服务" scheme="http://maweizhuo.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/"/>
     
   </entry>
   
