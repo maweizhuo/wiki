@@ -6,7 +6,7 @@
   <link href="/wiki/atom.xml" rel="self"/>
   
   <link href="http://maweizhuo.com/"/>
-  <updated>2017-11-22T07:22:25.000Z</updated>
+  <updated>2017-11-22T09:56:48.000Z</updated>
   <id>http://maweizhuo.com/</id>
   
   <author>
@@ -17,21 +17,134 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Git 常用命令</title>
-    <link href="http://maweizhuo.com/wiki/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://maweizhuo.com/wiki/Git 常用命令/</id>
-    <published>2017-11-22T01:51:30.000Z</published>
-    <updated>2017-11-22T07:22:25.000Z</updated>
+    <title>linux命令汇总</title>
+    <link href="http://maweizhuo.com/wiki/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/"/>
+    <id>http://maweizhuo.com/wiki/linux常用命令汇总/</id>
+    <published>2017-11-22T06:55:30.000Z</published>
+    <updated>2017-11-22T09:56:48.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><p>克隆一个版本仓库命令<br>常用参数还有</p><ul><li>git clone url –depth=1<br>(加上这个参数可以避免项目太大，下载失败；<br>–depth=1 是指只拉取最后一次的提交结果。);</li></ul><ul><li>git clone url new_name</li></ul><h2 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init 初始化</span><br><span class="line">     git branch branch_name</span><br><span class="line">    git branch -D branch_name 删除分支</span><br><span class="line">     git checkout -b branch_name 新建并切换为这个分支</span><br><span class="line">     git pull origin master 更新  = git fetch (拉取远程代码不</span><br><span class="line"> 自动合并) + git merge</span><br></pre></td></tr></table></figure><h2 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 从主干合并分支代码</span><br><span class="line">1. 切换到master</span><br><span class="line">   git checkout master</span><br><span class="line">2.  合并代码到主干</span><br><span class="line">    git merge --no-ff develop</span><br><span class="line">    --no-ff 保留该版本提交的log</span><br><span class="line">3.  推送到远程</span><br><span class="line">     git push</span><br></pre></td></tr></table></figure><h2 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">     git rm a.txt  // 删除文件</span><br><span class="line">     git commit -m &apos;备注&apos;</span><br><span class="line">     git push origin master</span><br><span class="line">     git push origin develop  （develop为远程分支名）</span><br><span class="line"></span><br><span class="line">     git log</span><br><span class="line">     git status</span><br></pre></td></tr></table></figure><h2 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//  冲突之后 ,以下命令回退还原</span><br><span class="line">git reset --hard HEAD^  // 最新的一次提交</span><br><span class="line">git checkout 文件路径</span><br><span class="line">git revert </span><br><span class="line"></span><br><span class="line">   冲突放弃本地修改 的改法</span><br><span class="line">git reset --hard</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h2 id="git-tag"><a href="#git-tag" class="headerlink" title="git tag"></a>git tag</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git标签使用</span><br><span class="line">-- 新建tag v1.0</span><br><span class="line"> git tag -a v1.0 -m &apos;v1.0 release&apos;</span><br><span class="line">-- 推送tag v1.0 到远程库</span><br><span class="line">  git push  origin v1.0</span><br><span class="line">-- 删除本地tag</span><br><span class="line">git tag -d v1.0</span><br><span class="line">-- 删除远程tag</span><br><span class="line">git push origin --delete v1.0</span><br></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — weizhuo.ma</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><code>linux</code> 环境是多数RD必须要用的一个环境,其中一些常见的命令,也必须会使用</p><h2 id="常用汇总"><a href="#常用汇总" class="headerlink" title="常用汇总"></a>常用汇总</h2><ol><li><p><code>递归</code>创建目录<br><strong>mkdir -p /home/dir1/dir2</strong></p></li><li><p><code>查找文件名</code><br><code>find</code> /路径 -iname ‘文件名*’</p></li><li><p><code>查找内容</code><br>find /usr/ -type f |xargs grep ‘bind-address’<br>或 <code>grep</code> -r ‘bind-address’ /usr</p></li><li><p>tar/unzip 命令解压到<code>指定目录</code><br>tar zxvf elasticsearch-5.4.1.tar.gz <code>-C</code>/usr/local/<br>unzip test.zip <code>-d</code> /root/ </p></li><li><p>查看文件最新内容<br>tail -f /user/log.txt</p></li></ol><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — weizhuo.ma</p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;git-clone&quot;&gt;&lt;a href=&quot;#git-clone&quot; class=&quot;headerlink&quot; title=&quot;git clone&quot;&gt;&lt;/a&gt;git clone&lt;/h2&gt;&lt;p&gt;克隆一个版本仓库命令&lt;br&gt;常用参数还有&lt;/p&gt;
+        &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;&lt;code&gt;linux&lt;/code&gt; 环境是多数RD必须要用的一个环境,其中一些常见的命令,也必须会使用&lt;/p&gt;
+&lt;h2 id=&quot;常用汇总&quot;
+      
+    
+    </summary>
+    
+      <category term="编程艺术" scheme="http://maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+      <category term="Linux" scheme="http://maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://maweizhuo.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux php 自带扩展编译安装</title>
+    <link href="http://maweizhuo.com/wiki/linux%20php%20%E8%87%AA%E5%B8%A6%E6%89%A9%E5%B1%95%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/"/>
+    <id>http://maweizhuo.com/wiki/linux php 自带扩展编译安装/</id>
+    <published>2017-11-22T06:54:30.000Z</published>
+    <updated>2017-11-22T09:33:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><code>php</code> 安装自带或下载的扩展,需要编译安装</p><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol><li><p>进入到PHP 源码扩展目录<br>cd software/tar/php-7.0.2/ext/</p></li><li><p>进入需要安装的扩展目录比如 exif<br>cd exif</p></li><li><p>执行phpize （ 编译前准备）<br>/usr/local/php/bin/phpize </p></li><li><p>配置，并指向PHP配置文件位置<br>./configure <code>--with-php-config=/usr/local/php/bin/php-config</code></p></li><li><p>make 会在当前modules目录下生成exif.so</p></li><li><p>make install 会把exif.so复制到<br>/usr/local/php/lib/php/extensions/no-debug-non-zts-20151012/</p></li><li><p>编辑php.ini<br>extension = exif.so</p></li><li><p>重启服务<br>重启php-fpm 或Apache看phpinfo会有对应扩展</p></li></ol><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — weizhuo.ma</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;&lt;code&gt;php&lt;/code&gt; 安装自带或下载的扩展,需要编译安装&lt;/p&gt;
+&lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class
+      
+    
+    </summary>
+    
+      <category term="程序语言" scheme="http://maweizhuo.com/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="PHP" scheme="http://maweizhuo.com/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/PHP/"/>
+    
+    
+      <category term="php" scheme="http://maweizhuo.com/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>laravel相关</title>
+    <link href="http://maweizhuo.com/wiki/laravel%E7%9B%B8%E5%85%B3/"/>
+    <id>http://maweizhuo.com/wiki/laravel相关/</id>
+    <published>2017-11-22T06:53:30.000Z</published>
+    <updated>2017-11-22T09:52:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><code>laravel</code> 日常使用中遇到的一些问题及总结</p><h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><ol><li><p><code>框架安装完</code>需要做的事情</p><ul><li>.env 文件创建,修改里面的配置</li><li>chmod -R 777 storage/ </li></ul></li><li><p>如何去掉<code>notice错误,undefined index ..</code> 提示<br>当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对<br>php.ini 里的变量进行重写了。 </p><p>修改地址:vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php<br>修改 <code>error_reporting(E_ALL &amp; ~E_NOTICE)</code></p><ol><li><code>session</code>问题</li></ol><ul><li>现象： 登录接口 session::put(‘user_id’,1)<pre><code> 退出接口 session::forget(&apos;user_id&apos;);用户信息 查询 session::get(&apos;user_id&apos;)，还有数据，不正常。</code></pre></li><li>解决办法：<br>在退出接口里session::forget 或put空数据之后<br>再加上一行代码 <code>session::save()</code>即可</li></ul><ol><li>如何<code>添加异常</code>提示<br>位置:代码文件位置在app/Exceptions/Handler.php <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">render</span><span class="params">($request, Exception $exception)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">$this</span>-&gt;isHttpException($exception)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">parent</span>::render($request, $exception);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> response()-&gt;json([</span><br><span class="line">            <span class="string">'code'</span>=&gt;$exception-&gt;getCode(),</span><br><span class="line">            <span class="string">'msg'</span>=&gt;$exception-&gt;getMessage(),</span><br><span class="line">        ] );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol></li></ol><ol><li><code>ubuntu 安装完之后composor</code> 报错</li></ol><ul><li><p>现象: 通过composer安装laravel框架过程中将需要调用<code>ext-dom</code>，若xml扩展未安装，这也会影响我们安装laravel。<br> 以上两个扩展是PHP7版本安装laravel所依赖也是容易被忽略的扩展，<br> 当你安装laravel无法正常生成vendor目录时就需要检查mbstring扩展加载情况了。</p><ul><li><p>解决   安装也是简单的：<br>apt-get install php7.0-mbstring</p><p>若提示：phpunit/phpunit 5.0.x requires ext-dom * -&gt; the requested PHP extension dom is missing from your system.<br>则需要安装xml扩展。<br>apt-get install php7.0-xml</p></li></ul></li></ul><ol><li><code>group by</code> 用法<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReviewMark::whereIn(<span class="string">'package_id'</span>, $review_pid)</span><br><span class="line">    -&gt;where(<span class="string">'is_cancel'</span>, <span class="number">1</span>)</span><br><span class="line">    -&gt;where(<span class="string">"l4_answers"</span>, <span class="string">"!="</span>, <span class="string">''</span>)-&gt;select(\DB::raw(<span class="string">'package_id,count(1) as num'</span>))</span><br><span class="line">    -&gt;groupBy(<span class="string">'package_id'</span>)-&gt;get()-&gt;toArray();</span><br></pre></td></tr></table></figure></li></ol><ol><li><p>laravel <code>定时任务不执行</code>的问题</p><ul><li><p>laravel 定时任务设置不重复执行的话会生成一个加密文件，当完成这个任务时候，会删掉这个文件。<br>如果不删掉的话这个任务会一直不执行。</p></li><li><p>kernel.php 里 command 里面名称的方法命名，如果包含下划线也不执行，如commad(‘m_r_diff:sync’)</p></li></ul><ol><li><code>composer</code> 安装<br>curl -sS <a href="https://getcomposer.org/installer" rel="external nofollow noopener noreferrer" target="_blank">https://getcomposer.org/installer</a> | /data/soft/php-fpm_9000/bin/php<br>sudo mv composer.phar /usr/local/bin/composer</li></ol><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — weizhuo.ma</p></blockquote></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;&lt;code&gt;laravel&lt;/code&gt; 日常使用中遇到的一些问题及总结&lt;/p&gt;
+&lt;h2 id=&quot;问题汇总&quot;&gt;&lt;a href=&quot;#问题汇总&quot;
+      
+    
+    </summary>
+    
+      <category term="程序语言" scheme="http://maweizhuo.com/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="PHP" scheme="http://maweizhuo.com/categories/%E7%A8%8B%E5%BA%8F%E8%AF%AD%E8%A8%80/PHP/"/>
+    
+    
+      <category term="laravel" scheme="http://maweizhuo.com/tags/laravel/"/>
+    
+      <category term="php" scheme="http://maweizhuo.com/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac 工具软件</title>
+    <link href="http://maweizhuo.com/wiki/mac%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    <id>http://maweizhuo.com/wiki/mac工具软件/</id>
+    <published>2017-11-22T06:51:30.000Z</published>
+    <updated>2017-11-22T07:41:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="mac-常用工具下载地址汇总"><a href="#mac-常用工具下载地址汇总" class="headerlink" title="mac 常用工具下载地址汇总"></a>mac 常用工具下载地址汇总</h2><blockquote><ul><li><a href="http://www.cnblogs.com/wulaoer/p/5538721.html" rel="external nofollow noopener noreferrer" target="_blank">securecrt</a></li><li><a href="http://www.sdifen.com/charles4.html" rel="external nofollow noopener noreferrer" target="_blank">charles 抓包工具</a></li><li><a href="https://pan.baidu.com/share/init?surl=kVhhv63" rel="external nofollow noopener noreferrer" target="_blank">phpstorm 网盘地址</a> 密码:iueh<br><a href="http://www.sdifen.com/phpstorm20162.html" rel="external nofollow noopener noreferrer" target="_blank">安装参考地址</a></li><li><a href="http://www.sequelpro.com/download" rel="external nofollow noopener noreferrer" target="_blank">数据库管理工具 sequelpro</a></li><li>postman 和 navicat 在我的百度云网盘</li></ul></blockquote><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — weizhuo.ma</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;mac-常用工具下载地址汇总&quot;&gt;&lt;a href=&quot;#mac-常用工具下载地址汇总&quot; class=&quot;headerlink&quot; title=&quot;mac 常用工具下载地址汇总&quot;&gt;&lt;/a&gt;mac 常用工具下载地址汇总&lt;/h2&gt;&lt;blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;git clon
+&lt;li&gt;&lt;a 
+      
+    
+    </summary>
+    
+      <category term="工具软件" scheme="http://maweizhuo.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="Mac" scheme="http://maweizhuo.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/Mac/"/>
+    
+    
+      <category term="Git" scheme="http://maweizhuo.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git 常用命令</title>
+    <link href="http://maweizhuo.com/wiki/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://maweizhuo.com/wiki/Git 常用命令/</id>
+    <published>2017-11-22T01:51:30.000Z</published>
+    <updated>2017-11-22T07:43:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><p>克隆一个版本仓库命令<br>常用参数还有<br><code>git clone url --depth=1</code><br>      (加上这个参数可以避免项目太大，下载失败；<br>       <strong>–depth=1</strong> 是指只拉取最后一次的提交结果。);</p><p><code>git clone url new_name</code></p><h2 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init 初始化</span><br><span class="line">     git branch branch_name</span><br><span class="line">    git branch -D branch_name 删除分支</span><br><span class="line">     git checkout -b branch_name 新建并切换为这个分支</span><br><span class="line">     git pull origin master 更新  = git fetch (拉取远程代码不</span><br><span class="line"> 自动合并) + git merge</span><br></pre></td></tr></table></figure><h2 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 从主干合并分支代码</span><br><span class="line">1. 切换到master</span><br><span class="line">   git checkout master</span><br><span class="line">2.  合并代码到主干</span><br><span class="line">    git merge --no-ff develop</span><br><span class="line">    --no-ff 保留该版本提交的log</span><br><span class="line">3.  推送到远程</span><br><span class="line">     git push</span><br></pre></td></tr></table></figure><h2 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">     git rm a.txt  // 删除文件</span><br><span class="line">     git commit -m &apos;备注&apos;</span><br><span class="line">     git push origin master</span><br><span class="line">     git push origin develop  （develop为远程分支名）</span><br><span class="line"></span><br><span class="line">     git log</span><br><span class="line">     git status</span><br></pre></td></tr></table></figure><h2 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//  冲突之后 ,以下命令回退还原</span><br><span class="line">git reset --hard HEAD^  // 最新的一次提交</span><br><span class="line">git checkout 文件路径</span><br><span class="line">git revert </span><br><span class="line"></span><br><span class="line">   冲突放弃本地修改 的改法</span><br><span class="line">git reset --hard</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h2 id="git-tag"><a href="#git-tag" class="headerlink" title="git tag"></a>git tag</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git标签使用</span><br><span class="line">-- 新建tag v1.0</span><br><span class="line"> git tag -a v1.0 -m &apos;v1.0 release&apos;</span><br><span class="line">-- 推送tag v1.0 到远程库</span><br><span class="line">  git push  origin v1.0</span><br><span class="line">-- 删除本地tag</span><br><span class="line">git tag -d v1.0</span><br><span class="line">-- 删除远程tag</span><br><span class="line">git push origin --delete v1.0</span><br></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — weizhuo.ma</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;git-clone&quot;&gt;&lt;a href=&quot;#git-clone&quot; class=&quot;headerlink&quot; title=&quot;git clone&quot;&gt;&lt;/a&gt;git clone&lt;/h2&gt;&lt;p&gt;克隆一个版本仓库命令&lt;br&gt;常用参数还有&lt;br&gt;&lt;code&gt;git clone ur
       
     
     </summary>
@@ -100,60 +213,6 @@
   </entry>
   
   <entry>
-    <title>maweizhuo wiki site desc</title>
-    <link href="http://maweizhuo.com/wiki/maweizhuo%20wiki%20site%20desc/"/>
-    <id>http://maweizhuo.com/wiki/maweizhuo wiki site desc/</id>
-    <published>2017-08-25T15:04:48.000Z</published>
-    <updated>2017-11-21T08:17:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我的个人wiki。</p><p> O(∩_∩)O哈哈~ </p><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>没有wiki 的时候,自己对知识的储备流程大概如下</p><ul><li>干脆不记录,需要时候百度下</li><li>记在一个本上,方式古老了点</li><li>写博客,但相对零散,不直观</li><li>存在云笔记里,如 有道云</li></ul><p>在使用中，<strong>笔记系统</strong> 主大块信息的<strong>分类和整理</strong>，<strong>Wiki</strong> 主零碎知识的<strong>积累</strong>，而 <strong>博客</strong> 只在于 <strong>精</strong>。</p><h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p> 希望在以后的工作生活中,wiki可以作为自己的一个<strong>工具</strong>,记录自己生活中的点滴。促进自己成长。</p><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — weizhuo.ma</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;我的个人wiki。&lt;/p&gt;
-&lt;p&gt; O(∩_∩)O哈哈~ &lt;/p&gt;
-&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;没有wiki 的时候,自己对知识的储备流程大概如下&lt;/p&gt;
-&lt;ul
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>八大排序算法复杂度</title>
-    <link href="http://maweizhuo.com/wiki/%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
-    <id>http://maweizhuo.com/wiki/八大排序算法复杂度/</id>
-    <published>2017-08-25T15:04:48.000Z</published>
-    <updated>2017-11-21T07:41:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="排序算法时间空间复杂度表"><a href="#排序算法时间空间复杂度表" class="headerlink" title="排序算法时间空间复杂度表"></a>排序算法时间空间复杂度表</h2><table><thead><tr><th style="text-align:center">排序方法</th><th style="text-align:center">平均时间</th><th style="text-align:center">最坏时间</th><th style="text-align:center">辅助空间</th><th style="text-align:center">稳定性</th></tr></thead><tbody><tr><td style="text-align:center">冒泡排序</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">简单选择排序</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">直接插入排序</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">希尔排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">不稳定</td></tr><tr><td style="text-align:center">堆排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">不稳定</td></tr><tr><td style="text-align:center">并归排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">快速排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">不稳定</td></tr><tr><td style="text-align:center">基数排序</td><td style="text-align:center">$O(d(n+r))$</td><td style="text-align:center">$O(d(n+r))$</td><td style="text-align:center">$O(n)$</td><td style="text-align:center">稳定</td></tr></tbody></table><p>注：基数排序中，d 为位数，r 为基数，n 为原数组个数。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li>大话数据结构 | 程杰</li><li><a href="https://www.toptal.com/developers/sorting-algorithms/" rel="external nofollow noopener noreferrer" target="_blank">Sorting Algorithms Animations</a></li><li><a href="https://zh.wikipedia.org/wiki/冒泡排序" rel="external nofollow noopener noreferrer" target="_blank">冒泡排序 | Wikipedia</a> </li><li><a href="https://zh.wikipedia.org/wiki/选择排序" rel="external nofollow noopener noreferrer" target="_blank">选择排序 | Wikipedia</a> </li><li><a href="https://zh.wikipedia.org/wiki/快速排序" rel="external nofollow noopener noreferrer" target="_blank">快速排序 | Wikipedia</a> </li><li><a href="https://zh.wikipedia.org/wiki/堆排序" rel="external nofollow noopener noreferrer" target="_blank">堆排序| Wikipedia</a> </li><li><a href="https://zh.wikipedia.org/wiki/希尔排序" rel="external nofollow noopener noreferrer" target="_blank">希尔排序 | Wikipedia</a> </li><li><a href="https://zh.wikipedia.org/wiki/归并排序" rel="external nofollow noopener noreferrer" target="_blank">归并排序 | Wikipedia</a> </li><li><a href="http://blog.csdn.net/21aspnet/article/details/7199579" rel="external nofollow noopener noreferrer" target="_blank">维基百科上的算法和数据结构链接很强大 | 21aspnet</a></li></ul></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;排序算法时间空间复杂度表&quot;&gt;&lt;a href=&quot;#排序算法时间空间复杂度表&quot; class=&quot;headerlink&quot; title=&quot;排序算法时间空间复杂度表&quot;&gt;&lt;/a&gt;排序算法时间空间复杂度表&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;t
-      
-    
-    </summary>
-    
-      <category term="编程艺术" scheme="http://maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
-    
-      <category term="算法" scheme="http://maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="算法" scheme="http://maweizhuo.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>IaaS, PaaS, SaaS 概念</title>
     <link href="http://maweizhuo.com/wiki/IaaS,%20PaaS,%20SaaS%20%E6%A6%82%E5%BF%B5/"/>
     <id>http://maweizhuo.com/wiki/IaaS, PaaS, SaaS 概念/</id>
@@ -207,6 +266,59 @@
     
     
       <category term="awk" scheme="http://maweizhuo.com/tags/awk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>maweizhuo wiki site desc</title>
+    <link href="http://maweizhuo.com/wiki/maweizhuo%20wiki%20site%20desc/"/>
+    <id>http://maweizhuo.com/wiki/maweizhuo wiki site desc/</id>
+    <published>2017-08-25T15:04:48.000Z</published>
+    <updated>2017-11-22T08:06:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我的个人wiki。</p><p> O(∩_∩)O哈哈~ </p><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>没有 <code>wiki</code> 的时候,自己对知识的储备流程大概如下</p><ul><li>干脆不记录,需要时候百度下</li><li>记在一个本上,方式古老了点</li><li>写博客,但相对零散,不直观</li><li>存在云笔记里,如 有道云</li></ul><p>在使用中，<strong>笔记系统</strong> 主大块信息的<strong>分类和整理</strong>，<strong>Wiki</strong> 主零碎知识的<strong>积累</strong>，而 <strong>博客</strong> 只在于 <strong>精</strong>。</p><h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p> 希望在以后的工作生活中,<code>wiki</code>可以作为自己的一个<strong>工具</strong>,记录自己生活中的点滴。促进自己成长。</p><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — weizhuo.ma</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我的个人wiki。&lt;/p&gt;
+&lt;p&gt; O(∩_∩)O哈哈~ &lt;/p&gt;
+&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;没有 &lt;code&gt;wiki&lt;/code&gt; 的时候,自己对知识的储备
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>八大排序算法复杂度</title>
+    <link href="http://maweizhuo.com/wiki/%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
+    <id>http://maweizhuo.com/wiki/八大排序算法复杂度/</id>
+    <published>2017-08-25T15:04:48.000Z</published>
+    <updated>2017-11-21T07:41:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="排序算法时间空间复杂度表"><a href="#排序算法时间空间复杂度表" class="headerlink" title="排序算法时间空间复杂度表"></a>排序算法时间空间复杂度表</h2><table><thead><tr><th style="text-align:center">排序方法</th><th style="text-align:center">平均时间</th><th style="text-align:center">最坏时间</th><th style="text-align:center">辅助空间</th><th style="text-align:center">稳定性</th></tr></thead><tbody><tr><td style="text-align:center">冒泡排序</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">简单选择排序</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">直接插入排序</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">希尔排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">不稳定</td></tr><tr><td style="text-align:center">堆排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">不稳定</td></tr><tr><td style="text-align:center">并归排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">快速排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">不稳定</td></tr><tr><td style="text-align:center">基数排序</td><td style="text-align:center">$O(d(n+r))$</td><td style="text-align:center">$O(d(n+r))$</td><td style="text-align:center">$O(n)$</td><td style="text-align:center">稳定</td></tr></tbody></table><p>注：基数排序中，d 为位数，r 为基数，n 为原数组个数。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li>大话数据结构 | 程杰</li><li><a href="https://www.toptal.com/developers/sorting-algorithms/" rel="external nofollow noopener noreferrer" target="_blank">Sorting Algorithms Animations</a></li><li><a href="https://zh.wikipedia.org/wiki/冒泡排序" rel="external nofollow noopener noreferrer" target="_blank">冒泡排序 | Wikipedia</a> </li><li><a href="https://zh.wikipedia.org/wiki/选择排序" rel="external nofollow noopener noreferrer" target="_blank">选择排序 | Wikipedia</a> </li><li><a href="https://zh.wikipedia.org/wiki/快速排序" rel="external nofollow noopener noreferrer" target="_blank">快速排序 | Wikipedia</a> </li><li><a href="https://zh.wikipedia.org/wiki/堆排序" rel="external nofollow noopener noreferrer" target="_blank">堆排序| Wikipedia</a> </li><li><a href="https://zh.wikipedia.org/wiki/希尔排序" rel="external nofollow noopener noreferrer" target="_blank">希尔排序 | Wikipedia</a> </li><li><a href="https://zh.wikipedia.org/wiki/归并排序" rel="external nofollow noopener noreferrer" target="_blank">归并排序 | Wikipedia</a> </li><li><a href="http://blog.csdn.net/21aspnet/article/details/7199579" rel="external nofollow noopener noreferrer" target="_blank">维基百科上的算法和数据结构链接很强大 | 21aspnet</a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;排序算法时间空间复杂度表&quot;&gt;&lt;a href=&quot;#排序算法时间空间复杂度表&quot; class=&quot;headerlink&quot; title=&quot;排序算法时间空间复杂度表&quot;&gt;&lt;/a&gt;排序算法时间空间复杂度表&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;t
+      
+    
+    </summary>
+    
+      <category term="编程艺术" scheme="http://maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+      <category term="算法" scheme="http://maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://maweizhuo.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
