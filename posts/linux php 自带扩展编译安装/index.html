@@ -3,23 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>mac 工具软件 | 马伟倬wiki</title>
+    <title>linux php 自带扩展编译安装 | 马伟倬wiki</title>
     
     
-        <meta name="keywords" content="Git">
+        <meta name="keywords" content="php">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="mac 常用工具下载地址汇总  securecrt charles 抓包工具 phpstorm 网盘地址 密码:iueh安装参考地址 数据库管理工具 sequelpro postman 和 navicat 在我的百度云网盘   引用 记录点滴，成为更好的自己。       — weizhuo.ma">
-<meta name="keywords" content="Git">
+    <meta name="description" content="背景php 安装自带或下载的扩展,需要编译安装 步骤 进入到PHP 源码扩展目录cd software/tar/php-7.0.2/ext/  进入需要安装的扩展目录比如 exifcd exif  执行phpize （ 编译前准备）/usr/local/php/bin/phpize   配置，并指向PHP配置文件位置.">
+<meta name="keywords" content="php">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac 工具软件">
-<meta property="og:url" content="http://maweizhuo.com/wiki/mac工具软件/index.html">
+<meta property="og:title" content="linux php 自带扩展编译安装">
+<meta property="og:url" content="http://maweizhuo.com/posts/linux php 自带扩展编译安装/index.html">
 <meta property="og:site_name" content="马伟倬wiki">
-<meta property="og:description" content="mac 常用工具下载地址汇总  securecrt charles 抓包工具 phpstorm 网盘地址 密码:iueh安装参考地址 数据库管理工具 sequelpro postman 和 navicat 在我的百度云网盘   引用 记录点滴，成为更好的自己。       — weizhuo.ma">
-<meta property="og:updated_time" content="2017-11-22T07:41:57.000Z">
+<meta property="og:description" content="背景php 安装自带或下载的扩展,需要编译安装 步骤 进入到PHP 源码扩展目录cd software/tar/php-7.0.2/ext/  进入需要安装的扩展目录比如 exifcd exif  执行phpize （ 编译前准备）/usr/local/php/bin/phpize   配置，并指向PHP配置文件位置./configure --with-php-config=/usr/local/">
+<meta property="og:updated_time" content="2017-11-22T09:33:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mac 工具软件">
-<meta name="twitter:description" content="mac 常用工具下载地址汇总  securecrt charles 抓包工具 phpstorm 网盘地址 密码:iueh安装参考地址 数据库管理工具 sequelpro postman 和 navicat 在我的百度云网盘   引用 记录点滴，成为更好的自己。       — weizhuo.ma">
+<meta name="twitter:title" content="linux php 自带扩展编译安装">
+<meta name="twitter:description" content="背景php 安装自带或下载的扩展,需要编译安装 步骤 进入到PHP 源码扩展目录cd software/tar/php-7.0.2/ext/  进入需要安装的扩展目录比如 exifcd exif  执行phpize （ 编译前准备）/usr/local/php/bin/phpize   配置，并指向PHP配置文件位置./configure --with-php-config=/usr/local/">
     
 
     
@@ -27,22 +27,22 @@
     
 
     
-        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="/wiki/favicon.ico">
     
 
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/open-sans/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    <link rel="stylesheet" href="/wiki/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/wiki/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/wiki/libs/source-code-pro/styles.css">
 
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="/wiki/css/style.css">
+    <script src="/wiki/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/wiki/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
     
     
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+        <link rel="stylesheet" href="/wiki/libs/lightgallery/css/lightgallery.min.css">
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="/wiki/libs/justified-gallery/justifiedGallery.min.css">
     
     
     
@@ -56,21 +56,21 @@
         <header id="header">
     <div id="header-main" class="header-inner">
         <div class="outer">
-            <a href="/" id="logo">
+            <a href="/wiki/" id="logo">
                 
                 <span class="site-title">马伟倬wiki</span>
             </a>
             <nav id="main-nav">
                 
-                    <a class="main-nav-link" href="/">首页</a>
+                    <a class="main-nav-link" href="/wiki/">首页</a>
                 
-                    <a class="main-nav-link" href="/archives">归档</a>
+                    <a class="main-nav-link" href="/wiki/archives">归档</a>
                 
-                    <a class="main-nav-link" href="/categories">分类</a>
+                    <a class="main-nav-link" href="/wiki/categories">分类</a>
                 
-                    <a class="main-nav-link" href="/tags">标签</a>
+                    <a class="main-nav-link" href="/wiki/tags">标签</a>
                 
-                    <a class="main-nav-link" href="/about">关于</a>
+                    <a class="main-nav-link" href="/wiki/about">关于</a>
                 
             </nav>
             
@@ -102,13 +102,13 @@
             TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
+        ROOT_URL: '/wiki/',
+        CONTENT_URL: '/wiki/content.json',
     };
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
-<script src="/js/insight.js"></script>
+<script src="/wiki/js/insight.js"></script>
 
 </div>
         </div>
@@ -117,15 +117,15 @@
         <table class="menu outer">
             <tr>
                 
-                    <td><a class="main-nav-link" href="/">首页</a></td>
+                    <td><a class="main-nav-link" href="/wiki/">首页</a></td>
                 
-                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                    <td><a class="main-nav-link" href="/wiki/archives">归档</a></td>
                 
-                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                    <td><a class="main-nav-link" href="/wiki/categories">分类</a></td>
                 
-                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                    <td><a class="main-nav-link" href="/wiki/tags">标签</a></td>
                 
-                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                    <td><a class="main-nav-link" href="/wiki/about">关于</a></td>
                 
                 <td>
                     
@@ -157,20 +157,20 @@
         
         
          <ul class="unstyled" id="tree"> 
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             工具软件
                         </a>
                          <ul class="unstyled" id="tree"> 
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             Mac
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/mac工具软件/">mac 工具软件</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/mac工具软件/">mac 工具软件</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -181,12 +181,12 @@
                             &nbsp;
                             生活闲读
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/DISC-行为风格理论/">DISC 行为风格理论</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/DISC-行为风格理论/">DISC 行为风格理论</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             程序语言
                         </a>
@@ -197,16 +197,16 @@
                             &nbsp;
                             CSS
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/CSS属性声明顺序规范/">CSS属性声明顺序规范</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/CSS属性声明顺序规范/">CSS属性声明顺序规范</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             PHP
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  <li class="file"><a href="/wiki/laravel相关/">laravel相关</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/laravel相关/">laravel相关</a></li>  <li class="file active"><a href="/wiki/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -224,7 +224,7 @@
                             &nbsp;
                             Git
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Git 常用命令/">Git 常用命令</a></li>  <li class="file"><a href="/wiki/Git 清理已追踪或未添加追踪的文件/">Git 清理已追踪或未添加追踪的文件</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/Git 常用命令/">Git 常用命令</a></li>  <li class="file"><a href="/wiki/posts/Git 清理已追踪或未添加追踪的文件/">Git 清理已追踪或未添加追踪的文件</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -240,9 +240,9 @@
                             &nbsp;
                             Shell
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/awk 管道操作小结/">awk 管道操作小结</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/awk 管道操作小结/">awk 管道操作小结</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="/wiki/linux常用命令汇总/">linux命令汇总</a></li>  </ul> 
+                     <li class="file"><a href="/wiki/posts/linux常用命令汇总/">linux命令汇总</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -251,7 +251,7 @@
                             &nbsp;
                             架构
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/IaaS, PaaS, SaaS 概念/">IaaS, PaaS, SaaS 概念</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/IaaS, PaaS, SaaS 概念/">IaaS, PaaS, SaaS 概念</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -260,11 +260,11 @@
                             &nbsp;
                             算法
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/八大排序算法复杂度/">八大排序算法复杂度</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/八大排序算法复杂度/">八大排序算法复杂度</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
-                     <li class="file"><a href="/wiki/maweizhuo wiki site desc/">maweizhuo wiki site desc</a></li>  </ul> 
+                     <li class="file"><a href="/wiki/posts/maweizhuo wiki site desc/">maweizhuo wiki site desc</a></li>  </ul> 
     </div>
     <script>
         $(document).ready(function() {
@@ -335,7 +335,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-mac工具软件" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <section id="main"><article id="post-linux php 自带扩展编译安装" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -345,20 +345,20 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/工具软件/">工具软件</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/工具软件/Mac/">Mac</a>
+        <a class="article-category-link" href="/wiki/categories/程序语言/">程序语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/wiki/categories/程序语言/PHP/">PHP</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Git/">Git</a>
+        <a class="tag-link" href="/wiki/tags/php/">php</a>
     </div>
 
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/wiki/mac工具软件/">
-            <time datetime="2017-11-22T06:51:30.000Z" itemprop="datePublished">2017-11-22</time>
+        <a href="/wiki/posts/linux php 自带扩展编译安装/">
+            <time datetime="2017-11-22T06:54:30.000Z" itemprop="datePublished">2017-11-22</time>
         </a>
     </div>
 
@@ -369,7 +369,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            mac 工具软件
+            linux php 自带扩展编译安装
         </h1>
     
 
@@ -382,15 +382,25 @@
             
         
         
-            <h2 id="mac-常用工具下载地址汇总"><a href="#mac-常用工具下载地址汇总" class="headerlink" title="mac 常用工具下载地址汇总"></a>mac 常用工具下载地址汇总</h2><blockquote>
-<ul>
-<li><a href="http://www.cnblogs.com/wulaoer/p/5538721.html" rel="external nofollow noopener noreferrer" target="_blank">securecrt</a></li>
-<li><a href="http://www.sdifen.com/charles4.html" rel="external nofollow noopener noreferrer" target="_blank">charles 抓包工具</a></li>
-<li><a href="https://pan.baidu.com/share/init?surl=kVhhv63" rel="external nofollow noopener noreferrer" target="_blank">phpstorm 网盘地址</a> 密码:iueh<br><a href="http://www.sdifen.com/phpstorm20162.html" rel="external nofollow noopener noreferrer" target="_blank">安装参考地址</a></li>
-<li><a href="http://www.sequelpro.com/download" rel="external nofollow noopener noreferrer" target="_blank">数据库管理工具 sequelpro</a></li>
-<li>postman 和 navicat 在我的百度云网盘</li>
-</ul>
-</blockquote>
+            <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><code>php</code> 安装自带或下载的扩展,需要编译安装</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
+<li><p>进入到PHP 源码扩展目录<br>cd software/tar/php-7.0.2/ext/</p>
+</li>
+<li><p>进入需要安装的扩展目录比如 exif<br>cd exif</p>
+</li>
+<li><p>执行phpize （ 编译前准备）<br>/usr/local/php/bin/phpize </p>
+</li>
+<li><p>配置，并指向PHP配置文件位置<br>./configure <code>--with-php-config=/usr/local/php/bin/php-config</code></p>
+</li>
+<li><p>make 会在当前modules目录下生成exif.so</p>
+</li>
+<li><p>make install 会把exif.so复制到<br>/usr/local/php/lib/php/extensions/no-debug-non-zts-20151012/</p>
+</li>
+<li><p>编辑php.ini<br>extension = exif.so</p>
+</li>
+<li><p>重启服务<br>重启php-fpm 或Apache看phpinfo会有对应扩展</p>
+</li>
+</ol>
 <h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
 <p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
 </blockquote>
@@ -406,19 +416,19 @@
     
 <nav id="article-nav">
     
-        <a href="/wiki/laravel相关/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/wiki/posts/linux常用命令汇总/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    laravel相关
+                    linux命令汇总
                 
             </div>
         </a>
     
     
-        <a href="/wiki/Git 常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/wiki/posts/laravel相关/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Git 常用命令</div>
+            <div class="article-nav-title">laravel相关</div>
         </a>
     
 </nav>
@@ -450,18 +460,18 @@
         
 
     
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-video.min.js"></script>
     
     
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+        <script src="/wiki/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
     
     
         <script type="text/x-mathjax-config">
@@ -489,7 +499,7 @@
 
 
 <!-- Custom Scripts -->
-<script src="/js/main.js"></script>
+<script src="/wiki/js/main.js"></script>
 
     </div>
 </body>

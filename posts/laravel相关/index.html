@@ -3,21 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>马伟倬wiki</title>
+    <title>laravel相关 | 马伟倬wiki</title>
     
     
-        <meta name="keywords" content="马伟倬wiki">
+        <meta name="keywords" content="laravel,php">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="马伟倬的个人wiki,对工作生活零碎的知识进行整理分类">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马伟倬wiki">
-<meta property="og:url" content="http://maweizhuo.com/page/2/index.html">
+    <meta name="description" content="背景laravel 日常使用中遇到的一些问题及总结 问题汇总 框架安装完需要做的事情  .env 文件创建,修改里面的配置 chmod -R 777 storage/    如何去掉notice错误,undefined index .. 提示当你修改php.ini 里的error_reporting 后会发现,lara">
+<meta name="keywords" content="laravel,php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel相关">
+<meta property="og:url" content="http://maweizhuo.com/posts/laravel相关/index.html">
 <meta property="og:site_name" content="马伟倬wiki">
-<meta property="og:description" content="马伟倬的个人wiki,对工作生活零碎的知识进行整理分类">
+<meta property="og:description" content="背景laravel 日常使用中遇到的一些问题及总结 问题汇总 框架安装完需要做的事情  .env 文件创建,修改里面的配置 chmod -R 777 storage/    如何去掉notice错误,undefined index .. 提示当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对php.ini 里的变量进行重写了">
+<meta property="og:updated_time" content="2017-11-22T10:12:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马伟倬wiki">
-<meta name="twitter:description" content="马伟倬的个人wiki,对工作生活零碎的知识进行整理分类">
+<meta name="twitter:title" content="laravel相关">
+<meta name="twitter:description" content="背景laravel 日常使用中遇到的一些问题及总结 问题汇总 框架安装完需要做的事情  .env 文件创建,修改里面的配置 chmod -R 777 storage/    如何去掉notice错误,undefined index .. 提示当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对php.ini 里的变量进行重写了">
     
 
     
@@ -25,22 +27,22 @@
     
 
     
-        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="/wiki/favicon.ico">
     
 
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/open-sans/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    <link rel="stylesheet" href="/wiki/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/wiki/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/wiki/libs/source-code-pro/styles.css">
 
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    <link rel="stylesheet" href="/wiki/css/style.css">
+    <script src="/wiki/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/wiki/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
     
     
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+        <link rel="stylesheet" href="/wiki/libs/lightgallery/css/lightgallery.min.css">
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="/wiki/libs/justified-gallery/justifiedGallery.min.css">
     
     
     
@@ -54,21 +56,21 @@
         <header id="header">
     <div id="header-main" class="header-inner">
         <div class="outer">
-            <a href="/" id="logo">
+            <a href="/wiki/" id="logo">
                 
                 <span class="site-title">马伟倬wiki</span>
             </a>
             <nav id="main-nav">
                 
-                    <a class="main-nav-link" href="/">首页</a>
+                    <a class="main-nav-link" href="/wiki/">首页</a>
                 
-                    <a class="main-nav-link" href="/archives">归档</a>
+                    <a class="main-nav-link" href="/wiki/archives">归档</a>
                 
-                    <a class="main-nav-link" href="/categories">分类</a>
+                    <a class="main-nav-link" href="/wiki/categories">分类</a>
                 
-                    <a class="main-nav-link" href="/tags">标签</a>
+                    <a class="main-nav-link" href="/wiki/tags">标签</a>
                 
-                    <a class="main-nav-link" href="/about">关于</a>
+                    <a class="main-nav-link" href="/wiki/about">关于</a>
                 
             </nav>
             
@@ -100,13 +102,13 @@
             TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
+        ROOT_URL: '/wiki/',
+        CONTENT_URL: '/wiki/content.json',
     };
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
-<script src="/js/insight.js"></script>
+<script src="/wiki/js/insight.js"></script>
 
 </div>
         </div>
@@ -115,15 +117,15 @@
         <table class="menu outer">
             <tr>
                 
-                    <td><a class="main-nav-link" href="/">首页</a></td>
+                    <td><a class="main-nav-link" href="/wiki/">首页</a></td>
                 
-                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                    <td><a class="main-nav-link" href="/wiki/archives">归档</a></td>
                 
-                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                    <td><a class="main-nav-link" href="/wiki/categories">分类</a></td>
                 
-                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                    <td><a class="main-nav-link" href="/wiki/tags">标签</a></td>
                 
-                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                    <td><a class="main-nav-link" href="/wiki/about">关于</a></td>
                 
                 <td>
                     
@@ -168,7 +170,7 @@
                             &nbsp;
                             Mac
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/mac工具软件/">mac 工具软件</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/mac工具软件/">mac 工具软件</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -179,12 +181,12 @@
                             &nbsp;
                             生活闲读
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/DISC-行为风格理论/">DISC 行为风格理论</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/DISC-行为风格理论/">DISC 行为风格理论</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             程序语言
                         </a>
@@ -195,16 +197,16 @@
                             &nbsp;
                             CSS
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/CSS属性声明顺序规范/">CSS属性声明顺序规范</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/CSS属性声明顺序规范/">CSS属性声明顺序规范</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             PHP
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  <li class="file"><a href="/wiki/laravel相关/">laravel相关</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/posts/laravel相关/">laravel相关</a></li>  <li class="file"><a href="/wiki/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -222,7 +224,7 @@
                             &nbsp;
                             Git
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Git 常用命令/">Git 常用命令</a></li>  <li class="file"><a href="/wiki/Git 清理已追踪或未添加追踪的文件/">Git 清理已追踪或未添加追踪的文件</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/Git 常用命令/">Git 常用命令</a></li>  <li class="file"><a href="/wiki/posts/Git 清理已追踪或未添加追踪的文件/">Git 清理已追踪或未添加追踪的文件</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -238,9 +240,9 @@
                             &nbsp;
                             Shell
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/awk 管道操作小结/">awk 管道操作小结</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/awk 管道操作小结/">awk 管道操作小结</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="/wiki/linux常用命令汇总/">linux命令汇总</a></li>  </ul> 
+                     <li class="file"><a href="/wiki/posts/linux常用命令汇总/">linux命令汇总</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -249,7 +251,7 @@
                             &nbsp;
                             架构
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/IaaS, PaaS, SaaS 概念/">IaaS, PaaS, SaaS 概念</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/IaaS, PaaS, SaaS 概念/">IaaS, PaaS, SaaS 概念</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -258,11 +260,11 @@
                             &nbsp;
                             算法
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/八大排序算法复杂度/">八大排序算法复杂度</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/八大排序算法复杂度/">八大排序算法复杂度</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
-                     <li class="file"><a href="/wiki/maweizhuo wiki site desc/">maweizhuo wiki site desc</a></li>  </ul> 
+                     <li class="file"><a href="/wiki/posts/maweizhuo wiki site desc/">maweizhuo wiki site desc</a></li>  </ul> 
     </div>
     <script>
         $(document).ready(function() {
@@ -333,8 +335,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main">
-    <article id="post-maweizhuo wiki site desc" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <section id="main"><article id="post-laravel相关" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -342,12 +343,22 @@
                 
                     <div class="article-meta">
                         
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/wiki/categories/程序语言/">程序语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/wiki/categories/程序语言/PHP/">PHP</a>
+    </div>
+
                         
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/wiki/tags/laravel/">laravel</a>, <a class="tag-link" href="/wiki/tags/php/">php</a>
+    </div>
+
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/wiki/maweizhuo wiki site desc/">
-            <time datetime="2017-08-25T15:04:48.000Z" itemprop="datePublished">2017-08-25</time>
+        <a href="/wiki/posts/laravel相关/">
+            <time datetime="2017-11-22T06:53:30.000Z" itemprop="datePublished">2017-11-22</time>
         </a>
     </div>
 
@@ -358,7 +369,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            maweizhuo wiki site desc
+            laravel相关
         </h1>
     
 
@@ -371,20 +382,54 @@
             
         
         
-            <p>我的个人wiki。</p>
-<p> O(∩_∩)O哈哈~ </p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>没有 <code>wiki</code> 的时候,自己对知识的储备流程大概如下</p>
+            <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><code>laravel</code> 日常使用中遇到的一些问题及总结</p>
+<h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><ol>
+<li><p><code>框架安装完</code>需要做的事情</p>
 <ul>
-<li>干脆不记录,需要时候百度下</li>
-<li>记在一个本上,方式古老了点</li>
-<li>写博客,但相对零散,不直观</li>
-<li>存在云笔记里,如 有道云</li>
+<li>.env 文件创建,修改里面的配置</li>
+<li>chmod -R 777 storage/ </li>
 </ul>
-<p>在使用中，<strong>笔记系统</strong> 主大块信息的<strong>分类和整理</strong>，<strong>Wiki</strong> 主零碎知识的<strong>积累</strong>，而 <strong>博客</strong> 只在于 <strong>精</strong>。</p>
-<h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p> 希望在以后的工作生活中,<code>wiki</code>可以作为自己的一个<strong>工具</strong>,记录自己生活中的点滴。促进自己成长。</p>
+</li>
+<li><p>如何去掉<code>notice错误,undefined index ..</code> 提示<br>当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对<br>php.ini 里的变量进行重写了。 </p>
+<p>修改地址:vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php<br>修改 <code>error_reporting(E_ALL &amp; ~E_NOTICE)</code></p>
+</li>
+<li><p><code>session</code>问题</p>
+<ul>
+<li>现象： 登录接口 session::put(‘user_id’,1)<pre><code> 退出接口 session::forget(&apos;user_id&apos;);
+用户信息 查询 session::get(&apos;user_id&apos;)，还有数据，不正常。
+</code></pre></li>
+<li>解决办法：<br>在退出接口里session::forget 或put空数据之后<br>再加上一行代码 <code>session::save()</code>即可</li>
+</ul>
+</li>
+<li><p>如何<code>添加异常</code>提示<br>位置:代码文件位置在app/Exceptions/Handler.php </p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">render</span><span class="params">($request, Exception $exception)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">$this</span>-&gt;isHttpException($exception)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">parent</span>::render($request, $exception);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> response()-&gt;json([</span><br><span class="line">            <span class="string">'code'</span>=&gt;$exception-&gt;getCode(),</span><br><span class="line">            <span class="string">'msg'</span>=&gt;$exception-&gt;getMessage(),</span><br><span class="line">        ] );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>ubuntu 安装完之后composor</code> 报错</p>
+<ul>
+<li><p>现象: 通过composer安装laravel框架过程中将需要调用<code>ext-dom</code>，若xml扩展未安装，这也会影响我们安装laravel。<br>以上两个扩展是PHP7版本安装laravel所依赖也是容易被忽略的扩展，<br>当你安装laravel无法正常生成vendor目录时就需要检查mbstring扩展加载情况了。</p>
+</li>
+<li><p>解决   安装也是简单的：<br>apt-get install php7.0-mbstring</p>
+<p>若提示：phpunit/phpunit 5.0.x requires ext-dom * -&gt; the requested PHP extension dom is missing from your system.<br>则需要安装xml扩展。<br>apt-get install php7.0-xml</p>
+</li>
+</ul>
+</li>
+<li><p><code>group by</code> 用法</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReviewMark::whereIn(<span class="string">'package_id'</span>, $review_pid)</span><br><span class="line">    -&gt;where(<span class="string">'is_cancel'</span>, <span class="number">1</span>)</span><br><span class="line">    -&gt;where(<span class="string">"l4_answers"</span>, <span class="string">"!="</span>, <span class="string">''</span>)-&gt;select(\DB::raw(<span class="string">'package_id,count(1) as num'</span>))</span><br><span class="line">    -&gt;groupBy(<span class="string">'package_id'</span>)-&gt;get()-&gt;toArray();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>laravel <code>定时任务不执行</code>的问题</p>
+<ul>
+<li><p>laravel 定时任务设置不重复执行的话会生成一个加密文件，当完成这个任务时候，会删掉这个文件。<br>如果不删掉的话这个任务会一直不执行。</p>
+</li>
+<li><p>kernel.php 里 command 里面名称的方法命名，如果包含下划线也不执行，如commad(‘m_r_diff:sync’)</p>
+</li>
+</ul>
+</li>
+<li><p><code>composer</code> 安装<br> curl -sS <a href="https://getcomposer.org/installer" rel="external nofollow noopener noreferrer" target="_blank">https://getcomposer.org/installer</a> | /data/soft/php-fpm_9000/bin/php<br> sudo mv composer.phar /usr/local/bin/composer</p>
 <h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
 <p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
 </blockquote>
+</li>
+</ol>
 
             </div>
         
@@ -397,19 +442,19 @@
     
 <nav id="article-nav">
     
-        <a href="/wiki/八大排序算法复杂度/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/wiki/posts/linux php 自带扩展编译安装/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    八大排序算法复杂度
+                    linux php 自带扩展编译安装
                 
             </div>
         </a>
     
     
-        <a href="/wiki/awk 管道操作小结/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/wiki/posts/mac工具软件/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">awk 管道操作小结</div>
+            <div class="article-nav-title">mac 工具软件</div>
         </a>
     
 </nav>
@@ -428,8 +473,6 @@
 <!-- <script type="text/javascript">
     !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
 </script>     -->
-
-
 </section>
         </div>
         <footer id="footer">
@@ -443,18 +486,18 @@
         
 
     
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/wiki/libs/lightgallery/js/lg-video.min.js"></script>
     
     
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+        <script src="/wiki/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
     
     
         <script type="text/x-mathjax-config">
@@ -482,7 +525,7 @@
 
 
 <!-- Custom Scripts -->
-<script src="/js/main.js"></script>
+<script src="/wiki/js/main.js"></script>
 
     </div>
 </body>
