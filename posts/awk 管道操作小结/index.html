@@ -16,7 +16,7 @@
 <meta property="og:url" content="http://maweizhuo.com/posts/awk 管道操作小结/index.html">
 <meta property="og:site_name" content="马伟倬wiki">
 <meta property="og:description" content="背景大致是希望使用 awk 读取一个文本文件，通过空行把文本分割成多个文本块，依次把每个文本块输入到一个程序，并把结果依次输出到指定文件。 先看文件结构： 12$ lsplus.sh  data.txt 其中， plus.sh 文件内容如下： 12345#!/bin/shIFS=&quot; &quot;read a b((c=a+b)) echo $&amp;#123;c&amp;#125; 代码含义是从标准输入读入两个数， a">
-<meta property="og:updated_time" content="2017-11-21T07:39:54.000Z">
+<meta property="og:updated_time" content="2017-11-23T09:53:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="awk 管道操作小结">
 <meta name="twitter:description" content="背景大致是希望使用 awk 读取一个文本文件，通过空行把文本分割成多个文本块，依次把每个文本块输入到一个程序，并把结果依次输出到指定文件。 先看文件结构： 12$ lsplus.sh  data.txt 其中， plus.sh 文件内容如下： 12345#!/bin/shIFS=&quot; &quot;read a b((c=a+b)) echo $&amp;#123;c&amp;#125; 代码含义是从标准输入读入两个数， a">
@@ -389,6 +389,11 @@
         
         
             
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#背景"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#经过"><span class="toc-number">2.</span> <span class="toc-text">经过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决尝试"><span class="toc-number">3.</span> <span class="toc-text">解决尝试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">5.</span> <span class="toc-text">参考资料</span></a></li></ol>
+                </div>
+            
         
         
             <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>大致是希望使用 awk 读取一个文本文件，通过空行把文本分割成多个文本块，依次把每个文本块输入到一个程序，并把结果依次输出到指定文件。</p>
@@ -468,11 +473,11 @@
     
 <nav id="article-nav">
     
-        <a href="/wiki/posts/CSS属性声明顺序规范/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/wiki/posts/IaaS, PaaS, SaaS 概念/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    CSS属性声明顺序规范
+                    IaaS, PaaS, SaaS 概念
                 
             </div>
         </a>
