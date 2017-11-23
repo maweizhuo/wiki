@@ -76,7 +76,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -95,10 +95,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Entradas',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categorias',
-            TAGS: 'Etiquetas',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/wiki/',
@@ -129,7 +129,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
     </div>
 
                 </td>
@@ -146,7 +146,7 @@
         
     <div class="widget-wrap" id="categories">
         <h3 class="widget-title">
-            <span>Categorias</span>
+            <span>categories</span>
             &nbsp;
             <a id="allExpand" href="#">
                 <i class="fa fa-angle-double-down fa-2x"></i>
@@ -197,6 +197,15 @@
                             CSS
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/CSS属性声明顺序规范/">CSS属性声明顺序规范</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            MYSQL
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/mysql常用汇总/">mysql常用汇总</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -340,7 +349,7 @@
     </div>
     <div class="layout-wrap-inner list-categories">
         
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/工具软件/">工具软件</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/工具软件/Mac/">Mac</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/生活闲读/">生活闲读</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/程序语言/">程序语言</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/程序语言/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/程序语言/PHP/">PHP</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/">编程艺术</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/Git/">Git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/Linux/">Linux</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/Linux/Shell/">Shell</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/架构/">架构</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/算法/">算法</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/工具软件/">工具软件</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/工具软件/Mac/">Mac</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/生活闲读/">生活闲读</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/程序语言/">程序语言</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/程序语言/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/程序语言/MYSQL/">MYSQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/程序语言/PHP/">PHP</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/">编程艺术</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/Git/">Git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/Linux/">Linux</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/Linux/Shell/">Shell</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/架构/">架构</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/wiki/categories/编程艺术/算法/">算法</a><span class="category-list-count">1</span></li></ul></li></ul>
         
     </div>
 </section></section>
