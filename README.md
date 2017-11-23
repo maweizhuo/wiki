@@ -1,5 +1,7 @@
-我的wiki
-[线上地址]:(http:wiki.maweizhuo.com)
+生活学习中零碎知识点记录的地方 
+> **wiki**
+
+[我的wiki地址](http:wiki.maweizhuo.com)
 
 ## v1.0
 - 搭建框架
