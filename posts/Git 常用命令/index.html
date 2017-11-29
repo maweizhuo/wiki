@@ -9,17 +9,17 @@
         <meta name="keywords" content="Git">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="git clone克隆一个版本仓库命令常用参数还有git clone url --depth=1      (加上这个参数可以避免项目太大，下载失败；       –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name git init123456git init 初始化  ">
+    <meta name="description" content="git clone 克隆一个版本仓库命令 常用参数还有 git clone url --depth=1 (加上这个参数可以避免项目太大，下载失败； –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name git init 123456git init 初始化     git ">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 常用命令">
 <meta property="og:url" content="http://maweizhuo.com/posts/Git 常用命令/index.html">
 <meta property="og:site_name" content="马伟倬wiki">
-<meta property="og:description" content="git clone克隆一个版本仓库命令常用参数还有git clone url --depth=1      (加上这个参数可以避免项目太大，下载失败；       –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name git init123456git init 初始化     git branch branch_name    git branch">
+<meta property="og:description" content="git clone 克隆一个版本仓库命令 常用参数还有 git clone url --depth=1 (加上这个参数可以避免项目太大，下载失败； –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name git init 123456git init 初始化     git branch branch_name    git branch -D bran">
 <meta property="og:updated_time" content="2017-11-23T09:54:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 常用命令">
-<meta name="twitter:description" content="git clone克隆一个版本仓库命令常用参数还有git clone url --depth=1      (加上这个参数可以避免项目太大，下载失败；       –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name git init123456git init 初始化     git branch branch_name    git branch">
+<meta name="twitter:description" content="git clone 克隆一个版本仓库命令 常用参数还有 git clone url --depth=1 (加上这个参数可以避免项目太大，下载失败； –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name git init 123456git init 初始化     git branch branch_name    git branch -D bran">
     
 
     
@@ -47,6 +47,7 @@
     
     
     
+
 
 
 </head>
@@ -215,7 +216,7 @@
                             &nbsp;
                             PHP
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  <li class="file"><a href="/wiki/posts/laravel相关/">laravel相关</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/laravel相关/">laravel相关</a></li>  <li class="file"><a href="/wiki/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -252,6 +253,15 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/awk 管道操作小结/">awk 管道操作小结</a></li>  </ul> 
                     </li> 
                      <li class="file"><a href="/wiki/posts/linux常用命令汇总/">linux命令汇总</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            个人web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/hexo安装使用/">hexo安装使用</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -396,15 +406,26 @@
             
         
         
-            <h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><p>克隆一个版本仓库命令<br>常用参数还有<br><code>git clone url --depth=1</code><br>      (加上这个参数可以避免项目太大，下载失败；<br>       <strong>–depth=1</strong> 是指只拉取最后一次的提交结果。);</p>
+            <h2 id="git-clone"><a class="header-anchor" href="#git-clone"></a>git clone</h2>
+<p>克隆一个版本仓库命令<br>
+常用参数还有<br>
+<code>git clone url --depth=1</code><br>
+(加上这个参数可以避免项目太大，下载失败；<br>
+<strong>–depth=1</strong> 是指只拉取最后一次的提交结果。);</p>
 <p><code>git clone url new_name</code></p>
-<h2 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init 初始化</span><br><span class="line">     git branch branch_name</span><br><span class="line">    git branch -D branch_name 删除分支</span><br><span class="line">     git checkout -b branch_name 新建并切换为这个分支</span><br><span class="line">     git pull origin master 更新  = git fetch (拉取远程代码不</span><br><span class="line"> 自动合并) + git merge</span><br></pre></td></tr></table></figure>
-<h2 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 从主干合并分支代码</span><br><span class="line">1. 切换到master</span><br><span class="line">   git checkout master</span><br><span class="line">2.  合并代码到主干</span><br><span class="line">    git merge --no-ff develop</span><br><span class="line">    --no-ff 保留该版本提交的log</span><br><span class="line">3.  推送到远程</span><br><span class="line">     git push</span><br></pre></td></tr></table></figure>
-<h2 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">     git rm a.txt  // 删除文件</span><br><span class="line">     git commit -m &apos;备注&apos;</span><br><span class="line">     git push origin master</span><br><span class="line">     git push origin develop  （develop为远程分支名）</span><br><span class="line"></span><br><span class="line">     git log</span><br><span class="line">     git status</span><br></pre></td></tr></table></figure>
-<h2 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//  冲突之后 ,以下命令回退还原</span><br><span class="line">git reset --hard HEAD^  // 最新的一次提交</span><br><span class="line">git checkout 文件路径</span><br><span class="line">git revert </span><br><span class="line"></span><br><span class="line">   冲突放弃本地修改 的改法</span><br><span class="line">git reset --hard</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-<h2 id="git-tag"><a href="#git-tag" class="headerlink" title="git tag"></a>git tag</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git标签使用</span><br><span class="line">-- 新建tag v1.0</span><br><span class="line"> git tag -a v1.0 -m &apos;v1.0 release&apos;</span><br><span class="line">-- 推送tag v1.0 到远程库</span><br><span class="line">  git push  origin v1.0</span><br><span class="line">-- 删除本地tag</span><br><span class="line">git tag -d v1.0</span><br><span class="line">-- 删除远程tag</span><br><span class="line">git push origin --delete v1.0</span><br></pre></td></tr></table></figure>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
+<h2 id="git-init"><a class="header-anchor" href="#git-init"></a>git init</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init 初始化</span><br><span class="line">     git branch branch_name</span><br><span class="line">    git branch -D branch_name 删除分支</span><br><span class="line">     git checkout -b branch_name 新建并切换为这个分支</span><br><span class="line">     git pull origin master 更新  = git fetch (拉取远程代码不</span><br><span class="line"> 自动合并) + git merge</span><br></pre></td></tr></table></figure>
+<h2 id="git-merge"><a class="header-anchor" href="#git-merge"></a>git merge</h2>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 从主干合并分支代码</span><br><span class="line">1. 切换到master</span><br><span class="line">   git checkout master</span><br><span class="line">2.  合并代码到主干</span><br><span class="line">    git merge --no-ff develop</span><br><span class="line">    --no-ff 保留该版本提交的log</span><br><span class="line">3.  推送到远程</span><br><span class="line">     git push</span><br></pre></td></tr></table></figure>
+<h2 id="git-push"><a class="header-anchor" href="#git-push"></a>git push</h2>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">     git rm a.txt  // 删除文件</span><br><span class="line">     git commit -m &apos;备注&apos;</span><br><span class="line">     git push origin master</span><br><span class="line">     git push origin develop  （develop为远程分支名）</span><br><span class="line"></span><br><span class="line">     git log</span><br><span class="line">     git status</span><br></pre></td></tr></table></figure>
+<h2 id="git-reset"><a class="header-anchor" href="#git-reset"></a>git reset</h2>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//  冲突之后 ,以下命令回退还原</span><br><span class="line">git reset --hard HEAD^  // 最新的一次提交</span><br><span class="line">git checkout 文件路径</span><br><span class="line">git revert </span><br><span class="line"></span><br><span class="line">   冲突放弃本地修改 的改法</span><br><span class="line">git reset --hard</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<h2 id="git-tag"><a class="header-anchor" href="#git-tag"></a>git tag</h2>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git标签使用</span><br><span class="line">-- 新建tag v1.0</span><br><span class="line"> git tag -a v1.0 -m &apos;v1.0 release&apos;</span><br><span class="line">-- 推送tag v1.0 到远程库</span><br><span class="line">  git push  origin v1.0</span><br><span class="line">-- 删除本地tag</span><br><span class="line">git tag -d v1.0</span><br><span class="line">-- 删除远程tag</span><br><span class="line">git push origin --delete v1.0</span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<blockquote>
+<p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p>
 </blockquote>
 
             </div>

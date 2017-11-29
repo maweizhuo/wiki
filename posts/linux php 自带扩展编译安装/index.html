@@ -9,17 +9,17 @@
         <meta name="keywords" content="php">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="背景php 安装自带或下载的扩展,需要编译安装 步骤 进入到PHP 源码扩展目录cd software/tar/php-7.0.2/ext/  进入需要安装的扩展目录比如 exifcd exif  执行phpize （ 编译前准备）/usr/local/php/bin/phpize   配置，并指向PHP配置文件位置.">
+    <meta name="description" content="背景 php 安装自带或下载的扩展,需要编译安装 步骤   进入到PHP 源码扩展目录 cd software/tar/php-7.0.2/ext/   进入需要安装的扩展目录比如 exif cd exif   执行phpize （ 编译前准备） /usr/local/php/bin/phpize   配置，并指向PH">
 <meta name="keywords" content="php">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux php 自带扩展编译安装">
 <meta property="og:url" content="http://maweizhuo.com/posts/linux php 自带扩展编译安装/index.html">
 <meta property="og:site_name" content="马伟倬wiki">
-<meta property="og:description" content="背景php 安装自带或下载的扩展,需要编译安装 步骤 进入到PHP 源码扩展目录cd software/tar/php-7.0.2/ext/  进入需要安装的扩展目录比如 exifcd exif  执行phpize （ 编译前准备）/usr/local/php/bin/phpize   配置，并指向PHP配置文件位置./configure --with-php-config=/usr/local/">
+<meta property="og:description" content="背景 php 安装自带或下载的扩展,需要编译安装 步骤   进入到PHP 源码扩展目录 cd software/tar/php-7.0.2/ext/   进入需要安装的扩展目录比如 exif cd exif   执行phpize （ 编译前准备） /usr/local/php/bin/phpize   配置，并指向PHP配置文件位置 ./configure --with-php-config=/u">
 <meta property="og:updated_time" content="2017-11-22T09:33:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux php 自带扩展编译安装">
-<meta name="twitter:description" content="背景php 安装自带或下载的扩展,需要编译安装 步骤 进入到PHP 源码扩展目录cd software/tar/php-7.0.2/ext/  进入需要安装的扩展目录比如 exifcd exif  执行phpize （ 编译前准备）/usr/local/php/bin/phpize   配置，并指向PHP配置文件位置./configure --with-php-config=/usr/local/">
+<meta name="twitter:description" content="背景 php 安装自带或下载的扩展,需要编译安装 步骤   进入到PHP 源码扩展目录 cd software/tar/php-7.0.2/ext/   进入需要安装的扩展目录比如 exif cd exif   执行phpize （ 编译前准备） /usr/local/php/bin/phpize   配置，并指向PHP配置文件位置 ./configure --with-php-config=/u">
     
 
     
@@ -47,6 +47,7 @@
     
     
     
+
 
 
 </head>
@@ -215,7 +216,7 @@
                             &nbsp;
                             PHP
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  <li class="file"><a href="/wiki/posts/laravel相关/">laravel相关</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/laravel相关/">laravel相关</a></li>  <li class="file active"><a href="/wiki/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -252,6 +253,15 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/awk 管道操作小结/">awk 管道操作小结</a></li>  </ul> 
                     </li> 
                      <li class="file"><a href="/wiki/posts/linux常用命令汇总/">linux命令汇总</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            个人web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/hexo安装使用/">hexo安装使用</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -391,27 +401,45 @@
             
         
         
-            <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><code>php</code> 安装自带或下载的扩展,需要编译安装</p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
-<li><p>进入到PHP 源码扩展目录<br>cd software/tar/php-7.0.2/ext/</p>
+            <h2 id="背景"><a class="header-anchor" href="#背景"></a>背景</h2>
+<p><code>php</code> 安装自带或下载的扩展,需要编译安装</p>
+<h2 id="步骤"><a class="header-anchor" href="#步骤"></a>步骤</h2>
+<ol>
+<li>
+<p>进入到PHP 源码扩展目录<br>
+cd software/tar/php-7.0.2/ext/</p>
 </li>
-<li><p>进入需要安装的扩展目录比如 exif<br>cd exif</p>
+<li>
+<p>进入需要安装的扩展目录比如 exif<br>
+cd exif</p>
 </li>
-<li><p>执行phpize （ 编译前准备）<br>/usr/local/php/bin/phpize </p>
+<li>
+<p>执行phpize （ 编译前准备）<br>
+/usr/local/php/bin/phpize</p>
 </li>
-<li><p>配置，并指向PHP配置文件位置<br>./configure <code>--with-php-config=/usr/local/php/bin/php-config</code></p>
+<li>
+<p>配置，并指向PHP配置文件位置<br>
+./configure <code>--with-php-config=/usr/local/php/bin/php-config</code></p>
 </li>
-<li><p>make 会在当前modules目录下生成exif.so</p>
+<li>
+<p>make <a href="http://xn--modulesexif-jq8q13iv7oyks5z4ahbaz08guj5grth.so" rel="external nofollow noopener noreferrer" target="_blank">会在当前modules目录下生成exif.so</a></p>
 </li>
-<li><p>make install 会把exif.so复制到<br>/usr/local/php/lib/php/extensions/no-debug-non-zts-20151012/</p>
+<li>
+<p>make install 会把exif.so复制到<br>
+/usr/local/php/lib/php/extensions/no-debug-non-zts-20151012/</p>
 </li>
-<li><p>编辑php.ini<br>extension = exif.so</p>
+<li>
+<p>编辑php.ini<br>
+extension = <a href="http://exif.so" rel="external nofollow noopener noreferrer" target="_blank">exif.so</a></p>
 </li>
-<li><p>重启服务<br>重启php-fpm 或Apache看phpinfo会有对应扩展</p>
+<li>
+<p>重启服务<br>
+重启php-fpm 或Apache看phpinfo会有对应扩展</p>
 </li>
 </ol>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<blockquote>
+<p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p>
 </blockquote>
 
             </div>

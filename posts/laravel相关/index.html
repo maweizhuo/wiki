@@ -6,20 +6,20 @@
     <title>laravel相关 | 马伟倬wiki</title>
     
     
-        <meta name="keywords" content="php,laravel">
+        <meta name="keywords" content="laravel,php">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="背景laravel 日常使用中遇到的一些问题及总结 问题汇总 框架安装完需要做的事情  .env 文件创建,修改里面的配置 chmod -R 777 storage/    如何去掉notice错误,undefined index .. 提示当你修改php.ini 里的error_reporting 后会发现,lara">
-<meta name="keywords" content="php,laravel">
+    <meta name="description" content="背景 laravel 日常使用中遇到的一些问题及总结 问题汇总  框架安装完需要做的事情   .env 文件创建,修改里面的配置 chmod -R 777 storage/   如何去掉notice错误,undefined index .. 提示 当你修改php.ini 里的error_reporting 后会发现,l">
+<meta name="keywords" content="laravel,php">
 <meta property="og:type" content="article">
 <meta property="og:title" content="laravel相关">
 <meta property="og:url" content="http://maweizhuo.com/posts/laravel相关/index.html">
 <meta property="og:site_name" content="马伟倬wiki">
-<meta property="og:description" content="背景laravel 日常使用中遇到的一些问题及总结 问题汇总 框架安装完需要做的事情  .env 文件创建,修改里面的配置 chmod -R 777 storage/    如何去掉notice错误,undefined index .. 提示当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对php.ini 里的变量进行重写了">
+<meta property="og:description" content="背景 laravel 日常使用中遇到的一些问题及总结 问题汇总  框架安装完需要做的事情   .env 文件创建,修改里面的配置 chmod -R 777 storage/   如何去掉notice错误,undefined index .. 提示 当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对 php.ini 里的变量进">
 <meta property="og:updated_time" content="2017-11-23T09:53:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="laravel相关">
-<meta name="twitter:description" content="背景laravel 日常使用中遇到的一些问题及总结 问题汇总 框架安装完需要做的事情  .env 文件创建,修改里面的配置 chmod -R 777 storage/    如何去掉notice错误,undefined index .. 提示当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对php.ini 里的变量进行重写了">
+<meta name="twitter:description" content="背景 laravel 日常使用中遇到的一些问题及总结 问题汇总  框架安装完需要做的事情   .env 文件创建,修改里面的配置 chmod -R 777 storage/   如何去掉notice错误,undefined index .. 提示 当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对 php.ini 里的变量进">
     
 
     
@@ -47,6 +47,7 @@
     
     
     
+
 
 
 </head>
@@ -215,7 +216,7 @@
                             &nbsp;
                             PHP
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  <li class="file active"><a href="/wiki/posts/laravel相关/">laravel相关</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/posts/laravel相关/">laravel相关</a></li>  <li class="file"><a href="/wiki/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -252,6 +253,15 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/awk 管道操作小结/">awk 管道操作小结</a></li>  </ul> 
                     </li> 
                      <li class="file"><a href="/wiki/posts/linux常用命令汇总/">linux命令汇总</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            个人web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/hexo安装使用/">hexo安装使用</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -396,102 +406,146 @@
             
         
         
-            <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><code>laravel</code> 日常使用中遇到的一些问题及总结</p>
-<h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><ol>
-<li><p><code>框架安装完</code>需要做的事情</p>
+            <h2 id="背景"><a class="header-anchor" href="#背景"></a>背景</h2>
+<p><code>laravel</code> 日常使用中遇到的一些问题及总结</p>
+<h2 id="问题汇总"><a class="header-anchor" href="#问题汇总"></a>问题汇总</h2>
+<ol>
+<li><code>框架安装完</code>需要做的事情</li>
+</ol>
 <ul>
 <li>.env 文件创建,修改里面的配置</li>
-<li>chmod -R 777 storage/ </li>
+<li>chmod -R 777 storage/</li>
+</ul>
+<ol start="2">
+<li>如何去掉<code>notice错误,undefined index ..</code> 提示<br>
+当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对<br>
+php.ini 里的变量进行重写了。</li>
+</ol>
+<p>修改地址:vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php<br>
+修改 <code>error_reporting(E_ALL &amp; ~E_NOTICE)</code></p>
+<ol start="3">
+<li>
+<p><code>session</code>问题</p>
+<ul>
+<li>现象： 登录接口 session::put(‘user_id’,1)<br>
+退出接口 session::forget(‘user_id’);<br>
+用户信息 查询 session::get(‘user_id’)，还有数据，不正常。</li>
+<li>解决办法：<br>
+在退出接口里session::forget 或put空数据之后<br>
+再加上一行代码 <code>session::save()</code>即可</li>
 </ul>
 </li>
-<li><p>如何去掉<code>notice错误,undefined index ..</code> 提示<br>当你修改php.ini 里的error_reporting 后会发现,laravel 还是会报错,因为laravel 底层对<br>php.ini 里的变量进行重写了。 </p>
-<p>修改地址:vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php<br>修改 <code>error_reporting(E_ALL &amp; ~E_NOTICE)</code></p>
+<li>
+<p>如何<code>添加异常</code>提示<br>
+位置:代码文件位置在app/Exceptions/Handler.php</p>
 </li>
-<li><p><code>session</code>问题</p>
+</ol>
+  <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">render</span><span class="params">($request, Exception $exception)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">$this</span>-&gt;isHttpException($exception)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">parent</span>::render($request, $exception);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> response()-&gt;json([</span><br><span class="line">            <span class="string">'code'</span>=&gt;$exception-&gt;getCode(),</span><br><span class="line">            <span class="string">'msg'</span>=&gt;$exception-&gt;getMessage(),</span><br><span class="line">        ] );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li><code>ubuntu 安装完之后composor</code> 报错</li>
+</ol>
 <ul>
-<li>现象： 登录接口 session::put(‘user_id’,1)<pre><code> 退出接口 session::forget(&apos;user_id&apos;);
-用户信息 查询 session::get(&apos;user_id&apos;)，还有数据，不正常。
-</code></pre></li>
-<li>解决办法：<br>在退出接口里session::forget 或put空数据之后<br>再加上一行代码 <code>session::save()</code>即可</li>
-</ul>
+<li>
+<p>现象: 通过composer安装laravel框架过程中将需要调用<code>ext-dom</code>，若xml扩展未安装，这也会影响我们安装laravel。<br>
+以上两个扩展是PHP7版本安装laravel所依赖也是容易被忽略的扩展，<br>
+当你安装laravel无法正常生成vendor目录时就需要检查mbstring扩展加载情况了。</p>
 </li>
-<li><p>如何<code>添加异常</code>提示<br>位置:代码文件位置在app/Exceptions/Handler.php </p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">render</span><span class="params">($request, Exception $exception)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">$this</span>-&gt;isHttpException($exception)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">parent</span>::render($request, $exception);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> response()-&gt;json([</span><br><span class="line">            <span class="string">'code'</span>=&gt;$exception-&gt;getCode(),</span><br><span class="line">            <span class="string">'msg'</span>=&gt;$exception-&gt;getMessage(),</span><br><span class="line">        ] );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>ubuntu 安装完之后composor</code> 报错</p>
-<ul>
-<li><p>现象: 通过composer安装laravel框架过程中将需要调用<code>ext-dom</code>，若xml扩展未安装，这也会影响我们安装laravel。<br>以上两个扩展是PHP7版本安装laravel所依赖也是容易被忽略的扩展，<br>当你安装laravel无法正常生成vendor目录时就需要检查mbstring扩展加载情况了。</p>
-</li>
-<li><p>解决   安装也是简单的：<br>apt-get install php7.0-mbstring</p>
-<p>若提示：phpunit/phpunit 5.0.x requires ext-dom * -&gt; the requested PHP extension dom is missing from your system.<br>则需要安装xml扩展。<br>apt-get install php7.0-xml</p>
-</li>
-</ul>
-</li>
-<li><p><code>group by</code> 用法</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReviewMark::whereIn(<span class="string">'package_id'</span>, $review_pid)</span><br><span class="line">    -&gt;where(<span class="string">'is_cancel'</span>, <span class="number">1</span>)</span><br><span class="line">    -&gt;where(<span class="string">"l4_answers"</span>, <span class="string">"!="</span>, <span class="string">''</span>)-&gt;select(\DB::raw(<span class="string">'package_id,count(1) as num'</span>))</span><br><span class="line">    -&gt;groupBy(<span class="string">'package_id'</span>)-&gt;get()-&gt;toArray();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>laravel <code>定时任务不执行</code>的问题</p>
-<ul>
-<li><p>laravel 定时任务设置不重复执行的话会生成一个加密文件，当完成这个任务时候，会删掉这个文件。<br>如果不删掉的话这个任务会一直不执行。</p>
-</li>
-<li><p>kernel.php 里 command 里面名称的方法命名，如果包含下划线也不执行，如commad(‘m_r_diff:sync’)</p>
+<li>
+<p>解决   安装也是简单的：<br>
+apt-get install php7.0-mbstring</p>
+<p>若提示：phpunit/phpunit 5.0.x requires ext-dom * -&gt; the requested PHP extension dom is missing from your system.<br>
+则需要安装xml扩展。<br>
+apt-get install php7.0-xml</p>
 </li>
 </ul>
-</li>
-<li><p><code>composer</code> 安装<br> curl -sS <a href="https://getcomposer.org/installer" rel="external nofollow noopener noreferrer" target="_blank">https://getcomposer.org/installer</a> | /data/soft/php-fpm_9000/bin/php<br> sudo mv composer.phar /usr/local/bin/composer</p>
-</li>
-<li><p><code>job</code> 的使用</p>
+<ol start="6">
+<li><code>group by</code> 用法</li>
+</ol>
+  <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReviewMark::whereIn(<span class="string">'package_id'</span>, $review_pid)</span><br><span class="line">    -&gt;where(<span class="string">'is_cancel'</span>, <span class="number">1</span>)</span><br><span class="line">    -&gt;where(<span class="string">"l4_answers"</span>, <span class="string">"!="</span>, <span class="string">''</span>)-&gt;select(\DB::raw(<span class="string">'package_id,count(1) as num'</span>))</span><br><span class="line">    -&gt;groupBy(<span class="string">'package_id'</span>)-&gt;get()-&gt;toArray();</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>
+<p>laravel <code>定时任务不执行</code>的问题</p>
 <ul>
-<li><p>生成文件</p>
-<p>   在app目录下job 目录生成队列任务</p>
-<p>   php artisan make:job SendReminderEmail</p>
+<li>
+<p>laravel 定时任务设置不重复执行的话会生成一个加密文件，当完成这个任务时候，会删掉这个文件。<br>
+如果不删掉的话这个任务会一直不执行。</p>
 </li>
-<li><p>添加到队列</p>
-<p>  a. 默认 </p>
-<pre><code>queue::push(new SendReminderEmail());
-</code></pre><p>  b. 指定队列名</p>
-<pre><code>queue::pushOn(&apos;queue_name&apos;,new SendReminderEmail());
-</code></pre></li>
-<li><p>执行队列</p>
-<p>   a. php artisan queue:work/listen 执行/监听</p>
-<p>   b. 指定执行某个队列名 </p>
-<pre><code>--queue参数指定
- php artisan queue:work --queue=&apos;queue_name&apos; --tries=3 --sleep=2
-</code></pre></li>
+<li>
+<p>kernel.php 里 command 里面名称的方法命名，如果包含下划线也不执行，如commad(‘m_r_diff:sync’)</p>
+</li>
 </ul>
 </li>
-<li><p>邮箱配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MAIL_DRIVER=smtp</span><br><span class="line">MAIL_HOST=smtp.163.com</span><br><span class="line">MAIL_PORT=465</span><br><span class="line">MAIL_USERNAME=maweizhuo1314@163.com</span><br><span class="line">MAIL_PASSWORD=yourpassword</span><br><span class="line">MAIL_ENCRYPTION=ssl</span><br></pre></td></tr></table></figure>
+<li>
+<p><code>composer</code> 安装<br>
+curl -sS <a href="https://getcomposer.org/installer" rel="external nofollow noopener noreferrer" target="_blank">https://getcomposer.org/installer</a> | /data/soft/php-fpm_9000/bin/php<br>
+sudo mv composer.phar /usr/local/bin/composer</p>
 </li>
-<li><p>发送<code>邮件乱码</code></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$message-&gt;attach($attachment,[<span class="string">'as'</span>=&gt;<span class="string">"=?UTF-8?B?"</span>.base64_encode(<span class="keyword">$this</span>-&gt;pad_filename).<span class="string">"?=.doc"</span>]);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>安装laravel</code></p>
+<li>
+<p><code>job</code> 的使用</p>
 <ul>
-<li>a. 创建</li>
+<li>
+<p>生成文件</p>
+<p>在app目录下job 目录生成队列任务</p>
+<p>php artisan make:job SendReminderEmail</p>
+</li>
+<li>
+<p>添加到队列</p>
+<p>a. 默认<br>
+queue::push(new SendReminderEmail());</p>
+<p>b. 指定队列名<br>
+queue::pushOn(‘queue_name’,new SendReminderEmail());</p>
+</li>
+<li>
+<p>执行队列</p>
+<p>a. php artisan queue:work/listen 执行/监听</p>
+<p>b. 指定执行某个队列名</p>
+<pre><code> --queue参数指定
+  php artisan queue:work --queue='queue_name' --tries=3 --sleep=2
+</code></pre>
+</li>
 </ul>
-<p>composer create-project laravel/laravel=5.1.* –prefer-dist</p>
+</li>
+<li>
+<p>邮箱配置</p>
+</li>
+</ol>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MAIL_DRIVER=smtp</span><br><span class="line">MAIL_HOST=smtp.163.com</span><br><span class="line">MAIL_PORT=465</span><br><span class="line">MAIL_USERNAME=maweizhuo1314@163.com</span><br><span class="line">MAIL_PASSWORD=yourpassword</span><br><span class="line">MAIL_ENCRYPTION=ssl</span><br></pre></td></tr></table></figure>
+<ol start="11">
+<li>发送<code>邮件乱码</code></li>
+</ol>
+  <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$message-&gt;attach($attachment,[<span class="string">'as'</span>=&gt;<span class="string">"=?UTF-8?B?"</span>.base64_encode(<span class="keyword">$this</span>-&gt;pad_filename).<span class="string">"?=.doc"</span>]);</span><br></pre></td></tr></table></figure>
+<ol start="12">
+<li><code>安装laravel</code></li>
+</ol>
 <ul>
-<li>b. 采用国内的包管理</li>
+<li>
+<p>a. 创建</p>
+<p>composer create-project laravel/laravel=5.1.* --prefer-dist</p>
+</li>
+<li>
+<p>b. 采用国内的包管理</p>
+</li>
 </ul>
 <p>composer config -g repositories.packagist composer <a href="http://packagist.phpcomposer.com" rel="external nofollow noopener noreferrer" target="_blank">http://packagist.phpcomposer.com</a></p>
 <ul>
 <li>c. 全局配置</li>
 </ul>
 <p>composer config -g secure-http false</p>
-</li>
-<li><p>框架安装<code>redis 引入包</code></p>
-<p><strong>注:</strong> 需要引入的包可访问<br><a href="http://packagist.phpcomposer.com" rel="external nofollow noopener noreferrer" target="_blank">package国内镜像官网</a><br><a href="https://packagist.org/" rel="external nofollow noopener noreferrer" target="_blank">各种引入包下载地址</a></p>
+<ol start="13">
+<li>框架安装<code>redis 引入包</code></li>
+</ol>
+<p><strong>注:</strong> 需要引入的包可访问<br>
+<a href="http://packagist.phpcomposer.com" rel="external nofollow noopener noreferrer" target="_blank">package国内镜像官网</a><br>
+<a href="https://packagist.org/" rel="external nofollow noopener noreferrer" target="_blank">各种引入包下载地址</a></p>
 <ul>
 <li>修改 项目Conposer.json文件</li>
-<li>删除Conposer.lock </li>
+<li>删除Conposer.lock</li>
 <li>执行composer clearcache</li>
 <li>执行composer update</li>
 <li>执行：composer require predis/predis</li>
 </ul>
-</li>
-<li><p>框架<code>优缺点</code></p>
-</li>
+<ol start="14">
+<li>框架<code>优缺点</code></li>
 </ol>
 <table>
 <thead>
@@ -523,8 +577,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<blockquote>
+<p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p>
 </blockquote>
 
             </div>

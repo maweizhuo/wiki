@@ -9,17 +9,17 @@
         <meta name="keywords" content="Linux">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="背景linux 环境是多数RD必须要用的一个环境,其中一些常见的命令,也必须会使用 常用汇总 递归创建目录mkdir -p /home/dir1/dir2  查找文件名find /路径 -iname ‘文件名*’  查找内容find /usr/ -type f |xargs grep ‘bind-address’或 g">
+    <meta name="description" content="背景 linux 环境是多数RD必须要用的一个环境,其中一些常见的命令,也必须会使用 常用汇总   递归创建目录 mkdir -p /home/dir1/dir2   查找文件名 find /路径 -iname ‘文件名*’   查找内容 find /usr/ -type f |xargs grep &apos;bin">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux命令汇总">
 <meta property="og:url" content="http://maweizhuo.com/posts/linux常用命令汇总/index.html">
 <meta property="og:site_name" content="马伟倬wiki">
-<meta property="og:description" content="背景linux 环境是多数RD必须要用的一个环境,其中一些常见的命令,也必须会使用 常用汇总 递归创建目录mkdir -p /home/dir1/dir2  查找文件名find /路径 -iname ‘文件名*’  查找内容find /usr/ -type f |xargs grep ‘bind-address’或 grep -r ‘bind-address’ /usr  tar/unzip 命令">
+<meta property="og:description" content="背景 linux 环境是多数RD必须要用的一个环境,其中一些常见的命令,也必须会使用 常用汇总   递归创建目录 mkdir -p /home/dir1/dir2   查找文件名 find /路径 -iname ‘文件名*’   查找内容 find /usr/ -type f |xargs grep &apos;bind-address’ 或 grep -r ‘bind-address’ /usr   ta">
 <meta property="og:updated_time" content="2017-11-22T09:56:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux命令汇总">
-<meta name="twitter:description" content="背景linux 环境是多数RD必须要用的一个环境,其中一些常见的命令,也必须会使用 常用汇总 递归创建目录mkdir -p /home/dir1/dir2  查找文件名find /路径 -iname ‘文件名*’  查找内容find /usr/ -type f |xargs grep ‘bind-address’或 grep -r ‘bind-address’ /usr  tar/unzip 命令">
+<meta name="twitter:description" content="背景 linux 环境是多数RD必须要用的一个环境,其中一些常见的命令,也必须会使用 常用汇总   递归创建目录 mkdir -p /home/dir1/dir2   查找文件名 find /路径 -iname ‘文件名*’   查找内容 find /usr/ -type f |xargs grep &apos;bind-address’ 或 grep -r ‘bind-address’ /usr   ta">
     
 
     
@@ -47,6 +47,7 @@
     
     
     
+
 
 
 </head>
@@ -215,7 +216,7 @@
                             &nbsp;
                             PHP
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  <li class="file"><a href="/wiki/posts/laravel相关/">laravel相关</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/laravel相关/">laravel相关</a></li>  <li class="file"><a href="/wiki/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -252,6 +253,15 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/awk 管道操作小结/">awk 管道操作小结</a></li>  </ul> 
                     </li> 
                      <li class="file active"><a href="/wiki/posts/linux常用命令汇总/">linux命令汇总</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            个人web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/hexo安装使用/">hexo安装使用</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -391,21 +401,36 @@
             
         
         
-            <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><code>linux</code> 环境是多数RD必须要用的一个环境,其中一些常见的命令,也必须会使用</p>
-<h2 id="常用汇总"><a href="#常用汇总" class="headerlink" title="常用汇总"></a>常用汇总</h2><ol>
-<li><p><code>递归</code>创建目录<br><strong>mkdir -p /home/dir1/dir2</strong></p>
+            <h2 id="背景"><a class="header-anchor" href="#背景"></a>背景</h2>
+<p><code>linux</code> 环境是多数RD必须要用的一个环境,其中一些常见的命令,也必须会使用</p>
+<h2 id="常用汇总"><a class="header-anchor" href="#常用汇总"></a>常用汇总</h2>
+<ol>
+<li>
+<p><code>递归</code>创建目录<br>
+<strong>mkdir -p /home/dir1/dir2</strong></p>
 </li>
-<li><p><code>查找文件名</code><br><code>find</code> /路径 -iname ‘文件名*’</p>
+<li>
+<p><code>查找文件名</code><br>
+<code>find</code> /路径 -iname ‘文件名*’</p>
 </li>
-<li><p><code>查找内容</code><br>find /usr/ -type f |xargs grep ‘bind-address’<br>或 <code>grep</code> -r ‘bind-address’ /usr</p>
+<li>
+<p><code>查找内容</code><br>
+find /usr/ -type f |xargs grep 'bind-address’<br>
+或 <code>grep</code> -r ‘bind-address’ /usr</p>
 </li>
-<li><p>tar/unzip 命令解压到<code>指定目录</code><br>tar zxvf elasticsearch-5.4.1.tar.gz <code>-C</code>/usr/local/<br>unzip test.zip <code>-d</code> /root/ </p>
+<li>
+<p>tar/unzip 命令解压到<code>指定目录</code><br>
+tar zxvf elasticsearch-5.4.1.tar.gz <code>-C</code>/usr/local/<br>
+unzip test.zip <code>-d</code> /root/</p>
 </li>
-<li><p>查看文件最新内容<br>tail -f /user/log.txt</p>
+<li>
+<p>查看文件最新内容<br>
+tail -f /user/log.txt</p>
 </li>
 </ol>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote>
-<p>记录点滴，成为更好的自己。       — weizhuo.ma</p>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<blockquote>
+<p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p>
 </blockquote>
 
             </div>
