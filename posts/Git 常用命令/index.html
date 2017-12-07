@@ -9,17 +9,17 @@
         <meta name="keywords" content="Git">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="git clone 克隆一个版本仓库命令 常用参数还有 git clone url --depth=1 (加上这个参数可以避免项目太大，下载失败； –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name git init 123456git init 初始化     git ">
+    <meta name="description" content="git clone 克隆一个版本仓库命令 常用参数还有 git clone url --depth=1 (加上这个参数可以避免项目太大，下载失败； –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name 生成裸仓库文件 进入git源目录 , 生成无版本控制的新文件 git a">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 常用命令">
 <meta property="og:url" content="http://wiki.maweizhuo.com/posts/Git 常用命令/index.html">
 <meta property="og:site_name" content="马伟倬 wiki">
-<meta property="og:description" content="git clone 克隆一个版本仓库命令 常用参数还有 git clone url --depth=1 (加上这个参数可以避免项目太大，下载失败； –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name git init 123456git init 初始化     git branch branch_name    git branch -D bran">
-<meta property="og:updated_time" content="2017-11-23T09:54:04.000Z">
+<meta property="og:description" content="git clone 克隆一个版本仓库命令 常用参数还有 git clone url --depth=1 (加上这个参数可以避免项目太大，下载失败； –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name 生成裸仓库文件 进入git源目录 , 生成无版本控制的新文件 git archive -o latest.zip HEAD 基于最新提交建立归档文件la">
+<meta property="og:updated_time" content="2017-12-07T07:50:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 常用命令">
-<meta name="twitter:description" content="git clone 克隆一个版本仓库命令 常用参数还有 git clone url --depth=1 (加上这个参数可以避免项目太大，下载失败； –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name git init 123456git init 初始化     git branch branch_name    git branch -D bran">
+<meta name="twitter:description" content="git clone 克隆一个版本仓库命令 常用参数还有 git clone url --depth=1 (加上这个参数可以避免项目太大，下载失败； –depth=1 是指只拉取最后一次的提交结果。); git clone url new_name 生成裸仓库文件 进入git源目录 , 生成无版本控制的新文件 git archive -o latest.zip HEAD 基于最新提交建立归档文件la">
     
 
     
@@ -234,7 +234,7 @@
                             &nbsp;
                             Git
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/posts/Git 常用命令/">Git 常用命令</a></li>  <li class="file"><a href="/wiki/posts/Git 清理已追踪或未添加追踪的文件/">Git 清理已追踪或未添加追踪的文件</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/posts/Git 清理已追踪或未添加追踪的文件/">Git 清理已追踪或未添加追踪的文件</a></li>  <li class="file active"><a href="/wiki/posts/Git 常用命令/">Git 常用命令</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -413,6 +413,9 @@
 (加上这个参数可以避免项目太大，下载失败；<br>
 <strong>–depth=1</strong> 是指只拉取最后一次的提交结果。);</p>
 <p><code>git clone url new_name</code></p>
+<p><strong>生成裸仓库文件</strong><br>
+进入git源目录 , 生成无版本控制的新文件<br>
+<code>git archive -o latest.zip HEAD 基于最新提交建立归档文件latest.zip</code></p>
 <h2 id="git-init"><a class="header-anchor" href="#git-init"></a>git init</h2>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init 初始化</span><br><span class="line">     git branch branch_name</span><br><span class="line">    git branch -D branch_name 删除分支</span><br><span class="line">     git checkout -b branch_name 新建并切换为这个分支</span><br><span class="line">     git pull origin master 更新  = git fetch (拉取远程代码不</span><br><span class="line"> 自动合并) + git merge</span><br></pre></td></tr></table></figure>
 <h2 id="git-merge"><a class="header-anchor" href="#git-merge"></a>git merge</h2>
