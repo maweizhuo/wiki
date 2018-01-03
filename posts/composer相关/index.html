@@ -3,21 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Categoria: 架构 | 马伟倬 wiki</title>
+    <title>composer相关 | 马伟倬 wiki</title>
     
     
-        <meta name="keywords" content="马伟倬 wiki">
+        <meta name="keywords" content="composer,php">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="maweizhuo wiki,马伟倬的个人wiki,对工作生活零碎的知识进行整理分类,个人原创,坚持原创">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马伟倬 wiki">
-<meta property="og:url" content="http://wiki.maweizhuo.com/categories/编程艺术/架构/index.html">
+    <meta name="description" content="背景 composer 在laravel 框架 使用中的汇总,包括安装及引入包 是什么 是 PHP 用来管理依赖（dependency）关系的工具。 你可以在自己的项目中声明所依赖的外部工具库（libraries）， Composer 会帮你安装这些依赖的库文件。 使用汇总  下载&amp;amp;安装   sudo ">
+<meta name="keywords" content="composer,php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="composer相关">
+<meta property="og:url" content="http://wiki.maweizhuo.com/posts/composer相关/index.html">
 <meta property="og:site_name" content="马伟倬 wiki">
-<meta property="og:description" content="maweizhuo wiki,马伟倬的个人wiki,对工作生活零碎的知识进行整理分类,个人原创,坚持原创">
+<meta property="og:description" content="背景 composer 在laravel 框架 使用中的汇总,包括安装及引入包 是什么 是 PHP 用来管理依赖（dependency）关系的工具。 你可以在自己的项目中声明所依赖的外部工具库（libraries）， Composer 会帮你安装这些依赖的库文件。 使用汇总  下载&amp;amp;安装   sudo curl -sS https://getcomposer.org/installer |">
+<meta property="og:updated_time" content="2018-01-03T09:26:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马伟倬 wiki">
-<meta name="twitter:description" content="maweizhuo wiki,马伟倬的个人wiki,对工作生活零碎的知识进行整理分类,个人原创,坚持原创">
+<meta name="twitter:title" content="composer相关">
+<meta name="twitter:description" content="背景 composer 在laravel 框架 使用中的汇总,包括安装及引入包 是什么 是 PHP 用来管理依赖（dependency）关系的工具。 你可以在自己的项目中声明所依赖的外部工具库（libraries）， Composer 会帮你安装这些依赖的库文件。 使用汇总  下载&amp;amp;安装   sudo curl -sS https://getcomposer.org/installer |">
     
 
     
@@ -183,9 +185,9 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/DISC-行为风格理论/">DISC 行为风格理论</a></li>  <li class="file"><a href="/posts/点滴人生观念信条/">点滴人生观念信条</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             程序语言
                         </a>
@@ -208,13 +210,13 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/mysql常用汇总/">mysql常用汇总</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             PHP
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/composer相关/">composer相关</a></li>  <li class="file"><a href="/posts/laravel相关/">laravel相关</a></li>  <li class="file"><a href="/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/posts/composer相关/">composer相关</a></li>  <li class="file"><a href="/posts/laravel相关/">laravel相关</a></li>  <li class="file"><a href="/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -352,50 +354,156 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-folder"></i></span>
-        <h1 class="title">架构</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-composer相关" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/posts/IaaS, PaaS, SaaS 概念/">IaaS, PaaS, SaaS 概念</a>
-        </h1>
-    
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/程序语言/">程序语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/程序语言/PHP/">PHP</a>
+    </div>
 
-                <div class="article-meta">
-                    
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/composer/">composer</a>, <a class="tag-link" href="/tags/php/">php</a>
+    </div>
+
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/posts/IaaS, PaaS, SaaS 概念/">
-            <time datetime="2017-08-25T15:04:48.000Z" itemprop="datePublished">2017-08-25</time>
+        <a href="/posts/composer相关/">
+            <time datetime="2018-01-03T07:53:30.000Z" itemprop="datePublished">2018-01-03</time>
         </a>
     </div>
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/编程艺术/">编程艺术</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/编程艺术/架构/">架构</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/云服务/">云服务</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
+                        
+                    </div>
+                
+                
     
-</div>
+        <h1 class="article-title" itemprop="name">
+            composer相关
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h2 id="背景"><a class="header-anchor" href="#背景"></a>背景</h2>
+<p><code>composer</code> 在laravel 框架 使用中的汇总,包括安装及引入包</p>
+<h2 id="是什么"><a class="header-anchor" href="#是什么"></a>是什么</h2>
+<p>是 PHP 用来管理依赖（dependency）关系的工具。<br>
+你可以在自己的项目中声明所依赖的外部工具库（libraries），<br>
+Composer 会帮你<code>安装这些依赖的库文件</code>。</p>
+<h2 id="使用汇总"><a class="header-anchor" href="#使用汇总"></a>使用汇总</h2>
+<ol>
+<li>下载&amp;安装</li>
+</ol>
+<ul>
+<li>sudo curl -sS <a href="https://getcomposer.org/installer" rel="external nofollow noopener noreferrer" target="_blank">https://getcomposer.org/installer</a> | sudo php -d detect_unicode=Off</li>
+<li>执行完会生成,composer.phar的文件</li>
+</ul>
+<ol start="2">
+<li>
+<p>修改权限<br>
+sudo chmod a+x composer.phar</p>
+</li>
+<li>
+<p>全局安装<br>
+sudo mv composer.phar /usr/local/bin/composer</p>
+</li>
+<li>
+<p>国内资源<br>
+composer config -g repo.packagist composer <a href="https://packagist.phpcomposer.com" rel="external nofollow noopener noreferrer" target="_blank">https://packagist.phpcomposer.com</a></p>
+</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#### 如果 Composer 更新仍然慢，就在项目中执行以下命令</span></span><br><span class="line">composer config repo.packagist composer https:<span class="comment">//packagist.phpcomposer.com</span></span><br><span class="line"><span class="comment">#### 上述命令将会在当前项目中的 composer.json 文件的末尾自动添加镜像的配置信息（你也可以自己手工添加）：</span></span><br><span class="line"><span class="string">"repositories"</span>: &#123;</span><br><span class="line">        <span class="string">"packagist"</span>: &#123; </span><br><span class="line">                <span class="string">"type"</span>: <span class="string">"composer"</span>, </span><br><span class="line">                <span class="string">"url"</span> : <span class="string">"https://packagist.phpcomposer.com"</span> </span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>laravel 常用的包</li>
+</ol>
+<blockquote>
+<ul>
+<li>“predis/predis”:&quot;~1.0&quot;,</li>
+<li>“maatwebsite/excel”: “~2.1.0”,</li>
+<li>“nmred/kafka-php”: “0.2.*”</li>
+<li>“itsgoingd/clockwork”: “^2.0”</li>
+</ul>
+</blockquote>
+<ol start="6">
+<li>安装示例</li>
+</ol>
+<ul>
+<li>
+<p>以安装itsgoingd/clockwork 为例</p>
+</li>
+<li>
+<p><a href="https://packagist.org/packages/itsgoingd/clockwork" rel="external nofollow noopener noreferrer" target="_blank">composer 包地址</a></p>
+</li>
+<li>
+<p>安装 <code>composer require itsgoingd/clockwork</code></p>
+</li>
+<li>
+<p>配置:</p>
+<ul>
+<li>config/app.php</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 服务提供者</span></span><br><span class="line"><span class="string">'providers'</span> =&gt; [</span><br><span class="line">	...</span><br><span class="line">	Clockwork\Support\Laravel\ClockworkServiceProvider::class</span><br><span class="line">]</span><br><span class="line"> <span class="comment">// 别名声明</span></span><br><span class="line"> <span class="string">'aliases'</span> =&gt; [</span><br><span class="line">     ...</span><br><span class="line">     <span class="string">'Clockwork'</span> =&gt; Clockwork\Support\Laravel\Facade::class,</span><br><span class="line"> ]</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>生成配置文件</p>
+</li>
+</ul>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan vendor:publish</span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<blockquote>
+<p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p>
+</blockquote>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+    
+        <a href="/posts/mysql常用汇总/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">mysql常用汇总</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<!-- <script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     -->
 </section>
         </div>
         <footer id="footer">
