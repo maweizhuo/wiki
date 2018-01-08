@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.maweizhuo.com/"/>
-  <updated>2018-01-03T09:26:51.000Z</updated>
+  <updated>2018-01-08T02:54:43.000Z</updated>
   <id>http://wiki.maweizhuo.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP 状态码</title>
+    <link href="http://wiki.maweizhuo.com/posts/HTTP%20%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    <id>http://wiki.maweizhuo.com/posts/HTTP 状态码/</id>
+    <published>2018-01-08T01:51:30.000Z</published>
+    <updated>2018-01-08T02:54:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一张图看懂http状态码"><a class="header-anchor" href="#一张图看懂http状态码"></a>一张图看懂HTTP状态码</h2><p><img src="https://box.kancloud.cn/2015-11-03_5638652bd8ad9.jpg" alt="http状态码"></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一张图看懂http状态码&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一张图看懂http状态码&quot;&gt;&lt;/a&gt;一张图看懂HTTP状态码&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://box.kancloud.cn/2015-11-03_56
+      
+    
+    </summary>
+    
+      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+      <category term="HTTP" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/HTTP/"/>
+    
+    
+      <category term="Http" scheme="http://wiki.maweizhuo.com/tags/Http/"/>
+    
+  </entry>
   
   <entry>
     <title>composer相关</title>
@@ -369,30 +397,6 @@
   </entry>
   
   <entry>
-    <title>maweizhuo wiki site desc</title>
-    <link href="http://wiki.maweizhuo.com/posts/maweizhuo%20wiki%20site%20desc/"/>
-    <id>http://wiki.maweizhuo.com/posts/maweizhuo wiki site desc/</id>
-    <published>2017-08-25T15:04:48.000Z</published>
-    <updated>2017-12-12T06:11:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我的个人wiki 😊 😊。</p><p>O(∩_∩)O哈哈~</p><h2 id="背景"><a class="header-anchor" href="#背景"></a>背景</h2><p>没有 <code>wiki</code> 的时候,自己对知识的储备流程大概如下</p><ul><li>干脆不记录,需要时候百度下 😂</li><li>记在一个本上,方式古老了点</li><li>写博客,但相对零散,不直观</li><li>存在云笔记里,如 有道云</li></ul><p>在使用中，<strong>笔记系统</strong> 主大块信息的<strong>分类和整理</strong>，<strong>Wiki</strong> 主零碎知识的<strong>积累</strong>，而 <strong>博客</strong> 只在于 <strong>精</strong>。</p><h2 id="用途"><a class="header-anchor" href="#用途"></a>用途</h2><p>希望在以后的工作生活中,<code>wiki</code>可以作为自己的一个<strong>工具</strong>,记录自己生活中的点滴。促进自己成长。</p><h2 id="其他链接"><a class="header-anchor" href="#其他链接"></a>其他链接</h2><p><a href="https://github.com/maweizhuo" rel="external nofollow noopener noreferrer" target="_blank">github</a><br><a href="http://blog.maweizhuo.com" rel="external nofollow noopener noreferrer" target="_blank">blog</a><br><a href="http://maweizhuo.com" target="_blank" rel="noopener">我的主页</a></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote> <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold" rel="external nofollow noopener noreferrer" target="_blank">Coding Pages</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;我的个人wiki 😊 😊。&lt;/p&gt;
-&lt;p&gt;O(∩_∩)O哈哈~&lt;/p&gt;
-&lt;h2 id=&quot;背景&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;
-&lt;p&gt;没有 &lt;code&gt;wiki&lt;/code&gt; 的时候,自己对知识的储备流程大
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>IaaS, PaaS, SaaS 概念</title>
     <link href="http://wiki.maweizhuo.com/posts/IaaS,%20PaaS,%20SaaS%20%E6%A6%82%E5%BF%B5/"/>
     <id>http://wiki.maweizhuo.com/posts/IaaS, PaaS, SaaS 概念/</id>
@@ -417,6 +421,30 @@
     
     
       <category term="云服务" scheme="http://wiki.maweizhuo.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>maweizhuo wiki site desc</title>
+    <link href="http://wiki.maweizhuo.com/posts/maweizhuo%20wiki%20site%20desc/"/>
+    <id>http://wiki.maweizhuo.com/posts/maweizhuo wiki site desc/</id>
+    <published>2017-08-25T15:04:48.000Z</published>
+    <updated>2017-12-12T06:11:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我的个人wiki 😊 😊。</p><p>O(∩_∩)O哈哈~</p><h2 id="背景"><a class="header-anchor" href="#背景"></a>背景</h2><p>没有 <code>wiki</code> 的时候,自己对知识的储备流程大概如下</p><ul><li>干脆不记录,需要时候百度下 😂</li><li>记在一个本上,方式古老了点</li><li>写博客,但相对零散,不直观</li><li>存在云笔记里,如 有道云</li></ul><p>在使用中，<strong>笔记系统</strong> 主大块信息的<strong>分类和整理</strong>，<strong>Wiki</strong> 主零碎知识的<strong>积累</strong>，而 <strong>博客</strong> 只在于 <strong>精</strong>。</p><h2 id="用途"><a class="header-anchor" href="#用途"></a>用途</h2><p>希望在以后的工作生活中,<code>wiki</code>可以作为自己的一个<strong>工具</strong>,记录自己生活中的点滴。促进自己成长。</p><h2 id="其他链接"><a class="header-anchor" href="#其他链接"></a>其他链接</h2><p><a href="https://github.com/maweizhuo" rel="external nofollow noopener noreferrer" target="_blank">github</a><br><a href="http://blog.maweizhuo.com" rel="external nofollow noopener noreferrer" target="_blank">blog</a><br><a href="http://maweizhuo.com" target="_blank" rel="noopener">我的主页</a></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote> <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold" rel="external nofollow noopener noreferrer" target="_blank">Coding Pages</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我的个人wiki 😊 😊。&lt;/p&gt;
+&lt;p&gt;O(∩_∩)O哈哈~&lt;/p&gt;
+&lt;h2 id=&quot;背景&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;
+&lt;p&gt;没有 &lt;code&gt;wiki&lt;/code&gt; 的时候,自己对知识的储备流程大
+      
+    
+    </summary>
+    
     
   </entry>
   
