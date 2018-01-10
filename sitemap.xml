@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wiki.maweizhuo.com/posts/mongodb%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%90%AF%E5%8A%A8/</loc>
+    
+    <lastmod>2018-01-10T08:25:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.maweizhuo.com/posts/Nosql%E4%B8%8ESql%E5%AF%B9%E6%AF%94/</loc>
+    
+    <lastmod>2018-01-10T07:04:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.maweizhuo.com/posts/B%E6%A0%91%E6%A6%82%E5%BF%B5/</loc>
     
     <lastmod>2018-01-09T10:04:39.000Z</lastmod>
