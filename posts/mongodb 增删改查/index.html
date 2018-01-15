@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>mongodb 增删改查 | 马伟倬 wiki</title>
+    
+    
+        <meta name="keywords" content="mongodb">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="创建/删除数据库  创建 use DATABASE_NAME 如果数据库不存在，则创建数据库，否则切换到指定数据库。 MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。  12345678910111213141516eg:&amp;gt; use runoobsw">
+<meta name="keywords" content="mongodb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mongodb 增删改查">
+<meta property="og:url" content="http://wiki.maweizhuo.com/posts/mongodb 增删改查/index.html">
+<meta property="og:site_name" content="马伟倬 wiki">
+<meta property="og:description" content="创建/删除数据库  创建 use DATABASE_NAME 如果数据库不存在，则创建数据库，否则切换到指定数据库。 MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。  12345678910111213141516eg:&amp;gt; use runoobswitched to db runoob&amp;gt; dbrunoob&amp;gt; **你想查看所">
+<meta property="og:updated_time" content="2018-01-15T09:36:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mongodb 增删改查">
+<meta name="twitter:description" content="创建/删除数据库  创建 use DATABASE_NAME 如果数据库不存在，则创建数据库，否则切换到指定数据库。 MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，集合将存放在 test 数据库中。  12345678910111213141516eg:&amp;gt; use runoobswitched to db runoob&amp;gt; dbrunoob&amp;gt; **你想查看所">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="马伟倬 wiki" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                
+                <span class="site-title">马伟倬 wiki</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Articles',
+            PAGES: 'Pages',
+            CATEGORIES: 'Catégories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Catégories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            工具软件
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Mac
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/mac工具软件/">mac 工具软件</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            生活闲读
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/DISC-行为风格理论/">DISC 行为风格理论</a></li>  <li class="file"><a href="/posts/点滴人生观念信条/">点滴人生观念信条</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            程序语言
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            CSS
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/CSS属性声明顺序规范/">CSS属性声明顺序规范</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            MYSQL
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/B树概念/">B树概念</a></li>  <li class="file"><a href="/posts/mysql常用汇总/">mysql常用汇总</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            NOSQL
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/Nosql与Sql对比/">Nosql与Sql对比</a></li>  <li class="file active"><a href="/posts/mongodb 增删改查/">mongodb 增删改查</a></li>  <li class="file"><a href="/posts/mongodb安装配置及启动/">mongodb安装配置及启动</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            PHP
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/composer相关/">composer相关</a></li>  <li class="file"><a href="/posts/laravel相关/">laravel相关</a></li>  <li class="file"><a href="/posts/linux php 自带扩展编译安装/">linux php 自带扩展编译安装</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            编程艺术
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Git
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/Git 清理已追踪或未添加追踪的文件/">Git 清理已追踪或未添加追踪的文件</a></li>  <li class="file"><a href="/posts/Git 常用命令/">Git 常用命令</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            HTTP
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/HTTP 状态码/">HTTP 状态码</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Linux
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Shell
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/awk 管道操作小结/">awk 管道操作小结</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/posts/linux常用命令汇总/">linux命令汇总</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            个人web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/hexo安装使用/">hexo安装使用</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            架构
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/IaaS, PaaS, SaaS 概念/">IaaS, PaaS, SaaS 概念</a></li>  <li class="file"><a href="/posts/大型网站架构演化/">大型网站架构演化</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            算法
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/八大排序算法复杂度/">八大排序算法复杂度</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     <li class="file"><a href="/posts/maweizhuo wiki site desc/">maweizhuo wiki site desc</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-mongodb 增删改查" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/程序语言/">程序语言</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/程序语言/NOSQL/">NOSQL</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/mongodb/">mongodb</a>
+    </div>
+
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/posts/mongodb 增删改查/">
+            <time datetime="2018-01-15T02:53:30.000Z" itemprop="datePublished">2018-01-15</time>
+        </a>
+    </div>
+
+
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            mongodb 增删改查
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建-删除数据库"><span class="toc-number">1.</span> <span class="toc-text">创建/删除数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入文档"><span class="toc-number">2.</span> <span class="toc-text">插入文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改"><span class="toc-number">3.</span> <span class="toc-text">修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除文档"><span class="toc-number">4.</span> <span class="toc-text">删除文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件操作符"><span class="toc-number">5.</span> <span class="toc-text">条件操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#limit-与-skip-操作符"><span class="toc-number">6.</span> <span class="toc-text">limit 与 skip 操作符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#排序"><span class="toc-number">7.</span> <span class="toc-text">排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#索引"><span class="toc-number">8.</span> <span class="toc-text">索引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#聚合"><span class="toc-number">9.</span> <span class="toc-text">聚合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mongodb使用参考"><span class="toc-number">10.</span> <span class="toc-text">mongodb使用参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用"><span class="toc-number">11.</span> <span class="toc-text">引用</span></a></li></ol>
+                </div>
+            
+        
+        
+            <h2 id="创建-删除数据库"><a class="header-anchor" href="#创建-删除数据库"></a>创建/删除数据库</h2>
+<ul>
+<li><strong>创建</strong><br>
+use DATABASE_NAME<br>
+如果数据库不存在，则创建数据库，否则切换到指定数据库。<br>
+MongoDB 中<code>默认的数据库为 test</code>，如果你没有创建新的数据库，集合将存放在 test 数据库中。</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">&gt; <span class="keyword">use</span> <span class="title">runoob</span></span><br><span class="line"><span class="title">switched</span> <span class="title">to</span> <span class="title">db</span> <span class="title">runoob</span></span><br><span class="line">&gt; <span class="title">db</span></span><br><span class="line"><span class="title">runoob</span></span><br><span class="line">&gt; </span><br><span class="line"></span><br><span class="line">**你想查看所有数据库，可以使用 <span class="title">show</span> <span class="title">dbs</span> 命令：**</span><br><span class="line"></span><br><span class="line">&gt; <span class="title">show</span> <span class="title">dbs</span></span><br><span class="line"><span class="title">local</span>  0.078<span class="title">GB</span></span><br><span class="line"><span class="title">test</span>   0.078<span class="title">GB</span></span><br><span class="line">&gt; </span><br><span class="line"></span><br><span class="line">//可以看到，我们刚创建的数据库 <span class="title">runoob</span> 并不在数据库的列表中，</span><br><span class="line">//要显示它，我们需要向 <span class="title">runoob</span> 数据库插入一些数据。</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>删除数据库</strong><br>
+db.dropDatabase()</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt; show dbs</span><br><span class="line">local   <span class="number">0.078</span>GB</span><br><span class="line">runoob  <span class="number">0.078</span>GB</span><br><span class="line">test    <span class="number">0.078</span>GB</span><br><span class="line">&gt; <span class="keyword">use</span> <span class="title">runoob</span></span><br><span class="line"><span class="title">switched</span> <span class="title">to</span> <span class="title">db</span> <span class="title">runoob</span></span><br><span class="line">&gt; </span><br><span class="line">&gt; <span class="title">db</span>.<span class="title">dropDatabase</span>()</span><br><span class="line">&#123; "<span class="title">dropped</span>" : "<span class="title">runoob</span>", "<span class="title">ok</span>" : 1 &#125;</span><br><span class="line">&gt; <span class="title">show</span> <span class="title">dbs</span></span><br><span class="line"><span class="title">local</span>  0.078<span class="title">GB</span></span><br><span class="line"><span class="title">test</span>   0.078<span class="title">GB</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>删除集合</strong><br>
+mongo 里说的集合 = MySQL里的表<br>
+db.collection.drop()</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">&gt; <span class="keyword">use</span> <span class="title">runoob</span></span><br><span class="line"><span class="title">switched</span> <span class="title">to</span> <span class="title">db</span> <span class="title">runoob</span></span><br><span class="line">&gt; <span class="title">show</span> <span class="title">tables</span></span><br><span class="line"><span class="title">user</span></span><br><span class="line">&gt; <span class="title">db</span>.<span class="title">user</span>.<span class="title">drop</span>()</span><br><span class="line"><span class="title">true</span></span><br><span class="line">&gt; <span class="title">show</span> <span class="title">tables</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="插入文档"><a class="header-anchor" href="#插入文档"></a>插入文档</h2>
+<p>db.col.insert()<br>
+db.collection.insertOne():向指定集合中插入一条文档数据<br>
+db.collection.insertMany():向指定集合中插入多条文档数据</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// insert() 插入,find() 查询, pretty()格式化</span></span><br><span class="line">&gt; db.user.insert(&#123;<span class="string">'id'</span>:<span class="number">1</span>,<span class="string">'age'</span>:<span class="number">12</span>,<span class="string">'name'</span>:<span class="string">'maweizhuo'</span>&#125;)</span><br><span class="line">WriteResult(&#123; <span class="string">"nInserted"</span> : <span class="number">1</span> &#125;)</span><br><span class="line">&gt; db.user.find()</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"5a58163b9a948caad01e31b4"</span>), <span class="string">"id"</span> : <span class="number">1</span>, <span class="string">"age"</span> : <span class="number">12</span>, <span class="string">"name"</span> : <span class="string">"maweizhuo"</span> &#125;</span><br><span class="line">&gt; db.user.find().pretty()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"_id"</span> : ObjectId(<span class="string">"5a58163b9a948caad01e31b4"</span>),</span><br><span class="line">	<span class="string">"id"</span> : <span class="number">1</span>,</span><br><span class="line">	<span class="string">"age"</span> : <span class="number">12</span>,</span><br><span class="line">	<span class="string">"name"</span> : <span class="string">"maweizhuo"</span></span><br><span class="line">&#125;</span><br><span class="line"> <span class="comment">// insertOne </span></span><br><span class="line">&gt; db.user.insertOne(&#123;<span class="string">'id'</span>:<span class="number">2</span>,<span class="string">'age'</span>:<span class="number">13</span>,<span class="string">'name'</span>:<span class="string">'maweizhuo1'</span>&#125;)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"acknowledged"</span> : <span class="keyword">true</span>,</span><br><span class="line">	<span class="string">"insertedId"</span> : ObjectId(<span class="string">"5a581a159a948caad01e31b5"</span>)</span><br><span class="line">&#125;</span><br><span class="line">&gt; db.user.find().pretty()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"_id"</span> : ObjectId(<span class="string">"5a58163b9a948caad01e31b4"</span>),</span><br><span class="line">	<span class="string">"id"</span> : <span class="number">1</span>,</span><br><span class="line">	<span class="string">"age"</span> : <span class="number">12</span>,</span><br><span class="line">	<span class="string">"name"</span> : <span class="string">"maweizhuo"</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"_id"</span> : ObjectId(<span class="string">"5a581a159a948caad01e31b5"</span>),</span><br><span class="line">	<span class="string">"id"</span> : <span class="number">2</span>,</span><br><span class="line">	<span class="string">"age"</span> : <span class="number">13</span>,</span><br><span class="line">	<span class="string">"name"</span> : <span class="string">"maweizhuo1"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 插入多条记录</span></span><br><span class="line">&gt; db.user.insertMany([&#123;<span class="string">'id'</span>:<span class="number">4</span>,<span class="string">'age'</span>:<span class="number">14</span>,<span class="string">'name'</span>:<span class="string">'maweizhuo4'</span>&#125;,&#123;<span class="string">'id'</span>:<span class="number">5</span>,<span class="string">'age'</span>:<span class="number">15</span>,<span class="string">'name'</span>:<span class="string">'maweizhuo5'</span>&#125;])</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"acknowledged"</span> : <span class="keyword">true</span>,</span><br><span class="line">	<span class="string">"insertedIds"</span> : [</span><br><span class="line">		ObjectId(<span class="string">"5a581aa39a948caad01e31b6"</span>),</span><br><span class="line">		ObjectId(<span class="string">"5a581aa39a948caad01e31b7"</span>)</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br><span class="line">&gt; db.user.find().pretty()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"_id"</span> : ObjectId(<span class="string">"5a58163b9a948caad01e31b4"</span>),</span><br><span class="line">	<span class="string">"id"</span> : <span class="number">1</span>,</span><br><span class="line">	<span class="string">"age"</span> : <span class="number">12</span>,</span><br><span class="line">	<span class="string">"name"</span> : <span class="string">"maweizhuo"</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"_id"</span> : ObjectId(<span class="string">"5a581a159a948caad01e31b5"</span>),</span><br><span class="line">	<span class="string">"id"</span> : <span class="number">2</span>,</span><br><span class="line">	<span class="string">"age"</span> : <span class="number">13</span>,</span><br><span class="line">	<span class="string">"name"</span> : <span class="string">"maweizhuo1"</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"_id"</span> : ObjectId(<span class="string">"5a581aa39a948caad01e31b6"</span>),</span><br><span class="line">	<span class="string">"id"</span> : <span class="number">4</span>,</span><br><span class="line">	<span class="string">"age"</span> : <span class="number">14</span>,</span><br><span class="line">	<span class="string">"name"</span> : <span class="string">"maweizhuo4"</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"_id"</span> : ObjectId(<span class="string">"5a581aa39a948caad01e31b7"</span>),</span><br><span class="line">	<span class="string">"id"</span> : <span class="number">5</span>,</span><br><span class="line">	<span class="string">"age"</span> : <span class="number">15</span>,</span><br><span class="line">	<span class="string">"name"</span> : <span class="string">"maweizhuo5"</span></span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="修改"><a class="header-anchor" href="#修改"></a>修改</h2>
+<p>MongoDB 使用 <code>update() 和 save()</code> 方法来更新集合中的文档</p>
+<ul>
+<li><strong>update</strong><br>
+参数说明：<br>
+<strong>query</strong> : update的查询条件，类似sql update查询内where后面的。<br>
+<strong>update</strong> : update的对象和一些更新的操作符（如$,$inc…）等，也可以理解为sql update查询内set后面的<br>
+<strong>upsert</strong> : (update+insert)可选，这个参数的意思是，<code>如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。</code><br>
+<strong>multi</strong> : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为<code>true,就把按条件查出来多条记录全部更新</code>。<br>
+<strong>writeConcern</strong> :可选，抛出异常的级别。</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.users.insert(&#123;<span class="string">'name'</span>:<span class="string">'maweihzuo'</span>,<span class="string">'age'</span>:<span class="number">18</span>,<span class="string">'tag'</span>:[<span class="string">'mongo'</span>,<span class="string">'nosql'</span>]&#125;)</span><br><span class="line">WriteResult(&#123; <span class="string">"nInserted"</span> : <span class="number">1</span> &#125;)</span><br><span class="line">&gt; show tables</span><br><span class="line">users</span><br><span class="line">&gt; db.users.find().pretty()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"_id"</span> : ObjectId(<span class="string">"5a59ac4bc52de95ef9c85bfd"</span>),</span><br><span class="line">	<span class="string">"name"</span> : <span class="string">"maweihzuo"</span>,</span><br><span class="line">	<span class="string">"age"</span> : <span class="number">18</span>,</span><br><span class="line">	<span class="string">"tag"</span> : [</span><br><span class="line">		<span class="string">"mongo"</span>,</span><br><span class="line">		<span class="string">"nosql"</span></span><br><span class="line">	]</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// update</span></span><br><span class="line">----修改的数据没加$set标记,数据直接变为替换了,缺失name-----</span><br><span class="line">&gt; db.users.update(&#123;<span class="string">'age'</span>:<span class="number">18</span>&#125;,&#123;<span class="string">'age'</span>:<span class="number">19</span>,<span class="string">"tag"</span>:[<span class="string">'mongo'</span>,<span class="string">'mysql'</span>,<span class="string">'nosql'</span>]&#125;)</span><br><span class="line">WriteResult(&#123; <span class="string">"nMatched"</span> : <span class="number">1</span>, <span class="string">"nUpserted"</span> : <span class="number">0</span>, <span class="string">"nModified"</span> : <span class="number">1</span> &#125;)</span><br><span class="line">&gt; db.users.find().pretty()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="string">"_id"</span> : ObjectId(<span class="string">"5a59ac4bc52de95ef9c85bfd"</span>),</span><br><span class="line">	<span class="string">"age"</span> : <span class="number">19</span>,</span><br><span class="line">	<span class="string">"tag"</span> : [</span><br><span class="line">		<span class="string">"mongo"</span>,</span><br><span class="line">		<span class="string">"mysql"</span>,</span><br><span class="line">		<span class="string">"nosql"</span></span><br><span class="line">	]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// $set修改字段;$inc新增字段</span></span><br><span class="line"><span class="comment">// $set 如果新增字段不会报错</span></span><br><span class="line"><span class="comment">// $inc 后面如果修改原有的字段会报错</span></span><br><span class="line">&gt;db.users.update(&#123;<span class="string">'age'</span>:<span class="number">20</span>&#125;,&#123;$set:&#123;<span class="string">'age'</span>:<span class="number">21</span>,<span class="string">"tag"</span>:[<span class="string">'mongo'</span>,<span class="string">'mysql'</span>,<span class="string">'nosql'</span>],<span class="string">'name'</span>:<span class="string">'ma11'</span>&#125;&#125;,&#123;multi:<span class="keyword">true</span>&#125;)</span><br><span class="line">&gt;db.users.update(&#123;<span class="string">'age'</span>:<span class="number">21</span>&#125;,&#123;$inc:&#123;<span class="string">'sex'</span>:<span class="number">1</span>&#125;&#125;,&#123;multi:<span class="keyword">true</span>&#125;)</span><br><span class="line">&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// save()  经测试是存在则修改。不存在在添加</span></span><br><span class="line"><span class="comment">// 存在与否由是根据_id 来进行唯一区分的</span></span><br><span class="line">&gt; db.users.save(&#123;<span class="string">"age"</span>:<span class="number">1</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.2 + 新特性</span></span><br><span class="line">updateOne</span><br><span class="line">updateMany</span><br><span class="line">&gt; db.test_collection.updateOne(&#123;<span class="string">"name"</span>:<span class="string">"abc"</span>&#125;,&#123;$set:&#123;<span class="string">"age"</span>:<span class="string">"28"</span>&#125;&#125;)</span><br><span class="line">&gt; db.test_collection.updateMany(&#123;<span class="string">"age"</span>:&#123;$gt:<span class="string">"10"</span>&#125;&#125;,&#123;$set:&#123;<span class="string">"status"</span>:<span class="string">"xyz"</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<p>– 更多示例update参数作用</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">只更新第一条记录：</span><br><span class="line">db.col.update( &#123; <span class="string">"count"</span> : &#123; $gt : <span class="number">1</span> &#125; &#125; , &#123; $set : &#123; <span class="string">"test2"</span> : <span class="string">"OK"</span>&#125; &#125; );</span><br><span class="line">全部更新：</span><br><span class="line">db.col.update( &#123; <span class="string">"count"</span> : &#123; $gt : <span class="number">3</span> &#125; &#125; , &#123; $set : &#123; <span class="string">"test2"</span> : <span class="string">"OK"</span>&#125; &#125;,<span class="keyword">false</span>,<span class="keyword">true</span> );</span><br><span class="line">只添加第一条：</span><br><span class="line">db.col.update( &#123; <span class="string">"count"</span> : &#123; $gt : <span class="number">4</span> &#125; &#125; , &#123; $set : &#123; <span class="string">"test5"</span> : <span class="string">"OK"</span>&#125; &#125;,<span class="keyword">true</span>,<span class="keyword">false</span> );</span><br><span class="line">全部添加加进去:</span><br><span class="line">db.col.update( &#123; <span class="string">"count"</span> : &#123; $gt : <span class="number">5</span> &#125; &#125; , &#123; $set : &#123; <span class="string">"test5"</span> : <span class="string">"OK"</span>&#125; &#125;,<span class="keyword">true</span>,<span class="keyword">true</span> );</span><br><span class="line">全部更新：</span><br><span class="line">db.col.update( &#123; <span class="string">"count"</span> : &#123; $gt : <span class="number">15</span> &#125; &#125; , &#123; $inc : &#123; <span class="string">"count"</span> : <span class="number">1</span>&#125; &#125;,<span class="keyword">false</span>,<span class="keyword">true</span> );</span><br><span class="line">只更新第一条记录：</span><br><span class="line">db.col.update( &#123; <span class="string">"count"</span> : &#123; $gt : <span class="number">10</span> &#125; &#125; , &#123; $inc : &#123; <span class="string">"count"</span> : <span class="number">1</span>&#125; &#125;,<span class="keyword">false</span>,<span class="keyword">false</span> );</span><br></pre></td></tr></table></figure>
+<h2 id="删除文档"><a class="header-anchor" href="#删除文档"></a>删除文档</h2>
+<p>MongoDB <code>remove()</code> 函数是用来移除集合中的数据。</p>
+<ul>
+<li>参数说明：<br>
+query :（可选）删除的文档的条件。<br>
+justOne : （可选）如果设为 true 或 1，则只删除一个文档。<br>
+writeConcern :（可选）抛出异常的级别。</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 好的习惯是先查询是否存在,在进行remove操作</span></span><br><span class="line">db.user.remove(&#123;<span class="string">"name"</span>:<span class="number">3</span>&#125;)</span><br></pre></td></tr></table></figure>
+<p>remove() 方法已经过时了，现在官方<strong>推荐使用</strong> <code>deleteOne() 和 deleteMany()</code> 方法。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">如删除集合下全部文档：</span><br><span class="line">db.inventory.deleteMany(&#123;&#125;)</span><br><span class="line">删除 status 等于 A 的全部文档：</span><br><span class="line">db.inventory.deleteMany(&#123; status : <span class="string">"A"</span> &#125;)</span><br><span class="line">删除 status 等于 D 的一个文档：</span><br><span class="line">db.inventory.deleteOne( &#123; status: <span class="string">"D"</span> &#125; )</span><br></pre></td></tr></table></figure>
+<h2 id="条件操作符"><a class="header-anchor" href="#条件操作符"></a>条件操作符</h2>
+<p>(&gt;) 大于 - <code>$gt</code>     ----------greater than<br>
+(&lt;) 小于 - <code>$lt</code>    ----------less than<br>
+(&gt;=) 大于等于 - <code>$gte</code>   ----------greater than equal<br>
+(&lt;= ) 小于等于 - <code>$lte</code>  ----------less than equal<br>
+(!=) 不等于  <code>$ne</code>     ----------- not equal<br>
+(=) 等于 <code>$eq</code>      --------  equal</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.user.find(&#123;&#125;,&#123;_id:<span class="number">0</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">2</span>, <span class="string">"name"</span> : <span class="number">34</span>, <span class="string">"named"</span> : <span class="number">34</span>, <span class="string">"namedd"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="number">40</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">7</span>, <span class="string">"name"</span> : <span class="number">45</span>, <span class="string">"named"</span> : <span class="number">37</span>, <span class="string">"namedd"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&gt;</span><br><span class="line">&gt; db.user.find(&#123;names:&#123;$gte:<span class="number">5</span>&#125;&#125;,&#123;_id:<span class="number">0</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="number">40</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">7</span>, <span class="string">"name"</span> : <span class="number">45</span>, <span class="string">"named"</span> : <span class="number">37</span>, <span class="string">"namedd"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&gt;</span><br><span class="line"><span class="comment">// name 字段&gt;1&amp; &lt;=5</span></span><br><span class="line">&gt; db.user.find(&#123;names:&#123;$lte:<span class="number">5</span>,$gt:<span class="number">1</span>&#125;&#125;,&#123;_id:<span class="number">0</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">2</span>, <span class="string">"name"</span> : <span class="number">34</span>, <span class="string">"named"</span> : <span class="number">34</span>, <span class="string">"namedd"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="number">40</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&gt;</span><br><span class="line">&gt; db.user.find(&#123;names:&#123;$lte:<span class="number">5</span>,$gt:<span class="number">1</span>&#125;,named:<span class="number">34</span>&#125;,&#123;_id:<span class="number">0</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">2</span>, <span class="string">"name"</span> : <span class="number">34</span>, <span class="string">"named"</span> : <span class="number">34</span>, <span class="string">"namedd"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="limit-与-skip-操作符"><a class="header-anchor" href="#limit-与-skip-操作符"></a>limit 与 skip 操作符</h2>
+<p>我们除了可以使用<code>limit()方法来读取指定数量的数据外</code>，<br>
+还可以使用<code>skip()方法来跳过指定数量的数据</code>，skip方法同样接受一个数字参数作为跳过的记录条数。<br>
+<code>当查询时同时使用sort,skip,limit，无论位置先后，最先执行顺序 sort再skip再limit。</code></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.user.find(&#123;&#125;,&#123;_id:<span class="number">0</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">2</span>, <span class="string">"name"</span> : <span class="number">34</span>, <span class="string">"named"</span> : <span class="number">34</span>, <span class="string">"namedd"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="number">40</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">7</span>, <span class="string">"name"</span> : <span class="number">45</span>, <span class="string">"named"</span> : <span class="number">37</span>, <span class="string">"namedd"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&gt;</span><br><span class="line">&gt; db.user.find(&#123;&#125;,&#123;_id:<span class="number">0</span>&#125;).limit(<span class="number">2</span>).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">2</span>, <span class="string">"name"</span> : <span class="number">34</span>, <span class="string">"named"</span> : <span class="number">34</span>, <span class="string">"namedd"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="number">40</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&gt;</span><br><span class="line">&gt; db.user.find(&#123;&#125;,&#123;_id:<span class="number">0</span>&#125;).skip(<span class="number">1</span>).limit(<span class="number">2</span>).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="number">40</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">7</span>, <span class="string">"name"</span> : <span class="number">45</span>, <span class="string">"named"</span> : <span class="number">37</span>, <span class="string">"namedd"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&gt; db.user.find(&#123;&#125;,&#123;_id:<span class="number">0</span>&#125;).skip(<span class="number">2</span>).limit(<span class="number">2</span>).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">7</span>, <span class="string">"name"</span> : <span class="number">45</span>, <span class="string">"named"</span> : <span class="number">37</span>, <span class="string">"namedd"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="排序"><a class="header-anchor" href="#排序"></a>排序</h2>
+<p>sort()方法可以通过参数指定排序的字段，<br>
+并使用 1 和 -1 来指定排序的方式，其中<code>1 为升序排列，而-1是用于降序排列</code>。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.user.find(&#123;&#125;,&#123;_id:<span class="number">0</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">2</span>, <span class="string">"name"</span> : <span class="number">34</span>, <span class="string">"named"</span> : <span class="number">34</span>, <span class="string">"namedd"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="number">40</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">7</span>, <span class="string">"name"</span> : <span class="number">45</span>, <span class="string">"named"</span> : <span class="number">37</span>, <span class="string">"namedd"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&gt;</span><br><span class="line">&gt; db.user.find(&#123;&#125;,&#123;_id:<span class="number">0</span>&#125;).sort(&#123;name:<span class="number">-1</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">7</span>, <span class="string">"name"</span> : <span class="number">45</span>, <span class="string">"named"</span> : <span class="number">37</span>, <span class="string">"namedd"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="number">40</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">2</span>, <span class="string">"name"</span> : <span class="number">34</span>, <span class="string">"named"</span> : <span class="number">34</span>, <span class="string">"namedd"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&gt; db.user.find(&#123;&#125;,&#123;_id:<span class="number">0</span>&#125;).sort(&#123;name:<span class="number">-1</span>,name:<span class="number">1</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">2</span>, <span class="string">"name"</span> : <span class="number">34</span>, <span class="string">"named"</span> : <span class="number">34</span>, <span class="string">"namedd"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="number">40</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">7</span>, <span class="string">"name"</span> : <span class="number">45</span>, <span class="string">"named"</span> : <span class="number">37</span>, <span class="string">"namedd"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="索引"><a class="header-anchor" href="#索引"></a>索引</h2>
+<ul>
+<li>
+<p>背景<br>
+索引通常能够极大的提高查询的效率，<strong>如果没有索引，<br>
+MongoDB在读取数据时必须扫描集合中的每个文件并选取那些符合查询条件的记录。<br>
+这种扫描全集合的查询效率是非常低的，特别在处理大量的数据时，查询可以要花费几十秒甚至几分钟，<br>
+这对网站的性能是非常致命的。</strong><br>
+索引是特殊的数据结构，索引存储在一个易于遍历读取的数据集合中，<code>索引是对数据库表中一列或多列的值进行排序的一种结构</code></p>
+</li>
+<li>
+<p>语法<br>
+<code>&gt;db.COLLECTION_NAME.ensureIndex({KEY:1})</code><br>
+语法中 Key 值为你要创建的索引字段，<strong>1为指定按升序创建索引，如果你想按降序来创建索引指定为-1即可。</strong><br>
+有几个可选参数设置后台执行,唯一索引等。详情看教程</p>
+</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单个索引</span></span><br><span class="line"> &gt;db.col.ensureIndex(&#123;<span class="string">"title"</span>:<span class="number">1</span>&#125;)</span><br><span class="line"> &gt;</span><br><span class="line"> <span class="comment">// ensureIndex() 方法中你也可以设置使用多个字段创建索引（关系型数据库中称作复合索引）。</span></span><br><span class="line"> &gt;db.col.ensureIndex(&#123;<span class="string">"title"</span>:<span class="number">1</span>,<span class="string">"description"</span>:<span class="number">-1</span>&#125;)</span><br><span class="line"> &gt;</span><br><span class="line"> <span class="comment">// 在后台创建索引</span></span><br><span class="line"> db.values.ensureIndex(&#123;open: <span class="number">1</span>, close: <span class="number">1</span>&#125;, &#123;background: <span class="keyword">true</span>&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="聚合"><a class="header-anchor" href="#聚合"></a>聚合</h2>
+<ul>
+<li>
+<p>背景<br>
+MongoDB中<code>聚合(aggregate)主要用于处理数据(诸如统计平均值,求和等)</code>，<br>
+并返回计算后的数据结果。有点类似sql语句中的 count(*)。</p>
+</li>
+<li>
+<p>语法<br>
+<code>&gt;db.COLLECTION_NAME.aggregate(AGGREGATE_OPERATION)</code><br>
+常用的聚合表达式<br>
+<code>$sum,$avg,$max,$min,$first,$last</code></p>
+</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.user.find(&#123;&#125;,&#123;_id:<span class="number">0</span>&#125;).pretty()</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">2</span>, <span class="string">"name"</span> : <span class="string">"martin1"</span>, <span class="string">"named"</span> : <span class="number">34</span>, <span class="string">"namedd"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="string">"martin2"</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">7</span>, <span class="string">"name"</span> : <span class="string">"martin1"</span>, <span class="string">"named"</span> : <span class="number">37</span>, <span class="string">"namedd"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&gt;</span><br><span class="line">&gt; db.user.aggregate([&#123;$group:&#123;_id:<span class="string">"$name"</span>, num_tutorial : &#123;$sum:<span class="number">1</span>&#125;&#125;&#125;])</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin2"</span>, <span class="string">"num_tutorial"</span> : <span class="number">1</span> &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin1"</span>, <span class="string">"num_tutorial"</span> : <span class="number">2</span> &#125;</span><br><span class="line">&gt;</span><br><span class="line">&gt; db.user.aggregate([&#123;$group:&#123;_id:<span class="string">"$name"</span>, num_tutorial : &#123;$sum:<span class="string">"$names"</span>&#125;&#125;&#125;])</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin2"</span>, <span class="string">"num_tutorial"</span> : <span class="number">5</span> &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin1"</span>, <span class="string">"num_tutorial"</span> : <span class="number">9</span> &#125;</span><br><span class="line">&gt; db.user.aggregate([&#123;$group:&#123;_id:<span class="string">"$name"</span>, num_tutorial : &#123;$min:<span class="string">"$names"</span>&#125;&#125;&#125;])</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin2"</span>, <span class="string">"num_tutorial"</span> : <span class="number">5</span> &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin1"</span>, <span class="string">"num_tutorial"</span> : <span class="number">2</span> &#125;</span><br><span class="line">&gt; db.user.aggregate([&#123;$group:&#123;_id:<span class="string">"$name"</span>, num_tutorial : &#123;$min:<span class="string">"$named"</span>&#125;&#125;&#125;])</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin2"</span>, <span class="string">"num_tutorial"</span> : <span class="number">35</span> &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin1"</span>, <span class="string">"num_tutorial"</span> : <span class="number">34</span> &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>管道<br>
+管道在Unix和Linux中一般用于将当前命令的输出结果作为下一个命令的参数。<br>
+MongoDB的聚合管道将MongoDB文档在一个<code>管道处理完毕后将结果传递给下一个管道处理</code>。管道操作是可以重复的。<br>
+表达式：处理输入文档并输出。表达式是无状态的，只能用于计算当前聚合管道的文档，不能处理其它的文档。<br>
+这里我们介绍一下聚合框架中常用的几个操作：<br>
+<strong>$project：修改输入文档的结构。可以用来重命名、增加或删除域，也可以用于创建计算结果以及嵌套文档。</strong><br>
+<strong>$match：用于过滤数据，只输出符合条件的文档。$match使用MongoDB的标准查询操作。</strong><br>
+<strong>$limit：用来限制MongoDB聚合管道返回的文档数。</strong><br>
+<strong>$skip：在聚合管道中跳过指定数量的文档，并返回余下的文档。</strong><br>
+<strong>$unwind：将文档中的某一个数组类型字段拆分成多条，每条包含数组中的一个值。</strong><br>
+<strong>$group：将集合中的文档分组，可用于统计结果。</strong><br>
+<strong>$sort：将输入文档排序后输出。</strong><br>
+<strong>$geoNear：输出接近某一地理位置的有序文档。</strong></li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.user.aggregate([&#123;$project:&#123;name:<span class="number">1</span>,named:<span class="number">1</span>&#125;&#125;])</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"5a59d48084421d11551bb6a0"</span>), <span class="string">"name"</span> : <span class="string">"martin1"</span>, <span class="string">"named"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"5a5c0f172a78de2cabb5ad27"</span>), <span class="string">"name"</span> : <span class="string">"martin2"</span>, <span class="string">"named"</span> : <span class="number">35</span> &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"5a5c11e42a78de2cabb5ad28"</span>), <span class="string">"name"</span> : <span class="string">"martin1"</span>, <span class="string">"named"</span> : <span class="number">37</span> &#125;</span><br><span class="line">&gt; db.user.aggregate([&#123;$project:&#123;_id:<span class="number">0</span>&#125;&#125;])</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">2</span>, <span class="string">"name"</span> : <span class="string">"martin1"</span>, <span class="string">"named"</span> : <span class="number">34</span>, <span class="string">"namedd"</span> : <span class="number">34</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">5</span>, <span class="string">"name"</span> : <span class="string">"martin2"</span>, <span class="string">"named"</span> : <span class="number">35</span>, <span class="string">"namedd"</span> : <span class="number">36</span> &#125;</span><br><span class="line">&#123; <span class="string">"names"</span> : <span class="number">7</span>, <span class="string">"name"</span> : <span class="string">"martin1"</span>, <span class="string">"named"</span> : <span class="number">37</span>, <span class="string">"namedd"</span> : <span class="number">38</span> &#125;</span><br><span class="line">&gt; db.user.aggregate([&#123;$match:&#123;named:&#123;$lte:<span class="number">37</span>,$gte:<span class="number">34</span>&#125;&#125;&#125;,&#123;$group:&#123;_id:<span class="string">"$name"</span>,num:&#123;$sum:<span class="number">1</span>&#125;&#125;&#125;])</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin2"</span>, <span class="string">"num"</span> : <span class="number">1</span> &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin1"</span>, <span class="string">"num"</span> : <span class="number">2</span> &#125;</span><br><span class="line"><span class="comment">// $match用于获取named大于34小于或等于37记录，然后将符合条件的记录送到下一阶段$group管道操作符进行处理。</span></span><br><span class="line">&gt; db.user.aggregate([&#123;$match:&#123;named:&#123;$lte:<span class="number">37</span>,$gte:<span class="number">34</span>&#125;&#125;&#125;,&#123;$group:&#123;_id:<span class="keyword">null</span>,num:&#123;$sum:<span class="number">1</span>&#125;&#125;&#125;])</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="keyword">null</span>, <span class="string">"num"</span> : <span class="number">3</span> &#125;</span><br><span class="line"><span class="comment">// 跳过第一个,聚合操作</span></span><br><span class="line">&gt; db.user.aggregate([&#123;$skip:<span class="number">1</span>&#125;,&#123;$group:&#123;_id:<span class="string">"$name"</span>,num:&#123;$sum:<span class="number">1</span>&#125;&#125;&#125;])</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin1"</span>, <span class="string">"num"</span> : <span class="number">1</span> &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : <span class="string">"martin2"</span>, <span class="string">"num"</span> : <span class="number">1</span> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="mongodb使用参考"><a class="header-anchor" href="#mongodb使用参考"></a>mongodb使用参考</h2>
+<p>可参考文章<a href="http://www.runoob.com/mongodb/mongodb-create-database.html" rel="external nofollow noopener noreferrer" target="_blank">mongodb使用教程</a></p>
+<h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2>
+<blockquote>
+<p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p>
+</blockquote>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+    
+        <a href="/posts/mongodb安装配置及启动/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Plus ancien</strong>
+            <div class="article-nav-title">mongodb安装配置及启动</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<!-- <script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     -->
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            weizhuo.ma &copy; 2018 
+            <br>
+        </div>
+    </div>
+</footer>
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
