@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.maweizhuo.com/"/>
-  <updated>2018-01-15T09:36:14.000Z</updated>
+  <updated>2018-01-17T06:57:12.000Z</updated>
   <id>http://wiki.maweizhuo.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac 工具软件常用快捷键</title>
+    <link href="http://wiki.maweizhuo.com/posts/mac%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://wiki.maweizhuo.com/posts/mac工具软件常用快捷键/</id>
+    <published>2018-01-17T06:51:30.000Z</published>
+    <updated>2018-01-17T06:57:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a class="header-anchor" href="#介绍"></a>介绍</h2><p>记录下下Mac里常用软件的快捷键,避免总查询</p><h2 id="phpstorm"><a class="header-anchor" href="#phpstorm"></a>phpstorm</h2><ul><li><code>command + O 查找类名</code></li><li><code>command + shift + O 查找文件名</code></li><li><code>command + alt + o 查找function</code></li><li>command + shift + f 全局查找内容</li><li>command + ` 多个打开的项目切换</li><li>command + alt + l 格式化选中代码</li><li>command + r 替换</li><li>command + d 复制选中的行</li><li>command + delete 删除选中行</li><li>command + l 跳转到指定行</li><li>command + e 打开最近活动的文件</li><li>control + tab 打开的文件切换</li></ul><h2 id="iterm"><a class="header-anchor" href="#iterm"></a>iterm</h2><ul><li>标签</li></ul><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">新建标签：command + t</span><br><span class="line"></span><br><span class="line">关闭标签：command + w</span><br><span class="line"></span><br><span class="line">切换标签：command + 数字 command + 左右方向键</span><br><span class="line"></span><br><span class="line">切换全屏：command + enter</span><br><span class="line"></span><br><span class="line">查找：command + f</span><br></pre></td></tr></table></figure><ul><li>分屏</li></ul><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">垂直分屏：command + d</span><br><span class="line"></span><br><span class="line">水平分屏：command + shift + d</span><br><span class="line"></span><br><span class="line">切换屏幕：command + option + 方向键 command + [ 或 command + ]</span><br><span class="line"></span><br><span class="line">查看历史命令：command + ;</span><br><span class="line"></span><br><span class="line">查看剪贴板历史：command + shift + h</span><br></pre></td></tr></table></figure><ul><li>其他</li></ul><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">清除当前行：ctrl + u</span><br><span class="line"></span><br><span class="line">到行首：ctrl + a</span><br><span class="line"></span><br><span class="line">到行尾：ctrl + e</span><br><span class="line"></span><br><span class="line">前进后退：ctrl + f/b (相当于左右方向键)</span><br><span class="line"></span><br><span class="line">上一条命令：ctrl + p</span><br><span class="line"></span><br><span class="line">搜索命令历史：ctrl + r</span><br><span class="line"></span><br><span class="line">删除当前光标的字符：ctrl + d</span><br><span class="line"></span><br><span class="line">删除光标之前的字符：ctrl + h</span><br><span class="line"></span><br><span class="line">删除光标之前的单词：ctrl + w</span><br><span class="line"></span><br><span class="line">删除到文本末尾：ctrl + k</span><br><span class="line"></span><br><span class="line">交换光标处文本：ctrl + t</span><br><span class="line"></span><br><span class="line">清屏<span class="number">1</span>：command + r</span><br><span class="line"></span><br><span class="line">清屏<span class="number">2</span>：ctrl + l</span><br><span class="line"></span><br><span class="line">自带有哪些很实用的功能/快捷键</span><br><span class="line"></span><br><span class="line">⌘ + 数字在各 tab 标签直接来回切换</span><br><span class="line"></span><br><span class="line">选择即复制 + 鼠标中键粘贴，这个很实用</span><br><span class="line"></span><br><span class="line">⌘ + f 所查找的内容会被自动复制</span><br><span class="line"></span><br><span class="line">⌘ + d 横着分屏 / ⌘ + shift + d 竖着分屏</span><br><span class="line"></span><br><span class="line">⌘ + r = clear，而且只是换到新一屏，不会想 clear 一样创建一个空屏</span><br><span class="line"></span><br><span class="line">ctrl + u 清空当前行，无论光标在什么位置</span><br><span class="line"></span><br><span class="line">输入开头命令后 按 ⌘ + ; 会自动列出输入过的命令</span><br><span class="line"></span><br><span class="line">⌘ + shift + h 会列出剪切板历史</span><br><span class="line"></span><br><span class="line">可以在 Preferences &gt; keys 设置全局快捷键调出 iterm，这个也可以用过 Alfred 实现</span><br></pre></td></tr></table></figure><h2 id="sequel-pro"><a class="header-anchor" href="#sequel-pro"></a>sequel pro</h2><ul><li>command  /    注释或者取消注释一行。</li><li>command +t   打开一个连接标签。</li><li><code>command +r 运行SQL。</code></li></ul><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;介绍&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;
+&lt;p&gt;记录下下Mac里常用软件的快捷键,避免总查询&lt;/p&gt;
+&lt;h2 id=&quot;phpstorm&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#
+      
+    
+    </summary>
+    
+      <category term="工具软件" scheme="http://wiki.maweizhuo.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="Mac" scheme="http://wiki.maweizhuo.com/categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/Mac/"/>
+    
+    
+      <category term="tool" scheme="http://wiki.maweizhuo.com/tags/tool/"/>
+    
+  </entry>
   
   <entry>
     <title>mongodb 增删改查</title>
@@ -136,6 +165,34 @@ use DATABASE_NAME&lt;br&gt;
   </entry>
   
   <entry>
+    <title>HTTP 状态码</title>
+    <link href="http://wiki.maweizhuo.com/posts/HTTP%20%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    <id>http://wiki.maweizhuo.com/posts/HTTP 状态码/</id>
+    <published>2018-01-08T01:51:30.000Z</published>
+    <updated>2018-01-08T02:54:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一张图看懂http状态码"><a class="header-anchor" href="#一张图看懂http状态码"></a>一张图看懂HTTP状态码</h2><p><img src="https://box.kancloud.cn/2015-11-03_5638652bd8ad9.jpg" alt="http状态码"></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一张图看懂http状态码&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一张图看懂http状态码&quot;&gt;&lt;/a&gt;一张图看懂HTTP状态码&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://box.kancloud.cn/2015-11-03_56
+      
+    
+    </summary>
+    
+      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+      <category term="HTTP" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/HTTP/"/>
+    
+    
+      <category term="Http" scheme="http://wiki.maweizhuo.com/tags/Http/"/>
+    
+  </entry>
+  
+  <entry>
     <title>大型网站架构演化</title>
     <link href="http://wiki.maweizhuo.com/posts/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/"/>
     <id>http://wiki.maweizhuo.com/posts/大型网站架构演化/</id>
@@ -167,34 +224,6 @@ use DATABASE_NAME&lt;br&gt;
     
     
       <category term="架构" scheme="http://wiki.maweizhuo.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP 状态码</title>
-    <link href="http://wiki.maweizhuo.com/posts/HTTP%20%E7%8A%B6%E6%80%81%E7%A0%81/"/>
-    <id>http://wiki.maweizhuo.com/posts/HTTP 状态码/</id>
-    <published>2018-01-08T01:51:30.000Z</published>
-    <updated>2018-01-08T02:54:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一张图看懂http状态码"><a class="header-anchor" href="#一张图看懂http状态码"></a>一张图看懂HTTP状态码</h2><p><img src="https://box.kancloud.cn/2015-11-03_5638652bd8ad9.jpg" alt="http状态码"></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;一张图看懂http状态码&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一张图看懂http状态码&quot;&gt;&lt;/a&gt;一张图看懂HTTP状态码&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://box.kancloud.cn/2015-11-03_56
-      
-    
-    </summary>
-    
-      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
-    
-      <category term="HTTP" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/HTTP/"/>
-    
-    
-      <category term="Http" scheme="http://wiki.maweizhuo.com/tags/Http/"/>
     
   </entry>
   
@@ -352,9 +381,9 @@ use DATABASE_NAME&lt;br&gt;
     <link href="http://wiki.maweizhuo.com/posts/mac%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/"/>
     <id>http://wiki.maweizhuo.com/posts/mac工具软件/</id>
     <published>2017-11-22T06:51:30.000Z</published>
-    <updated>2018-01-05T08:21:08.000Z</updated>
+    <updated>2018-01-17T06:58:27.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="mac-常用工具下载地址汇总"><a class="header-anchor" href="#mac-常用工具下载地址汇总"></a>mac 常用工具下载地址汇总</h2><blockquote><ul><li><a href="http://www.cnblogs.com/wulaoer/p/5538721.html" rel="external nofollow noopener noreferrer" target="_blank">securecrt</a></li><li><a href="http://www.sdifen.com/charles4.html" rel="external nofollow noopener noreferrer" target="_blank">charles 抓包工具</a></li><li><a href="https://pan.baidu.com/share/init?surl=kVhhv63" rel="external nofollow noopener noreferrer" target="_blank">phpstorm 网盘地址</a> 密码:iueh<br><a href="http://www.sdifen.com/phpstorm20162.html" rel="external nofollow noopener noreferrer" target="_blank">安装参考地址</a></li><li><a href="http://www.sequelpro.com/download" rel="external nofollow noopener noreferrer" target="_blank">数据库管理工具 sequelpro</a></li><li>postman 和 navicat 在我的百度云网盘</li><li><a href="https://github.com/racaljk/hosts" rel="external nofollow noopener noreferrer" target="_blank">翻墙host</a></li></ul></blockquote><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="mac-常用工具下载地址汇总"><a class="header-anchor" href="#mac-常用工具下载地址汇总"></a>mac 常用工具下载地址汇总</h2><blockquote><ul><li><a href="http://www.cnblogs.com/wulaoer/p/5538721.html" rel="external nofollow noopener noreferrer" target="_blank">securecrt</a></li><li><a href="http://www.sdifen.com/charles4.html" rel="external nofollow noopener noreferrer" target="_blank">charles 抓包工具</a></li><li><a href="https://pan.baidu.com/share/init?surl=kVhhv63" rel="external nofollow noopener noreferrer" target="_blank">phpstorm 网盘地址</a> 密码:iueh<br><a href="http://www.sdifen.com/phpstorm20162.html" rel="external nofollow noopener noreferrer" target="_blank">安装参考地址</a></li><li><a href="http://www.sequelpro.com/download" rel="external nofollow noopener noreferrer" target="_blank">数据库管理工具 sequelpro</a></li><li>postman 和 navicat 在我的百度云网盘</li><li><a href="https://github.com/racaljk/hosts" rel="external nofollow noopener noreferrer" target="_blank">翻墙host</a></li><li><a href="https://www.iterm2.com/" rel="external nofollow noopener noreferrer" target="_blank">iTerm下载</a></li><li><a href="https://xiaozhou.net/learn-the-command-line-iterm-and-zsh-2017-06-23.html" rel="external nofollow noopener noreferrer" target="_blank">iTerm与Zsh篇</a></li></ul></blockquote><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
     
     <summary type="html">
     
@@ -520,34 +549,6 @@ use DATABASE_NAME&lt;br&gt;
   </entry>
   
   <entry>
-    <title>IaaS, PaaS, SaaS 概念</title>
-    <link href="http://wiki.maweizhuo.com/posts/IaaS,%20PaaS,%20SaaS%20%E6%A6%82%E5%BF%B5/"/>
-    <id>http://wiki.maweizhuo.com/posts/IaaS, PaaS, SaaS 概念/</id>
-    <published>2017-08-25T15:04:48.000Z</published>
-    <updated>2017-11-23T09:54:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>云服务通常将其提供的服务自下而上分成三层：<strong>基础设施(infrastructure)、平台(platform)和软件(software)</strong>。</p><h2 id="iaas"><a class="header-anchor" href="#iaas"></a>IaaS</h2><p><strong>Infrastructure-as-a-Service(基础设施即服务)</strong></p><p>第一层叫做 IaaS，有时候也叫做 Hardware-as-a-Service，如果你想在办公室或者公司的网站上运行一些应用（比如自己开发好的 APP 或是网络游戏，你需要去买服务器，成本太高了。</p><p>但是现在有IaaS，你可以将硬件外包给这些专业的公司，这些公司会提供场外服务器，存储和网络硬件，你花钱租用就行。</p><p>这样就节省了维护成本和办公场地，并且你可以在任何时候利用这些硬件来运行其应用。</p><h2 id="paas"><a class="header-anchor" href="#paas"></a>PaaS</h2><p><strong>Platform-as-a-Service（平台即服务）</strong></p><p>第二层就是 PaaS，某些时候也叫做中间件。PaaS 是面向软件开发者的服务，云计算平台提供硬件，OS， 编程语言，开发库，部署工具， 帮助软件开发者更快的开发软件服务。</p><p>云服务商将软件开发的云端开发平台和软件运营的云端运行环境（包括中间件、数据库、we b服务、消息总线等基础通用服务）作为一种服务，提供给最终用户。</p><p>换句话说，这些 PaaS 服务商提供的都是基础开发服务平台，主要目的就是让你把精力专注在应用层面的开发上面，而不需要浪费在这些基础重复性的事情上，也不用担心开发完成后部署问题。</p><h2 id="saas"><a class="header-anchor" href="#saas"></a>SaaS</h2><p><strong>Software-as-a-Service（软件即服务）</strong></p><p>简单说就是人家把你想要的功能开发好成应用软件，然后直接卖账号给你用，你也不需要担心服务器、带宽、应用开发等问题，直接交钱使用就行。</p><p>不再面向开发，而是直接面向企业或普通用户，企业改改 logo，直接给用户使用。</p><h2 id="参考资料"><a class="header-anchor" href="#参考资料"></a>参考资料</h2><blockquote><ul><li><a href="https://www.aliyun.com/zixun/content/1_5_15871.html" rel="external nofollow noopener noreferrer" target="_blank">IaaS PaaS和SaaS公司的作用 | 盐漂浮草</a></li><li><a href="https://zhihu.com/question/21641778/answer/91301221" rel="external nofollow noopener noreferrer" target="_blank">谁能举个通俗易懂的例子告诉我IAAS，SAAS，PAAS的区别？ | 东坪子的回答</a></li><li><a href="https://zhihu.com/question/21641778/answer/62523535" rel="external nofollow noopener noreferrer" target="_blank">谁能举个通俗易懂的例子告诉我IAAS，SAAS，PAAS的区别？ | 何足道的回答</a></li></ul></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;云服务通常将其提供的服务自下而上分成三层：&lt;strong&gt;基础设施(infrastructure)、平台(platform)和软件(software)&lt;/strong&gt;。&lt;/p&gt;
-&lt;h2 id=&quot;iaas&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#i
-      
-    
-    </summary>
-    
-      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
-    
-      <category term="架构" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/%E6%9E%B6%E6%9E%84/"/>
-    
-    
-      <category term="云服务" scheme="http://wiki.maweizhuo.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>awk 管道操作小结</title>
     <link href="http://wiki.maweizhuo.com/posts/awk%20%E7%AE%A1%E9%81%93%E6%93%8D%E4%BD%9C%E5%B0%8F%E7%BB%93/"/>
     <id>http://wiki.maweizhuo.com/posts/awk 管道操作小结/</id>
@@ -579,33 +580,26 @@ use DATABASE_NAME&lt;br&gt;
   </entry>
   
   <entry>
-    <title>八大排序算法复杂度</title>
-    <link href="http://wiki.maweizhuo.com/posts/%E5%85%AB%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
-    <id>http://wiki.maweizhuo.com/posts/八大排序算法复杂度/</id>
+    <title>maweizhuo wiki site desc</title>
+    <link href="http://wiki.maweizhuo.com/posts/maweizhuo%20wiki%20site%20desc/"/>
+    <id>http://wiki.maweizhuo.com/posts/maweizhuo wiki site desc/</id>
     <published>2017-08-25T15:04:48.000Z</published>
-    <updated>2017-11-21T07:41:43.000Z</updated>
+    <updated>2017-12-12T06:11:55.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="排序算法时间空间复杂度表"><a class="header-anchor" href="#排序算法时间空间复杂度表"></a>排序算法时间空间复杂度表</h2><table><thead><tr><th style="text-align:center">排序方法</th><th style="text-align:center">平均时间</th><th style="text-align:center">最坏时间</th><th style="text-align:center">辅助空间</th><th style="text-align:center">稳定性</th></tr></thead><tbody><tr><td style="text-align:center">冒泡排序</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">简单选择排序</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">直接插入排序</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">希尔排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">不稳定</td></tr><tr><td style="text-align:center">堆排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(1)$</td><td style="text-align:center">不稳定</td></tr><tr><td style="text-align:center">并归排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n)$</td><td style="text-align:center">稳定</td></tr><tr><td style="text-align:center">快速排序</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">$O(n^2)$</td><td style="text-align:center">$O(n \log n)$</td><td style="text-align:center">不稳定</td></tr><tr><td style="text-align:center">基数排序</td><td style="text-align:center">$O(d(n+r))$</td><td style="text-align:center">$O(d(n+r))$</td><td style="text-align:center">$O(n)$</td><td style="text-align:center">稳定</td></tr></tbody></table><p>注：基数排序中，d 为位数，r 为基数，n 为原数组个数。</p><h2 id="参考资料"><a class="header-anchor" href="#参考资料"></a>参考资料</h2><blockquote><ul><li>大话数据结构 | 程杰</li><li><a href="https://www.toptal.com/developers/sorting-algorithms/" rel="external nofollow noopener noreferrer" target="_blank">Sorting Algorithms Animations</a></li><li><a href="https://zh.wikipedia.org/wiki/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F" rel="external nofollow noopener noreferrer" target="_blank">冒泡排序 | Wikipedia</a></li><li><a href="https://zh.wikipedia.org/wiki/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F" rel="external nofollow noopener noreferrer" target="_blank">选择排序 | Wikipedia</a></li><li><a href="https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F" rel="external nofollow noopener noreferrer" target="_blank">快速排序 | Wikipedia</a></li><li><a href="https://zh.wikipedia.org/wiki/%E5%A0%86%E6%8E%92%E5%BA%8F" rel="external nofollow noopener noreferrer" target="_blank">堆排序| Wikipedia</a></li><li><a href="https://zh.wikipedia.org/wiki/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F" rel="external nofollow noopener noreferrer" target="_blank">希尔排序 | Wikipedia</a></li><li><a href="https://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F" rel="external nofollow noopener noreferrer" target="_blank">归并排序 | Wikipedia</a></li><li><a href="http://blog.csdn.net/21aspnet/article/details/7199579" rel="external nofollow noopener noreferrer" target="_blank">维基百科上的算法和数据结构链接很强大 | 21aspnet</a></li></ul></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>我的个人wiki 😊 😊。</p><p>O(∩_∩)O哈哈~</p><h2 id="背景"><a class="header-anchor" href="#背景"></a>背景</h2><p>没有 <code>wiki</code> 的时候,自己对知识的储备流程大概如下</p><ul><li>干脆不记录,需要时候百度下 😂</li><li>记在一个本上,方式古老了点</li><li>写博客,但相对零散,不直观</li><li>存在云笔记里,如 有道云</li></ul><p>在使用中，<strong>笔记系统</strong> 主大块信息的<strong>分类和整理</strong>，<strong>Wiki</strong> 主零碎知识的<strong>积累</strong>，而 <strong>博客</strong> 只在于 <strong>精</strong>。</p><h2 id="用途"><a class="header-anchor" href="#用途"></a>用途</h2><p>希望在以后的工作生活中,<code>wiki</code>可以作为自己的一个<strong>工具</strong>,记录自己生活中的点滴。促进自己成长。</p><h2 id="其他链接"><a class="header-anchor" href="#其他链接"></a>其他链接</h2><p><a href="https://github.com/maweizhuo" rel="external nofollow noopener noreferrer" target="_blank">github</a><br><a href="http://blog.maweizhuo.com" rel="external nofollow noopener noreferrer" target="_blank">blog</a><br><a href="http://maweizhuo.com" target="_blank" rel="noopener">我的主页</a></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote> <p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold" rel="external nofollow noopener noreferrer" target="_blank">Coding Pages</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;排序算法时间空间复杂度表&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#排序算法时间空间复杂度表&quot;&gt;&lt;/a&gt;排序算法时间空间复杂度表&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;
+        &lt;p&gt;我的个人wiki 😊 😊。&lt;/p&gt;
+&lt;p&gt;O(∩_∩)O哈哈~&lt;/p&gt;
+&lt;h2 id=&quot;背景&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;
+&lt;p&gt;没有 &lt;code&gt;wiki&lt;/code&gt; 的时候,自己对知识的储备流程大
       
     
     </summary>
     
-      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
-    
-      <category term="算法" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="算法" scheme="http://wiki.maweizhuo.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
