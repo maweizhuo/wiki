@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wiki.maweizhuo.com/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/</loc>
+    
+    <lastmod>2018-01-24T05:52:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.maweizhuo.com/posts/php%20rpc%E7%9B%B8%E5%85%B3/</loc>
     
     <lastmod>2018-01-23T07:28:03.000Z</lastmod>
@@ -159,13 +166,6 @@
     <loc>http://wiki.maweizhuo.com/posts/laravel%E7%9B%B8%E5%85%B3/</loc>
     
     <lastmod>2017-11-23T09:53:01.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.maweizhuo.com/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/</loc>
-    
-    <lastmod>2017-11-22T09:56:48.000Z</lastmod>
     
   </url>
   
