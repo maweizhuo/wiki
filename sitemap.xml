@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wiki.maweizhuo.com/posts/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    
+    <lastmod>2018-02-06T09:23:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.maweizhuo.com/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%B1%87%E6%80%BB/</loc>
     
     <lastmod>2018-01-24T05:52:46.000Z</lastmod>
@@ -82,13 +89,6 @@
     <loc>http://wiki.maweizhuo.com/posts/maweizhuo%20wiki%20site%20desc/</loc>
     
     <lastmod>2017-12-12T06:11:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.maweizhuo.com/posts/Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    
-    <lastmod>2017-12-07T07:50:20.000Z</lastmod>
     
   </url>
   
