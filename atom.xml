@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.maweizhuo.com/"/>
-  <updated>2018-03-14T02:29:43.000Z</updated>
+  <updated>2018-03-19T07:49:42.000Z</updated>
   <id>http://wiki.maweizhuo.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式分类及原则</title>
+    <link href="http://wiki.maweizhuo.com/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%88%86%E7%B1%BB%E5%8F%8A%E5%8E%9F%E5%88%99/"/>
+    <id>http://wiki.maweizhuo.com/posts/设计模式分类及原则/</id>
+    <published>2018-03-19T07:51:30.000Z</published>
+    <updated>2018-03-19T07:49:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="分类"><a class="header-anchor" href="#分类"></a>分类</h2><p>设计模式分为<code>三大类</code>：<br><strong>创建型模式</strong>，共<code>五</code>种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。<br><strong>结构型模式</strong>，共<code>七</code>种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。<br><strong>行为型模式</strong>，共<code>十一</code>种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、<br>备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。<br>其实还有两类：并发型模式和线程池模式。</p><h2 id="原则"><a class="header-anchor" href="#原则"></a>原则</h2><p>设计模式的六大原则：<br><code>总原则－开闭原则</code><br>对扩展开放，对修改封闭。在程序需要进行拓展的时候，不能去修改原有的代码，而是要扩展原有代码，实现一个热插拔的效果。<br>所以一句话概括就是：为了使程序的扩展性好，易于维护和升级。<br>想要达到这样的效果，我们需要使用接口和抽象类等，后面的具体设计中我们会提到这点。</p><ul><li><p><strong>单一职责原则</strong><br>不要存在多于一个导致类变更的原因，也就是说每个类应该<code>实现单一的职责</code>，否则就应该把类拆分。</p></li><li><p><strong>里氏替换原则（Liskov Substitution Principle）</strong><br>任何基类可以出现的地方，子类一定可以出现。里氏替换原则是继承复用的基石，<br>只有当衍生类可以替换基类，软件单位的功能不受到影响时，基类才能真正被复用，而衍生类也能够在基类的基础上增加新的行为。<br>里氏代换原则是对“开-闭”原则的补充。实现“开闭”原则的关键步骤就是抽象化。而基类与子类的继承关系就是抽象化的具体实现，<br>所以<code>里氏代换原则是对实现抽象化的具体步骤的规范</code>。<br>里氏替换原则中，子类对父类的方法尽量不要重写和重载。因为父类代表了定义好的结构，<br>通过这个规范的接口与外界交互，子类不应该随便破坏它。</p></li><li><p><strong>依赖倒转原则（Dependence Inversion Principle）</strong><br>面向接口编程，<code>依赖于抽象而不依赖于具体</code>。写代码时用到具体类时，不与具体类交互，而与具体类的上层接口交互。</p></li><li><p><strong>接口隔离原则（Interface Segregation Principle）</strong><br>每个接口中不存在子类用不到却必须实现的方法，如果不然，就要将<code>接口拆分。</code>使用多个隔离的接口，比使用单个接口（多个接口方法集合到一个的接口）要好。</p></li><li><p><strong>迪米特法则（最少知道原则）（Demeter Principle）</strong><br><code>一个类对自己依赖的类知道的越少越好</code>。无论被依赖的类多么复杂，都应该将逻辑封装在方法的内部，通过public方法提供给外部。这样当被依赖的类变化时，才能最小的影响该类。<br>最少知道原则的另一个表达方式是：只与直接的朋友通信。类之间只要有耦合关系，就叫朋友关系。耦合分为依赖、关联、聚合、组合等。<br>我们称出现为成员变量、方法参数、方法返回值中的类为直接朋友。局部变量、临时变量则不是直接的朋友。我们要求陌生的类不要作为局部变量出现在类中。</p></li><li><p><strong>合成复用原则（Composite Reuse Principle）</strong><br>尽量首先使用<code>合成/聚合</code>的方式，而不是使用继承。</p></li></ul><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;分类&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#分类&quot;&gt;&lt;/a&gt;分类&lt;/h2&gt;
+&lt;p&gt;设计模式分为&lt;code&gt;三大类&lt;/code&gt;：&lt;br&gt;
+&lt;strong&gt;创建型模式&lt;/strong&gt;，共&lt;code&gt;五&lt;/code&gt;种：工厂方法模式、抽象
+      
+    
+    </summary>
+    
+      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+      <category term="设计模式" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="http://wiki.maweizhuo.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>HTTP的变迁</title>
@@ -254,34 +283,6 @@ use DATABASE_NAME&lt;br&gt;
   </entry>
   
   <entry>
-    <title>HTTP 状态码</title>
-    <link href="http://wiki.maweizhuo.com/posts/HTTP%20%E7%8A%B6%E6%80%81%E7%A0%81/"/>
-    <id>http://wiki.maweizhuo.com/posts/HTTP 状态码/</id>
-    <published>2018-01-08T01:51:30.000Z</published>
-    <updated>2018-01-08T02:54:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一张图看懂http状态码"><a class="header-anchor" href="#一张图看懂http状态码"></a>一张图看懂HTTP状态码</h2><p><img src="https://box.kancloud.cn/2015-11-03_5638652bd8ad9.jpg" alt="http状态码"></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;一张图看懂http状态码&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一张图看懂http状态码&quot;&gt;&lt;/a&gt;一张图看懂HTTP状态码&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://box.kancloud.cn/2015-11-03_56
-      
-    
-    </summary>
-    
-      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
-    
-      <category term="HTTP" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/HTTP/"/>
-    
-    
-      <category term="Http" scheme="http://wiki.maweizhuo.com/tags/Http/"/>
-    
-  </entry>
-  
-  <entry>
     <title>大型网站架构演化</title>
     <link href="http://wiki.maweizhuo.com/posts/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/"/>
     <id>http://wiki.maweizhuo.com/posts/大型网站架构演化/</id>
@@ -313,6 +314,34 @@ use DATABASE_NAME&lt;br&gt;
     
     
       <category term="架构" scheme="http://wiki.maweizhuo.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP 状态码</title>
+    <link href="http://wiki.maweizhuo.com/posts/HTTP%20%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    <id>http://wiki.maweizhuo.com/posts/HTTP 状态码/</id>
+    <published>2018-01-08T01:51:30.000Z</published>
+    <updated>2018-01-08T02:54:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一张图看懂http状态码"><a class="header-anchor" href="#一张图看懂http状态码"></a>一张图看懂HTTP状态码</h2><p><img src="https://box.kancloud.cn/2015-11-03_5638652bd8ad9.jpg" alt="http状态码"></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一张图看懂http状态码&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一张图看懂http状态码&quot;&gt;&lt;/a&gt;一张图看懂HTTP状态码&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://box.kancloud.cn/2015-11-03_56
+      
+    
+    </summary>
+    
+      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+      <category term="HTTP" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/HTTP/"/>
+    
+    
+      <category term="Http" scheme="http://wiki.maweizhuo.com/tags/Http/"/>
     
   </entry>
   
@@ -579,33 +608,6 @@ use DATABASE_NAME&lt;br&gt;
     
     
       <category term="hexo" scheme="http://wiki.maweizhuo.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>点滴人生观念信条</title>
-    <link href="http://wiki.maweizhuo.com/posts/%E7%82%B9%E6%BB%B4%E4%BA%BA%E7%94%9F%E8%A7%82%E5%BF%B5%E4%BF%A1%E6%9D%A1/"/>
-    <id>http://wiki.maweizhuo.com/posts/点滴人生观念信条/</id>
-    <published>2017-09-20T12:28:21.000Z</published>
-    <updated>2017-11-24T03:17:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="学习生活观念-提高生活质量-拒绝直男癌"><a class="header-anchor" href="#学习生活观念-提高生活质量-拒绝直男癌"></a>学习生活观念，提高生活质量，拒绝直男癌</h2><p>优胜劣汰，直男癌去死。</p><h2 id="消费观念：什么层次的人用什么层次的货"><a class="header-anchor" href="#消费观念：什么层次的人用什么层次的货"></a>消费观念：什么层次的人用什么层次的货</h2><p>不要越界追求高端，并不能达到炫耀的目的；也不要刻意低廉、过分节俭，一味去省钱，反而失去更多。</p><p>钱是赚出来的，不是省出来的，赚出来的的钱 “是为了实现一定目标的等价物”。</p><p>参见 <a href="/wiki/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E9%A9%AC%E6%96%AF%E6%B4%9B%E9%9C%80%E6%B1%82%E5%B1%82%E6%AC%A1%E7%90%86%E8%AE%BA/"><strong>马斯洛需求层次理论</strong></a> 、<a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1488090359&amp;ver=1&amp;signature=VLFpBV0WLAh1r9I3PBT-9FuDm38jFBrv-*Ia-q56C0NNkousMilz8JavZwOAmUNdkPseSPcDULYLd11CBzeVBNAQnUmxPy55vAPxh17J163O2g2FVSx1w6h2YghhhHCRZWMw7sQhYq0yQwICSRGLTeUwZSa9PtFAYuQrpScgAyg=" rel="external nofollow noopener noreferrer" target="_blank"><strong>曹将 | 从他们分手说起</strong></a>。</p><h2 id="抱目的做事而不是抱期望做事"><a class="header-anchor" href="#抱目的做事而不是抱期望做事"></a>抱目的做事而不是抱期望做事</h2><p>不要报期望。</p><p>任何期望都有实现的可能，但也有落空后的失望，意志不坚的人容易被失望左右，最好是不要抱着任何好的坏的期望，而是抱着某种目的做事，想着要达成目的应该要做什么，通过目的驱动行为，通过目的驱动解决问题。</p><h2 id="遇到问题-事件努力解决"><a class="header-anchor" href="#遇到问题-事件努力解决"></a>遇到问题、事件努力解决</h2><p>不要想着不劳而获，也不要想着该别人做，他不做我去做就吃亏。</p><p>如果于自身利益相关，应该自我主动推动事情发展、解决问题，而不是别人不做我也不做，不要吝啬一丝力气。</p><h2 id="遭遇灾难不要放弃-人活着就有希望"><a class="header-anchor" href="#遭遇灾难不要放弃-人活着就有希望"></a>遭遇灾难不要放弃，人活着就有希望</h2><p>不到最后已经结束就不要放弃。</p><p>人生和生活都是需要活着才能实现，记录人生信条就是因为认为这些信条能帮助人活的更好。</p><h2 id="考虑最坏的打算-提前做好危机准备"><a class="header-anchor" href="#考虑最坏的打算-提前做好危机准备"></a>考虑最坏的打算，提前做好危机准备</h2><p>防人之心不可无，但不等于被害妄想症。<strong>保护自己是必要的，人不能有恃无恐。</strong></p><p>待人和气从哪个方便来说对人对己都有好处，但是和气不等于软弱退让，而是占理但不逼迫强硬。</p><h2 id="参考资料"><a class="header-anchor" href="#参考资料"></a>参考资料</h2><blockquote><ul><li><a href="/wiki/%E7%94%9F%E6%B4%BB%E5%AD%A6%E4%B9%A0/%E9%A9%AC%E6%96%AF%E6%B4%9B%E9%9C%80%E6%B1%82%E5%B1%82%E6%AC%A1%E7%90%86%E8%AE%BA/">马斯洛需求层次理论</a></li><li><a href="http://mp.weixin.qq.com/s?src=3&amp;timestamp=1488090359&amp;ver=1&amp;signature=VLFpBV0WLAh1r9I3PBT-9FuDm38jFBrv-*Ia-q56C0NNkousMilz8JavZwOAmUNdkPseSPcDULYLd11CBzeVBNAQnUmxPy55vAPxh17J163O2g2FVSx1w6h2YghhhHCRZWMw7sQhYq0yQwICSRGLTeUwZSa9PtFAYuQrpScgAyg=" rel="external nofollow noopener noreferrer" target="_blank">曹将 | 从他们分手说起</a></li><li><a href="http://www.zhijiandoukou.com/mp/odiucqf.html" rel="external nofollow noopener noreferrer" target="_blank">雷斯林 | “我可以骚，你不能扰”是最没意义的口号</a></li><li><a href="http://mp.weixin.qq.com/s?__biz=MzA3MjA4MDI5OQ==&amp;mid=2651728468&amp;idx=1&amp;sn=428524e951eeb91bcfa728ba97c47674&amp;chksm=84d94490b3aecd86a1b513df25504c6ac727f514adc98dd8e3b501131a46850187cb3750abf2&amp;mpshare=1&amp;scene=22&amp;srcid=0219FqZAJ85NQ5SrSgpJr3UW#rd" rel="external nofollow noopener noreferrer" target="_blank">雷斯林 | 法律对不怕死的人无解，所以待人和气一点其实对自己也有好处 | 微信</a></li></ul></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;学习生活观念-提高生活质量-拒绝直男癌&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#学习生活观念-提高生活质量-拒绝直男癌&quot;&gt;&lt;/a&gt;学习生活观念，提高生活质量，拒绝直男癌&lt;/h2&gt;
-&lt;p&gt;优胜劣汰，直男癌去死。&lt;/p&gt;
-&lt;h2 id=&quot;消费
-      
-    
-    </summary>
-    
-      <category term="生活闲读" scheme="http://wiki.maweizhuo.com/categories/%E7%94%9F%E6%B4%BB%E9%97%B2%E8%AF%BB/"/>
-    
-    
-      <category term="观念信条" scheme="http://wiki.maweizhuo.com/tags/%E8%A7%82%E5%BF%B5%E4%BF%A1%E6%9D%A1/"/>
     
   </entry>
   
