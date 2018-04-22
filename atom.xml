@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.maweizhuo.com/"/>
-  <updated>2018-03-19T07:49:42.000Z</updated>
+  <updated>2018-04-22T09:29:32.129Z</updated>
   <id>http://wiki.maweizhuo.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Svn 常用命令</title>
+    <link href="http://wiki.maweizhuo.com/posts/Svn%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://wiki.maweizhuo.com/posts/Svn 常用命令/</id>
+    <published>2018-04-22T01:51:30.000Z</published>
+    <updated>2018-04-22T09:29:32.129Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="检出"><a class="header-anchor" href="#检出"></a>检出</h2><p><code>svn checkout https://.... [本地目录全路径] --username=weizhuo --password=1111</code></p><h2 id="导出"><a class="header-anchor" href="#导出"></a>导出</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">导出(导出一个干净的不带.svn文件夹的目录树)</span><br><span class="line"></span><br><span class="line">svn  export  [-r 版本号]  http:<span class="comment">//路径(目录或文件的全路径) [本地目录全路径]　--username　用户名</span></span><br><span class="line">svn  export  [-r 版本号]  svn:<span class="comment">//路径(目录或文件的全路径) [本地目录全路径]　--username　用户名</span></span><br><span class="line">svn  export  本地检出的(即带有.svn文件夹的)目录全路径  要导出的本地目录全路径</span><br><span class="line"></span><br><span class="line">例子：</span><br><span class="line">svn export svn:<span class="comment">//localhost/测试工具 /home/testtools --username weizhuo</span></span><br><span class="line">svn export svn:<span class="comment">//localhost/test/testapp --username weizhuo</span></span><br><span class="line">svn export /home/testapp /home/testtools</span><br></pre></td></tr></table></figure><h2 id="添加-提交"><a class="header-anchor" href="#添加-提交"></a>添加&amp;提交</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">svn　add　文件名</span><br><span class="line">注：告诉SVN服务器要添加文件了，还要用svn commint/ci -m真实的上传上去！</span><br><span class="line">例子：</span><br><span class="line">svn add test.php ＜－ 添加test.php </span><br><span class="line">svn commit  -m “添加我的测试用test.php“ test.php</span><br><span class="line">svn add *.php ＜－ 添加当前目录下所有的php文件</span><br><span class="line">svn commit -m “添加我的测试用全部php文件“ *.php</span><br></pre></td></tr></table></figure><h2 id="更新"><a class="header-anchor" href="#更新"></a>更新</h2><p><code>svn update/up [文件名]</code></p><h2 id="删除"><a class="header-anchor" href="#删除"></a>删除</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">svn　delete　svn://路径(目录或文件的全路径) -m “删除备注信息文本”</span><br><span class="line">推荐如下操作：</span><br><span class="line">svn　delete　文件名 </span><br><span class="line">svn　ci　-m　“删除备注信息文本”</span><br><span class="line">例子：</span><br><span class="line">svn delete svn://localhost/testapp/test.php -m “删除测试文件test.php”</span><br><span class="line">推荐如下操作：</span><br><span class="line">svn delete test.php </span><br><span class="line">svn ci -m “删除测试文件test.php”</span><br></pre></td></tr></table></figure><h2 id="svn-diff"><a class="header-anchor" href="#svn-diff"></a>svn diff</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">svn　diff　文件名 </span><br><span class="line">svn　diff　-r　修正版本号m:修正版本号n　文件名</span><br><span class="line">例子：</span><br><span class="line">svn diff test.php＜－ 将修改的文件与基础版本比较</span><br><span class="line">svn diff -r 200:201 test.php＜－ 对 修正版本号200 和 修正版本号201 比较差异</span><br></pre></td></tr></table></figure><h2 id="svn-st"><a class="header-anchor" href="#svn-st"></a>svn st</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">svn st 目录路径/名</span><br><span class="line">svn status 目录路径/名   目录下的文件和子目录的状态，正常状态不显示 </span><br><span class="line">　　　　　　　　　　　　　【?：不在svn的控制中；  M：内容被修改；C：发生冲突；</span><br><span class="line">　　　　　　　　　　　　　　A：预定加入到版本库；K：被锁定】 </span><br><span class="line">svn  -v 目录路径/名</span><br><span class="line">svn status -v 目录路径/名  显示文件和子目录状态</span><br><span class="line">　　　　　　　　　　　　　　【第一列保持相同，第二列显示工作版本号，</span><br><span class="line">　　　　　　　　　　　　　　 第三和第四列显示最后一次修改的版本号和修改人】</span><br></pre></td></tr></table></figure><h2 id="svn-log"><a class="header-anchor" href="#svn-log"></a>svn log</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查看日志</span><br><span class="line">svn　log　【文件名】</span><br></pre></td></tr></table></figure><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;检出&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#检出&quot;&gt;&lt;/a&gt;检出&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;svn checkout https://.... [本地目录全路径] --username=weizhuo --password=1111&lt;
+      
+    
+    </summary>
+    
+      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+      <category term="SVN" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/SVN/"/>
+    
+    
+      <category term="svn" scheme="http://wiki.maweizhuo.com/tags/svn/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式分类及原则</title>
@@ -283,6 +311,34 @@ use DATABASE_NAME&lt;br&gt;
   </entry>
   
   <entry>
+    <title>HTTP 状态码</title>
+    <link href="http://wiki.maweizhuo.com/posts/HTTP%20%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    <id>http://wiki.maweizhuo.com/posts/HTTP 状态码/</id>
+    <published>2018-01-08T01:51:30.000Z</published>
+    <updated>2018-01-08T02:54:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一张图看懂http状态码"><a class="header-anchor" href="#一张图看懂http状态码"></a>一张图看懂HTTP状态码</h2><p><img src="https://box.kancloud.cn/2015-11-03_5638652bd8ad9.jpg" alt="http状态码"></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一张图看懂http状态码&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一张图看懂http状态码&quot;&gt;&lt;/a&gt;一张图看懂HTTP状态码&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://box.kancloud.cn/2015-11-03_56
+      
+    
+    </summary>
+    
+      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
+    
+      <category term="HTTP" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/HTTP/"/>
+    
+    
+      <category term="Http" scheme="http://wiki.maweizhuo.com/tags/Http/"/>
+    
+  </entry>
+  
+  <entry>
     <title>大型网站架构演化</title>
     <link href="http://wiki.maweizhuo.com/posts/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96/"/>
     <id>http://wiki.maweizhuo.com/posts/大型网站架构演化/</id>
@@ -314,34 +370,6 @@ use DATABASE_NAME&lt;br&gt;
     
     
       <category term="架构" scheme="http://wiki.maweizhuo.com/tags/%E6%9E%B6%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTTP 状态码</title>
-    <link href="http://wiki.maweizhuo.com/posts/HTTP%20%E7%8A%B6%E6%80%81%E7%A0%81/"/>
-    <id>http://wiki.maweizhuo.com/posts/HTTP 状态码/</id>
-    <published>2018-01-08T01:51:30.000Z</published>
-    <updated>2018-01-08T02:54:43.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一张图看懂http状态码"><a class="header-anchor" href="#一张图看懂http状态码"></a>一张图看懂HTTP状态码</h2><p><img src="https://box.kancloud.cn/2015-11-03_5638652bd8ad9.jpg" alt="http状态码"></p><h2 id="引用"><a class="header-anchor" href="#引用"></a>引用</h2><blockquote><p>记录点滴，成为更好的自己。       — <a href="http://weizhuo.ma" rel="external nofollow noopener noreferrer" target="_blank">weizhuo.ma</a></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;一张图看懂http状态码&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#一张图看懂http状态码&quot;&gt;&lt;/a&gt;一张图看懂HTTP状态码&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://box.kancloud.cn/2015-11-03_56
-      
-    
-    </summary>
-    
-      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
-    
-      <category term="HTTP" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/HTTP/"/>
-    
-    
-      <category term="Http" scheme="http://wiki.maweizhuo.com/tags/Http/"/>
     
   </entry>
   
@@ -578,36 +606,6 @@ use DATABASE_NAME&lt;br&gt;
     
     
       <category term="Git" scheme="http://wiki.maweizhuo.com/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo安装使用</title>
-    <link href="http://wiki.maweizhuo.com/posts/hexo%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/"/>
-    <id>http://wiki.maweizhuo.com/posts/hexo安装使用/</id>
-    <published>2017-09-25T15:04:48.000Z</published>
-    <updated>2017-11-29T07:48:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装"><a class="header-anchor" href="#安装"></a>安装</h2><ol><li>首先需要安装node.js 和npm</li><li>npm install hexo --no-optional （此参数局部安装） -g(全局安装，之后运行服务会起不来端口可能)</li><li>创建一个网站目录 &amp;&amp; 进入该目录</li><li><strong>初始化</strong> hexo init</li><li><strong>安装</strong> npm install</li><li><strong>启动服务</strong> hexo server</li><li><strong>新建文章</strong><br>hexo new &quot;我的第一篇文章&quot;<br>然后会显示生产的文件地址，进行编辑</li><li>主题配置<br>git clone <a href="mailto:git@github.com" rel="external nofollow noopener noreferrer" target="_blank">git@github.com</a>:litten/hexo-theme-yilia.git themes/yilia</li><li>修改 <strong>_config.yml</strong>(注意：<code>冒号后面要空一格，否则会执行页面报错</code>)<br>theme: yilia</li><li>生效配置(<strong>常用的命令</strong>)<br><code>hexo clean</code><br><code>hexo g (generate)</code><br><code>hexo s (server) 启动服务</code></li><li><strong>安装git提交代码 扩展</strong><br>npm install hexo-deployer-git --save</li><li><strong>发布</strong><br>hexo d (deploy)</li></ol><h2 id="常见问题"><a class="header-anchor" href="#常见问题"></a>常见问题</h2><ol><li>readme.md文件 会<code>被解析</code>成HTML<br><strong>解决</strong>: 在根目录下_config.yml 里</li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">skip_render:</span><br><span class="line"> - README.md</span><br></pre></td></tr></table></figure><ol start="2"><li>每次编译ico或images会<code>丢掉</code><br><strong>解决</strong>: 在<strong>source目录下放这些源文件</strong>,而不是在public目录下放,因为public目录是<br>hexo g 之后生成的。</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;安装&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;首先需要安装node.js 和npm&lt;/li&gt;
-&lt;li&gt;npm install hexo --no-optional （此参数局部安装） -g
-      
-    
-    </summary>
-    
-      <category term="编程艺术" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/"/>
-    
-      <category term="个人web" scheme="http://wiki.maweizhuo.com/categories/%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/%E4%B8%AA%E4%BA%BAweb/"/>
-    
-    
-      <category term="hexo" scheme="http://wiki.maweizhuo.com/tags/hexo/"/>
     
   </entry>
   
