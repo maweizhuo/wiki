@@ -3,21 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Category: Mac | 马伟倬 wiki</title>
+    <title>linux-rsync命令 | 马伟倬 wiki</title>
     
     
-        <meta name="keywords" content="马伟倬 wiki">
+        <meta name="keywords" content="Linux">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="maweizhuo wiki,马伟倬的个人wiki,对工作生活零碎的知识进行整理分类,个人原创,坚持原创">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马伟倬 wiki">
-<meta property="og:url" content="http://wiki.maweizhuo.com/categories/工具软件/Mac/index.html">
+    <meta name="description" content="简介 rsync是类unix系统下的数据镜像备份工具，从软件的命名上就可以看出来了——remote sync。 特性 1、可以镜像保存整个目录树和文件系统。 2、可以很容易做到保持原来文件的权限、时间、软硬链接等等。 3、无须特殊权限即可安装。 4、优化的流程，文件传输效率高。 5、可以使用rcp、ssh等方式来传输文">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux-rsync命令">
+<meta property="og:url" content="http://wiki.maweizhuo.com/posts/linux-rsync命令/index.html">
 <meta property="og:site_name" content="马伟倬 wiki">
-<meta property="og:description" content="maweizhuo wiki,马伟倬的个人wiki,对工作生活零碎的知识进行整理分类,个人原创,坚持原创">
+<meta property="og:description" content="简介 rsync是类unix系统下的数据镜像备份工具，从软件的命名上就可以看出来了——remote sync。 特性 1、可以镜像保存整个目录树和文件系统。 2、可以很容易做到保持原来文件的权限、时间、软硬链接等等。 3、无须特殊权限即可安装。 4、优化的流程，文件传输效率高。 5、可以使用rcp、ssh等方式来传输文件，当然也可以通过直接的socket连接。 6、支持匿名传输。 安装 Yum 安">
+<meta property="og:updated_time" content="2018-06-11T13:56:08.554Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马伟倬 wiki">
-<meta name="twitter:description" content="maweizhuo wiki,马伟倬的个人wiki,对工作生活零碎的知识进行整理分类,个人原创,坚持原创">
+<meta name="twitter:title" content="linux-rsync命令">
+<meta name="twitter:description" content="简介 rsync是类unix系统下的数据镜像备份工具，从软件的命名上就可以看出来了——remote sync。 特性 1、可以镜像保存整个目录树和文件系统。 2、可以很容易做到保持原来文件的权限、时间、软硬链接等等。 3、无须特殊权限即可安装。 4、优化的流程，文件传输效率高。 5、可以使用rcp、ssh等方式来传输文件，当然也可以通过直接的socket连接。 6、支持匿名传输。 安装 Yum 安">
     
 
     
@@ -228,9 +230,9 @@
                      </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             编程艺术
                         </a>
@@ -253,9 +255,9 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/HTTP 状态码/">HTTP 状态码</a></li>  <li class="file"><a href="/posts/HTTP的变迁/">HTTP的变迁</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             Linux
                         </a>
@@ -268,7 +270,7 @@
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/posts/awk 管道操作小结/">awk 管道操作小结</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="/posts/linux-rsync命令/">linux-rsync命令</a></li>  <li class="file"><a href="/posts/linux常用命令汇总/">linux命令汇总</a></li>  <li class="file"><a href="/posts/linux字符串截取命令/">linux字符串截取命令</a></li>  </ul> 
+                     <li class="file active"><a href="/posts/linux-rsync命令/">linux-rsync命令</a></li>  <li class="file"><a href="/posts/linux常用命令汇总/">linux命令汇总</a></li>  <li class="file"><a href="/posts/linux字符串截取命令/">linux字符串截取命令</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -388,86 +390,183 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main">
-<div class="timeline timeline-wrap">
-    <div class="timeline-row timeline-row-major">
-        <span class="node"><i class="fa fa-folder"></i></span>
-        <h1 class="title">Mac</h1>
-    </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+            <section id="main"><article id="post-linux-rsync命令" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/posts/mac工具软件常用快捷键/">mac 工具软件常用快捷键</a>
-        </h1>
-    
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/编程艺术/">编程艺术</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/编程艺术/Linux/">Linux</a>
+    </div>
 
-                <div class="article-meta">
-                    
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Linux/">Linux</a>
+    </div>
+
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/posts/mac工具软件常用快捷键/">
-            <time datetime="2018-01-17T06:51:30.000Z" itemprop="datePublished">2018-01-17</time>
+        <a href="/posts/linux-rsync命令/">
+            <time datetime="2018-06-11T13:53:23.000Z" itemprop="datePublished">2018-06-11</time>
         </a>
     </div>
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/工具软件/">工具软件</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/工具软件/Mac/">Mac</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/tool/">tool</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+                        
+                    </div>
+                
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/posts/mac工具软件/">mac 工具软件</a>
+        <h1 class="article-title" itemprop="name">
+            linux-rsync命令
         </h1>
     
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/posts/mac工具软件/">
-            <time datetime="2017-11-22T06:51:30.000Z" itemprop="datePublished">2017-11-22</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/工具软件/">工具软件</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/工具软件/Mac/">Mac</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/tool/">tool</a>
-    </div>
-
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特性"><span class="toc-number">2.</span> <span class="toc-text">特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-number">4.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#同步"><span class="toc-number">5.</span> <span class="toc-text">同步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数解释"><span class="toc-number">6.</span> <span class="toc-text">参数解释</span></a></li></ol>
                 </div>
+            
+        
+        
+            <h2 id="简介"><a class="header-anchor" href="#简介"></a>简介</h2>
+<p>rsync是类unix系统下的数据镜像备份工具，从软件的命名上就可以看出来了——<strong>remote sync。</strong></p>
+<h2 id="特性"><a class="header-anchor" href="#特性"></a>特性</h2>
+<p>1、可以镜像保存整个目录树和文件系统。<br>
+2、可以很容易做到保持原来文件的权限、时间、软硬链接等等。<br>
+3、无须特殊权限即可安装。<br>
+4、优化的流程，文件传输效率高。<br>
+5、可以使用rcp、ssh等方式来传输文件，当然也可以通过直接的socket连接。<br>
+6、支持匿名传输。</p>
+<h2 id="安装"><a class="header-anchor" href="#安装"></a>安装</h2>
+<p><code>Yum 安装yum -y install rsync-3.*</code></p>
+<h2 id="配置"><a class="header-anchor" href="#配置"></a>配置</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">主配置文件 /etc/rsyncd.conf （一般这个文件没有自己手动创建）</span><br><span class="line"></span><br><span class="line">uid = root	#运行RSYNC守护进程的用户</span><br><span class="line"></span><br><span class="line">gid = root	#运行RSYNC守护进程的组</span><br><span class="line"></span><br><span class="line">max connections = 10	#最大连接数不限</span><br><span class="line"></span><br><span class="line">use chroot = no	#不使用chroot</span><br><span class="line"></span><br><span class="line">log file = /var/log/rsyncd.log #日志记录文件</span><br><span class="line"></span><br><span class="line">log format = %t %a %m %f %b #日志记录格式</span><br><span class="line"></span><br><span class="line">pid file = /var/run/rsyncd.pid　＃pid文件的存放位置</span><br><span class="line"></span><br><span class="line">lock file = /var/run/rsyncd.lock　＃锁文件的存放位置</span><br><span class="line"></span><br><span class="line">timeout = 300</span><br><span class="line"></span><br><span class="line">port = 873 #默认端口873</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">#这里是认证的模块名，在client端需要指定</span><br><span class="line"></span><br><span class="line">[web] </span><br><span class="line"></span><br><span class="line">path = /data/www/ppho.cn #需要做镜像的目录，由于我们采用推的方式，所以这个目录代表源主机推过来的文件放在哪里</span><br><span class="line"></span><br><span class="line">list = yes  #允许列文件</span><br><span class="line"></span><br><span class="line">comment = rsync software #这个模块的注释信息 </span><br><span class="line"></span><br><span class="line">ignore errors = yes # 可以忽略一些无关的IO错误</span><br><span class="line"></span><br><span class="line">read only = no  # 关闭只读</span><br><span class="line"></span><br><span class="line">hosts allow = 192.168.1.37 # 允许哪些主机访问 多个主机空格隔开</span><br><span class="line"></span><br><span class="line">hosts deny = *  # 禁止哪些主机访问</span><br><span class="line"></span><br><span class="line">auth users = test  # 验证用户名</span><br><span class="line"></span><br><span class="line">secrets file = /etc/rsync.pass  # 密码存放文件  timeout = 300</span><br><span class="line"></span><br><span class="line"> 密码验证文件</span><br><span class="line"></span><br><span class="line">/etc/rsync.pass 例如：用户:密码  一行一个用户 </span><br><span class="line"></span><br><span class="line">eg.</span><br><span class="line">[litecopy]</span><br><span class="line">path=/data0/data/rsync_server/lite_copy</span><br><span class="line">uid=gateway</span><br><span class="line">gid=gateway</span><br><span class="line">list=yes</span><br><span class="line">read only=false</span><br></pre></td></tr></table></figure>
+<h2 id="同步"><a class="header-anchor" href="#同步"></a>同步</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 查看列表</span><br><span class="line">rsync  10.7.1.1::litecopy (ip::模块名)</span><br><span class="line">// 推送文件</span><br><span class="line">rsync -avz 文件/目录 10.9.*.*::rsync_data/mweibo_mps_speed_content_log</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">（推）# rsync avzP e ‘ssh p 22‘ /tmp/ root@192.168.87.138:/tmp/aaa</span><br><span class="line">把本地的 /tmp/ 目录中的文件复制到192.168.87.138的 /tmp/aaa 目录下，通过22端口</span><br><span class="line"></span><br><span class="line">/tmp/中后面的/ 有这个就是推送指定文件夹的全部内容，没有这个就是推送整个目录</span><br><span class="line"></span><br><span class="line">（拉）# rsync avzP e ‘ssh p 22‘ root@192.168.87.138:/tmp/ /tmp</span><br><span class="line">把192.168.87.138的 /tmp/ 目录文件复制到本地的 /tmp 目录中</span><br></pre></td></tr></table></figure>
+<h2 id="参数解释"><a class="header-anchor" href="#参数解释"></a>参数解释</h2>
+<p>rsync -Rr 文件夹名 ip::目标模块</p>
+<p>-v, --verbose 详细模式输出<br>
+-q, --quiet 精简输出模式<br>
+-c, --checksum 打开校验开关，强制对文件传输进行校验<br>
+-a, --archive 归档模式，表示以递归方式传输文件，并保持所有文件属性，等于-rlptgoD<br>
+-r, --recursive 对子目录以递归模式处理<br>
+-R, --relative 使用相对路径信息</p>
+<p>rsync foo/bar/foo.c remote:/tmp/</p>
+<p>则在/tmp目录下创建foo.c文件，而如果使用-R参数：</p>
+<p>rsync -R foo/bar/foo.c remote:/tmp/</p>
+<p>则会创建文件/tmp/foo/bar/foo.c，也就是会保持完全路径信息。</p>
+<p>-b, --backup 创建备份，也就是对于目的已经存在有同样的文件名时，将老的文件重新命名为~filename。可以使用–suffix选项来指定不同的备份文件前缀。<br>
+–backup-dir 将备份文件(如~filename)存放在在目录下。<br>
+-suffix=SUFFIX 定义备份文件前缀<br>
+-u, --update 仅仅进行更新，也就是跳过所有已经存在于DST，并且文件时间晚于要备份的文件。(不覆盖更新的文件)<br>
+-l, --links 保留软链结<br>
+-L, --copy-links 想对待常规文件一样处理软链结<br>
+–copy-unsafe-links 仅仅拷贝指向SRC路径目录树以外的链结<br>
+–safe-links 忽略指向SRC路径目录树以外的链结<br>
+-H, --hard-links 保留硬链结<br>
+-p, --perms 保持文件权限<br>
+-o, --owner 保持文件属主信息<br>
+-g, --group 保持文件属组信息<br>
+-D, --devices 保持设备文件信息<br>
+-t, --times 保持文件时间信息<br>
+-S, --sparse 对稀疏文件进行特殊处理以节省DST的空间<br>
+-n, --dry-run现实哪些文件将被传输<br>
+-W, --whole-file 拷贝文件，不进行增量检测<br>
+-x, --one-file-system 不要跨越文件系统边界<br>
+-B, --block-size=SIZE 检验算法使用的块尺寸，默认是700字节<br>
+-e, --rsh=COMMAND 指定替代rsh的shell程序<br>
+–rsync-path=PATH 指定远程服务器上的rsync命令所在路径信息<br>
+-C, --cvs-exclude 使用和CVS一样的方法自动忽略文件，用来排除那些不希望传输的文件<br>
+–existing 仅仅更新那些已经存在于DST的文件，而不备份那些新创建的文件<br>
+–delete 删除那些DST中SRC没有的文件<br>
+–delete-excluded 同样删除接收端那些被该选项指定排除的文件<br>
+–delete-after 传输结束以后再删除<br>
+–ignore-errors 及时出现IO错误也进行删除<br>
+–max-delete=NUM 最多删除NUM个文件<br>
+–partial 保留那些因故没有完全传输的文件，以是加快随后的再次传输<br>
+–force 强制删除目录，即使不为空<br>
+–numeric-ids 不将数字的用户和组ID匹配为用户名和组名<br>
+–timeout=TIME IP超时时间，单位为秒<br>
+-I, --ignore-times 不跳过那些有同样的时间和长度的文件<br>
+–size-only 当决定是否要备份文件时，仅仅察看文件大小而不考虑文件时间<br>
+–modify-window=NUM 决定文件是否时间相同时使用的时间戳窗口，默认为0<br>
+-T --temp-dir=DIR 在DIR中创建临时文件<br>
+–compare-dest=DIR 同样比较DIR中的文件来决定是否需要备份<br>
+-P 等同于 --partial<br>
+–progress 显示备份过程<br>
+-z, --compress 对备份的文件在传输时进行压缩处理<br>
+–exclude=PATTERN 指定排除不需要传输的文件模式<br>
+–include=PATTERN 指定不排除而需要传输的文件模式<br>
+–exclude-from=FILE 排除FILE中指定模式的文件<br>
+–include-from=FILE 不排除FILE指定模式匹配的文件<br>
+–version 打印版本信息<br>
+–address 绑定到特定的地址<br>
+–config=FILE 指定其他的配置文件，不使用默认的rsyncd.conf文件<br>
+–port=PORT 指定其他的rsync服务端口<br>
+–blocking-io 对远程shell使用阻塞IO<br>
+-stats 给出某些文件的传输状态<br>
+–progress 在传输时现实传输过程<br>
+–log-format=formAT 指定日志文件格式<br>
+–password-file=FILE 从FILE中得到密码<br>
+–bwlimit=KBPS 限制I/O带宽，KBytes per second<br>
+-h, --help 显示帮助信息</p>
+
             </div>
-        </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
     
-</div>
+<nav id="article-nav">
+    
+        <a href="/posts/linux字符串截取命令/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    linux字符串截取命令
+                
+            </div>
+        </a>
+    
+    
+        <a href="/posts/Svn 常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">Svn 常用命令</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<!-- <script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     -->
 </section>
         </div>
         <footer id="footer">
